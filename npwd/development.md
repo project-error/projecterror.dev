@@ -1,25 +1,100 @@
 ## Development Resources
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget elit imperdiet, pellentesque sapien non, semper nunc. Nulla facilisi. In eu nunc venenatis, sollicitudin sem quis, pretium sapien. Etiam imperdiet mi nisl, efficitur convallis ligula vestibulum vel. Proin lectus massa, ultrices eu nulla eu, venenatis rutrum metus. Ut tristique tristique pharetra. Duis pretium condimentum ante a vulputate. Nulla vitae eros et augue pulvinar rutrum. Maecenas eros nisl, dignissim non congue scelerisque, congue hendrerit neque. Quisque suscipit ullamcorper nibh, eleifend sollicitudin arcu tempus quis. Phasellus tempor, lacus ac congue condimentum, neque mauris iaculis augue, sed ultricies magna mauris non nunc.
 
-```javascript
-var foo = true;
-var bar = false;
+## Creating a new app
 
-if (bar) {
-    // this code will never run
-    console.log('hello!');
-}
+### Getting started
+### Adding a new app to useApps
+Before creating a new app we want to create a new ``app object`` for our app. The object takes in a couple of properties:
 
-if (bar) {
-    // this code won't run
-} else {
-    if (foo) {
-        // this code will run
-    } else {
-        // this code would run if foo and bar were both false
-    }
+* ``id`` - The name of the app.
+* ``nameLocale`` - For creating the locale's.-
+* ``icon`` - The icon that will be used at the home screen.
+* ``backgroundColor`` - The background color for the header (if you use the ``AppTitle``) and for the app in the home screen.
+* ``color`` - Color of the app icon
+* ``path`` - The path for the app. Example ``path: "/example"``.
+* ``Route`` - A function that uses ``Route`` from ``react-router-dom``.
+
+#### Example
+```js
+{
+  id: "EXAMPLE",
+  nameLocale: "APPS_EXAMPLE",
+  icon: <FontAwesomeIcon icon={faPlaneArrival} size="sm" />,
+  backgroundColor: blue[500],
+  color: blue[50],
+  path: "/example",
+  Route: () => <Route path="/example" component={ExampleApp} />,
 }
 ```
 
-Pellentesque vitae nunc augue. Proin at fermentum eros. Nullam vitae lorem sed elit mollis iaculis sit amet ut sapien. Vestibulum sit amet interdum purus. Ut ut vestibulum dolor. Suspendisse at aliquam lorem, quis semper nunc. In libero diam, pharetra vel nibh sit amet, venenatis consequat orci. Fusce auctor neque commodo orci venenatis tincidunt. Integer gravida porttitor efficitur. Suspendisse vel fermentum tortor, condimentum tincidunt nibh. Maecenas non augue non justo lobortis lobortis. Aenean ut turpis quis nulla commodo ornare. Vestibulum commodo purus in lobortis consequat.
+### The main app component
+When creating a new app for the phone, you want to import the ``AppWrapper`` and ``AppContent``. These are two reusable components that surrounds all apps. You  also have access to the ``AppTitle`` component, which serves as a header.
+
+The ``AppTitle`` takes in a prop called `app`. Here you can add any string you want, but as a good practice, use the ``useApp`` hook. Here is an example.
+
+```js
+export const ExampleApp = () => {
+  // Calling the useApp hook, and passing in the app name. 
+  // The app name will the name you added in useApps.
+  const example = useApp('EXAMPLE');
+
+  return (
+    <AppWrapper>
+      <AppTitle app={example} />
+```
+
+### Creating a hook
+When you want to have a state that you can update, use in differenet components or reciving some sort of vaules from the client, a hook is the answer.
+
+### The service hook and ``useNuiEvent``
+When you want to recive data from the client, you need to set up a service hook (as we like to call it). It a function that will be called when the phone is rendered, and makes it available to recive data from the client and assign values to a desired hook of choice. If you are known with React, you probably already know how to create a hook. However, here is how you do it.
+
+First we want to import one of the hooks available from the ``recoil`` library.
+
+
+If you only want to read a state, you should use the ``useRecoilValue``. This will only read the state, without writing, or updating it. Do you also want to write to the state4, you need the ``useRecoilValue``, which is a API similar to the React ``useState``. 
+
+#### Setting the hook up
+
+
+
+
+### Full example
+#### ExampleApp.tsx
+```js
+// ExampleApp.tsx
+import React from 'react';
+import { AppWrapper } from '../../../ui/components';
+import { AppTitle } from '../../../ui/components/AppTitle';
+import { AppContent } from '../../../ui/components/AppContent';
+import { useApp } from '../../../os/apps/hooks/useApps';
+import { useExample } from '../hooks/useExample';
+
+export const ExampleApp = () => {
+  // calling the example hook, and we assign the value to a variable
+  const exampleString = useExample();
+  const example = useApp('EXAMPLE');
+  return (
+    <AppWrapper>
+      <AppTitle app={example} />
+      <AppContent>
+        <h1>This is an example</h1>
+        {/* Here we are using the value in a h3 tag */}
+        <h3>{exampleString}</h3>
+      </AppContent>
+    </AppWrapper>
+  );
+};
+```
+
+#### useExample.tsx
+```js
+import { useRecoilValue } from 'recoil';
+import { exampleState } from './state';
+
+export const useExample = () => {
+  const example = useRecoilValue(exampleState.example);
+  return example;
+};
+```

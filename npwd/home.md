@@ -1,72 +1,34 @@
-## Features
+# Installation
 
-- ZERO Database changes needed to replace [GCPhone V3](https://github.com/manueljlz/gcphone/) or any other public versions.
+## Getting started
+Installing NPWD is quite easy. You download the resource, which is located here. Make sure you are downloading from releases. Once installed, add the resource to your server. Next, you need to import the ``import.sql`` to your designated database.
 
-- Full contacts list.
 
-- Sending text messages.
 
-- Voice calls.
+### Production build
 
-- Anonymous calling.
+# Features
 
-- Bank application (With full bank transfers). Link to official new_banking -> https://github.com/NewWayRP/new_banking (For the bank application to work unless you edit yourself.)
+> Keep in mind. If you want to add new configs, they will need to be placed in the ``common/interfaces/config``
+# Configuration
 
-- Anonymous Chat application.
+### Database
+NPWD uses a database handler, which means that all the database handling are happening from the resource.
 
-- Stock market application (With full functionality soon).
+### Important note
+> As the NPWD uses a database handler, you don't need to use a library like ``mysql-async`` or ``ghmattimysql``. 
 
-- Customizable cover / screen.
+## Example ``server.cfg``
 
-- Add Contacts from recent text messages.
-
-- Add Contacts from recent call history.
-
-- Custom Ringtones with working Volume system in settings.
-
-- Mouse control is back at 100% functionality.
-
-- Screenshots/Selfies with already working upload server.
-
-- Easy installation instructions. Created for us by @ROCKY_southpaw#7777
-
-## Configuration
-
-- You can modify the sounds in `\html\static\sound`
-
-- You can modify the backgrounds in `\html\img\background`
-
-- You can modify the phone shell in `\html\img\coque`
-
-- The shells must be in 1000x500 px format, the screen area for creating backgrounds is centered in size 800 * 400.
-
-- Bank & Stock Market application(s) must be configured according to your scripts.
-
-- See installation.md for more configurations.
-
-- See Images at bottom of page for examples.
-
-#### Important Note Regarding `esx_addons_gcphone`:
-
-*ESX Addons GCPhone has been merged INTO the gcphone files for ease of use. 
-You are no longer required to add `ensure esx_addons_gcphone` to your server.cfg.* 
-
-*Please put `ensure gcphone` before jobs.*
-
-## Example `server.cfg`
-```
+```cfg
 ensure mysql-async
 
-ensure essentialmode (For esx 1.1)
-ensure esplugin_mysql
 ensure es_extended
 
-ensure gcphone
+ensure new-phone-who-dis
 ensure screenshot-basic
 
-ensure esx_policejob
-ensure esx_ambulancejob
-ensure esx_job3
+# all other resources you might have
 ```
 
 ## Screenshots
