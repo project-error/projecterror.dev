@@ -6,15 +6,4 @@ Find the documentation for one of our public releases!
 
 Our newest and most feature packed phone. 
 
-*Written completely by the ReIgnited Dev Team in [React](https://reactjs.org/).*
-
-> We recommend using this phone over our GCPhone package as its 100% written
-by the ReIgnited Dev Team, who can vouch for its quality.
-
-#### [GCPhone](/gcphone/home.md)
-
-A ReIgnited rewrite and continuation of the GCPhone resource originally created by Gannon. 
-
-*Created using [Vue](https://vuejs.org/)*
-
-> Whenever possible we recommend using our newest phone over this one.
+*Written completely by the Project Error Dev Team in [React](https://reactjs.org/).*
