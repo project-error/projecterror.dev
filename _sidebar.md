@@ -4,7 +4,8 @@
   - [Features](npwd/home?id=features)
   - [Config](npwd/home?id=configuration)
   - [Screenshots](npwd/home?id=screenshots)
-  - [Development Resources](npwd/development)
+- [**Development**](npwd/development)
+    - [Creating a new app](npwd/development?id=creating-a-new-app)
 
 <!-- - [**Usage**](usage.md)
   - [Base Styling](usage?id=base-styling)
