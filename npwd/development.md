@@ -56,6 +56,7 @@ When you want to have a state that you can update, use in differenet components 
 Lets create a state first!
 
 ```js
+// state.ts
 import { atom } from 'recoil';
 
 export const exampleState = {
@@ -69,11 +70,12 @@ export const exampleState = {
 We need to use the state somehow, and be able to read, write or both. Let's hook at how we create a simple hook. In this example we will both read and write to the state.
 
 ```js
+// useExampleList.ts
 import { useRecoilState } from 'recoil';
 
 export const useExampleList = () => {
-  const [list, setList] = useRecoilState()
-  return { list, setList }
+  const [list, setList] = useRecoilState();
+  return { list, setList };
 }
 ```
 
@@ -83,6 +85,43 @@ Now that we have created our hook, we'll go a step further and look at the ``"Se
 When you want to recive data from the client, you need to set up a service hook (as we like to call it). It a function that will be called when the phone is rendered, and makes it available to recive data from the client and assign values to a desired hook of choice. If you are known with React, you probably already know how to create a hook. However, here is how you do it.
 
 #### Setting the hook up
+This hook will simply listen to any data being sent from the client and store it into any state of choice. In this example we'll continue using the recoil state, but you can also use React Context. You can read more about how to use that here (a link)
+
+```js
+// useExampleService.ts
+
+// We'll start by importing the state and the hook we previously made
+// and the useNuIEvent hook
+import { useExampleList } from './useExampleList';
+import { exampleState } from './state';
+import { useNuiEvent } from '../../../os/nui-events/hooks/useNuiEvent';
+// We also need a function from recoil
+import { useSetRecoilState } from 'recoil';
+
+export const useExampleService = () => {
+  const setList = useSetRecoilState(exampleState.exampleArray);
+  useNuiEvent('EXAMPLE', 'setList', setList);
+
+  return useExampleList();
+}
+```
+You may wonder what `useSetRecoilState` and `useNuiEvent` does. We will cover that in the next section.
+
+`useSetRecoilState` returns a setter function for updating the value of a Recoil state (atom). We use this when we only want to write to the state without reading it. We assign this function to 'setList' and use that in the next function we'll talk about, the `useNuiEvent`.
+
+In order to know what `app` and `method` that should update our `exampleArray` state, we need to use `useNuiEvent`. The function listens to the any `message` event, in other words, when we use the `SendNuiMessage`. Then it takes the data and updates the value using the `setList` function we just called. However we're not done yet. In order for this work, we need to call `useExampleService` in `Phone.tsx`. 
+
+```js
+// Phone.tsx
+import { usePhotoService } from './apps/example/hooks/useExampleService';
+//...
+function Phone () {
+//...
+useExampleService()
+//...
+```
+
+
 
 
 
