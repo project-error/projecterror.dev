@@ -1,5 +1,8 @@
-# The Project-Error Docs
+# Project-Error Docs
 
-> Find extensive documentation for our various resources
+> Containing extensive documentation for our various resources.
 
-[Our New Phone (NPWD)](https://github.com/project-error/new-phone-who-dis)
+## Current Org Repositories
+[New-Phone-Who-Dis (NPWD)](https://github.com/project-error/new-phone-who-dis)
+
+[Get Started](https://docs.projecterror.dev/#/npwd/home)
