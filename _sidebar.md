@@ -1,5 +1,5 @@
 - [**Home**](/)
-- [**NPWD Phone**](npwd/home.md)
+- [**NPWD Getting Started**](npwd/home.md)
   - [Dependencies](npwd/home?id=dependencies)
   - [Prerequisites](npwd/home?id=prerequisites)
   - [Installation-Steps](npwd/home?id=installation-steps)
