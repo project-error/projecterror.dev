@@ -63,4 +63,5 @@ Most of these apps have UI that does **not** represent the final product and are
 - [**Messages**](https://i.imgur.com/UYHoVvy.png)
 - [**Notes**](https://i.imgur.com/m0ktIyj.png)
 - [**Phone**](https://i.imgur.com/zuxERmR.png)
+- [**Settings**](https://i.imgur.com/0ggMdij.png)
 - [**Twitter**](https://i.imgur.com/WfjOl1t.png)

@@ -9,7 +9,7 @@ The following apps should be in full working order and are no longer in active d
 - [**Calculator**](https://i.imgur.com/96e3bFF.png)
 
 ## Stable Apps
-These apps should be mostly stable and should not give any issues. However, they're not fully stable.
+These apps are **not** done and contain the least amount of issues across the phone. 
 
 - [**Contacts**](https://i.imgur.com/3Qc1eJB.png)
 
@@ -56,3 +56,8 @@ Lack of functionality for the below apps is due to the apps still being in devel
         - Unable to delete typed numbers.
         - Needs sound when calling
         - Needs UI rework for when a call is active.
+- [**Settings](https://i.imgur.com/0ggMdij.png)
+
+        - Active PR with style redesign
+        - Preview ringtone while adjusting volume.
+        - Additional themes in progress.
