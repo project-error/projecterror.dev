@@ -1,9 +1,9 @@
 - [**Home**](/)
 - [**NPWD Phone**](npwd/home.md)
-  - [Installation](npwd/home?id=installation)
-  - [Features](npwd/home?id=features)
-  - [Config](npwd/home?id=configuration)
-  - [Screenshots](npwd/home?id=screenshots)
+  - [Dependencies](npwd/home?id=dependencies)
+  - [Prerequisites](npwd/home?id=prerequisites)
+  - [Installation-Steps](npwd/home?id=installation-steps)
+  - [Previews](npwd/home?id=previews)
 - [**Development**](npwd/development)
     - [Creating a new app](npwd/development?id=creating-a-new-app)
 

@@ -4,7 +4,7 @@
 Below are the dependencies for full functionality of the resource. Adapating it to your framework shouldn't be difficulty, but some of the features depend on ESX. Additonal documentation for what needs to be changed will be made prior to full launch.
 
 1. [es_extended](https://github.com/esx-framework/es_extended/tree/legacy) For the best results, we recomend **V1 Final.**
-1. {Screenshot-Basic](https://github.com/project-error/screenshot-basic) **Be sure to use this version.**
+1. [Screenshot-Basic](https://github.com/project-error/screenshot-basic) **Be sure to use this version.**
 
 ### Prerequisites
 
@@ -17,7 +17,7 @@ The Installation Steps assumes you have the following prerequisites:
 1. [yarn](https://yarnpkg.com/) package manager installed (`npm install -g yarn`)
 1. A fivem environment that is set up according to the [setting up a server instructions](https://docs.fivem.net/docs/server-manual/setting-up-a-server/) from the fivem documentation.
 
-#### Installation Steps
+#### Installation-Steps
 
 1. Clone the [repo](https://github.com/project-error/new-phone-who-dis) into your `server-data/resources/` folder. The path will be `server-data\resources\new-phone-who-dis`. **Don't clone the repo into a sub folder.**
 1. Ensure the resource folder is named `new-phone-who-dis`.
@@ -48,4 +48,4 @@ ensure screenshot-basic
 # all other resources you might have
 ```
 
-## Screenshots
+## Previews
