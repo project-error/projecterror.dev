@@ -1,9 +1,11 @@
-## Our Resources
+# Project-Error Releases
 
-Find the documentation for one of our public releases!
-
-#### [New Phone Who Dis](/npwd/home.md)
-
-Our newest and most feature packed phone. 
+#### [New-Phone-Who-Dis (NPWD](https://github.com/project-error/new-phone-who-dis)
+NPWD is our current running project. Our team has been working on the project since **Auguest, 2020**. 
+The resource isn't complete yet and currently has no ETA. Feel free to test it out in a dev enviorment by following the [installation](npwd/home?id=installation-steps) guide.
 
 *Written completely by the Project Error Dev Team in [React](https://reactjs.org/).*
+
+### Discord
+If you seek additional support for any of our resources, feel free to join the [Project-Error Discord](https://discord.gg/HYwBjTbAY5).
+

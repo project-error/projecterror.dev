@@ -1,10 +1,5 @@
-## Development Resources
-
-
-## Creating a new app
-
-### Getting started
-### Adding a new app to useApps
+## Getting started
+### Adding a new app to `useApps`
 Before creating a new app we want to create a new ``app object`` for our app. The object takes in a couple of properties:
 
 * ``id`` - The name of the app.

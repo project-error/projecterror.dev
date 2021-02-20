@@ -1,6 +1,6 @@
 # Getting Started
 
-## Dependencies (As of 2/18/2021)
+### Dependencies (As of 2/18/2021)
 Below are the dependencies for full functionality of the resource. Adapating it to your framework shouldn't be difficulty, but some of the features depend on ESX. Additonal documentation for what needs to be changed will be made prior to full launch.
 
 1. [es_extended](https://github.com/esx-framework/es_extended/tree/legacy) For the best results, we recomend **V1 Final.**
@@ -17,7 +17,7 @@ The Installation Steps assumes you have the following prerequisites:
 1. [yarn](https://yarnpkg.com/) package manager installed (`npm install -g yarn`)
 1. A fivem environment that is set up according to the [setting up a server instructions](https://docs.fivem.net/docs/server-manual/setting-up-a-server/) from the fivem documentation.
 
-#### Installation-Steps
+### Installation-Steps
 
 1. Clone the [repo](https://github.com/project-error/new-phone-who-dis) into your `server-data/resources/` folder. The path will be `server-data\resources\new-phone-who-dis`. **Don't clone the repo into a sub folder.**
 1. Ensure the resource folder is named `new-phone-who-dis`.
@@ -33,9 +33,10 @@ The Installation Steps assumes you have the following prerequisites:
 1. Build in the current directory with `yarn build`.
 1. Start your FiveM server
 
-# Additonal Information
-* New-Phone-Who-Dis uses a database handler, you don't need to use a library like ``mysql-async`` or ``ghmattimysql``. 
-* Compatability with [esx_kashacter](https://github.com/FiveEYZ/esx_kashacter) is unknown as of 2/19/2021. Testing still need's to be conducted. 
+# Additonal-Information
+* *NPWD* uses a database handler so you don't need to use a library like ``mysql-async`` or ``ghmattimysql``. 
+* Compatability with [esx_kashacter](https://github.com/FiveEYZ/esx_kashacter) is unknown as of 2/19/2021. Testing still need's to be conducted.
+*Ran into an issue? Please open an issue [here](https://github.com/project-error/new-phone-who-dis/issues/new/choose) 
 
 ### Example ``server.cfg``
 
@@ -48,4 +49,18 @@ ensure screenshot-basic
 # all other resources you might have
 ```
 
-## Previews
+# Previews
+
+[Latest Teaser Video (October 28th)](https://streamable.com/f1ri9r)
+
+### Apps
+Most of these apps have UI that does **not** represent the final product and are subject to change.
+- [**Bank**](https://i.imgur.com/P5Dg0Mj.png)
+- [**Calculator**](https://i.imgur.com/96e3bFF.png)
+- [**Camera**](https://i.imgur.com/1aGEV28.png)
+- [**Contacts**](https://i.imgur.com/3Qc1eJB.png)
+- [**Marketplace**](https://i.imgur.com/8hPm6tU.png)
+- [**Messages**](https://i.imgur.com/UYHoVvy.png)
+- [**Notes**](https://i.imgur.com/m0ktIyj.png)
+- [**Phone**](https://i.imgur.com/zuxERmR.png)
+- [**Twitter**](https://i.imgur.com/WfjOl1t.png)
