@@ -26,7 +26,7 @@ The Installation Steps assumes you have the following prerequisites:
 
 1. Clone the [repo](https://github.com/project-error/new-phone-who-dis) into your `server-data/resources/` folder. The path will be `server-data\resources\new-phone-who-dis`. **Don't clone the repo into a sub folder.**
 1. Ensure the resource folder is named `new-phone-who-dis`.
-1. Import the [sql file](https://github.com/project-error/new-phone-who-dis/blob/master/resources/import.sql) from the `resources` folder into your database.
+1. Import the [sql file](https://github.com/project-error/new-phone-who-dis/blob/master/resources/import.sql) from the root directory into your database.
 1. Add the following to your `server.cfg`:
 ```
 setr SCREENSHOT_BASIC_TOKEN Client_ID
