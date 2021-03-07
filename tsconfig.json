@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "moduleResolution": "Node"
+  },
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "include": ["src/"]
+}

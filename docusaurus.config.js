@@ -70,6 +70,8 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/project-error/docs.projecterror.dev',
