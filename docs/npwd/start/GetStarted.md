@@ -1,4 +1,8 @@
-# Getting Started
+---
+id: get_started
+title: Getting Started
+sidebar_label: Getting Started
+---
 
 ## Dependencies (As of 2/20/2021)
 Below are the dependencies for full functionality of the resource. Adapating it to your framework shouldn't be difficult, but some of the features depend on ESX in the current sate. Additonal documentation for what needs to be changed will be made prior to full launch.
@@ -11,7 +15,7 @@ Below are the dependencies for full functionality of the resource. Adapating it 
 The Installation Steps assumes you have the following prerequisites:
 
 1. Dependencies installed.
-1. The ability to open a terminal. It's *recomended*, not required, to use [Visual Studio Code](https://code.visualstudio.com/) or Windows Powershell for the sake of this guide to better provide support should issues arise. 
+1. The ability to open a terminal. It's *recomended*, not required, to use [Visual Studio Code](https://code.visualstudio.com/) or Windows Powershell for the sake of this guide to better provide support should issues arise.
 1. [Git for windows](https://git-scm.com/download/win) installed
 1. [LTS node.js](https://nodejs.org/en/about/releases/) installed
 1. [yarn](https://yarnpkg.com/) package manager installed (`npm install -g yarn`)
@@ -79,7 +83,7 @@ ensure screenshot-basic
 
 This resource is highly configurable through the [config.json](https://github.com/project-error/new-phone-who-dis/blob/master/config.json). This JSON file holds configuration for the phone itself, for the apps running on it and peripheral information.
 
-Below is the list of current configuration options **(WIP)**: 
+Below is the list of current configuration options **(WIP)**:
 
 **Some of these configurations no longher apply.**
 
@@ -120,15 +124,15 @@ Current Discord integrations with the phone **(WIP)**:
 - Twitter: reporting tweets
 
 # Important Information
-* By installing [New-Phone-Who-Dis (NPWD)](https://github.com/project-error/new-phone-who-dis), you agree to the use of the following diagnostic package: 
-    * Sentry, (in use within the React portion of NPWD) Automatically
-    uploads relevant sesssion details and stack traces whenever an exception is thrown. We use these metrics to further improve the quality of the phone. 
-    
-    * To explicitly disable this, we urge you **not to** as its incredibly useful metrics for us,
-    please change the `SentryErrorMetrics` setting to `false` in `phone/config/default.json` and rebuild the phone.
+* By installing [New-Phone-Who-Dis (NPWD)](https://github.com/project-error/new-phone-who-dis), you agree to the use of the following diagnostic package:
+   * Sentry, (in use within the React portion of NPWD) Automatically
+     uploads relevant sesssion details and stack traces whenever an exception is thrown. We use these metrics to further improve the quality of the phone.
+
+   * To explicitly disable this, we urge you **not to** as its incredibly useful metrics for us,
+     please change the `SentryErrorMetrics` setting to `false` in `phone/config/default.json` and rebuild the phone.
 * Compatability with [esx_kashacter](https://github.com/FiveEYZ/esx_kashacter) is unknown as of 2/20/2021. Testing still need's to be conducted.
-    * Same applies to any Multi-Character as testing has only been conducted on`V1 Final` and `1.1 Weight` **without** the use of these resources.
-* Encountered an issue? Please open an issue [here](https://github.com/project-error/new-phone-who-dis/issues/new/choose) 
+   * Same applies to any Multi-Character as testing has only been conducted on`V1 Final` and `1.1 Weight` **without** the use of these resources.
+* Encountered an issue? Please open an issue [here](https://github.com/project-error/new-phone-who-dis/issues/new/choose)
 * If you seek additional support, feel free to join the [Project-Error Discord](https://discord.gg/HYwBjTbAY5).
 
 # Previews

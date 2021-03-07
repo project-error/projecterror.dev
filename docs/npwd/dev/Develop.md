@@ -1,4 +1,9 @@
-## Getting started
+---
+id: develop
+title: Development
+sidebar_label: Development
+---
+
 ### Adding a new app to `useApps`
 Before creating a new app we want to create a new ``app object`` for our app. The object takes in a couple of properties:
 
@@ -43,7 +48,7 @@ export const ExampleApp = () => {
 First we want to import one of the hooks available from the ``recoil`` library.
 
 
-If you only want to read a state, you should use the ``useRecoilValue``. This will only read the state, without writing, or updating it. Do you also want to write to the state, you need the ``useRecoilState``, which is a API similar to the React ``useState``. 
+If you only want to read a state, you should use the ``useRecoilValue``. This will only read the state, without writing, or updating it. Do you also want to write to the state, you need the ``useRecoilState``, which is a API similar to the React ``useState``.
 
 ### Creating a hook and states
 When you want to have a state that you can update, use in differenet components or reciving some sort of vaules from the client, a hook is the answer. Although, we need to have a state to read or write the value to.
@@ -104,7 +109,7 @@ You may wonder what `useSetRecoilState` and `useNuiEvent` does. We will cover th
 
 `useSetRecoilState` returns a setter function for updating the value of a Recoil state (atom). We use this when we only want to write to the state without reading it. We assign this function to 'setList' and use that in the next function we'll talk about, the `useNuiEvent`.
 
-In order to know what `app` and `method` that should update our `exampleArray` state, we need to use `useNuiEvent`. The function listens to the any `message` event, in other words, when we use the `SendNuiMessage`. Then it takes the data and updates the value using the `setList` function we just called. However we're not done yet. In order for this work, we need to call `useExampleService` in `Phone.tsx`. 
+In order to know what `app` and `method` that should update our `exampleArray` state, we need to use `useNuiEvent`. The function listens to the any `message` event, in other words, when we use the `SendNuiMessage`. Then it takes the data and updates the value using the `setList` function we just called. However we're not done yet. In order for this work, we need to call `useExampleService` in `Phone.tsx`.
 
 ```js
 // Phone.tsx
