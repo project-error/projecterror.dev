@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Project Error',
   tagline: 'Project Error, a meme organization.',
-  url: 'http://project-error.github.io',
+  url: 'https://docs.projecterror.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -9,6 +9,8 @@ module.exports = {
   organizationName: 'project-error', // Usually your GitHub org/user name.
   projectName: 'docs.projecterror.dev', // Usually your repo name.
   themeConfig: {
+    defaultMode: 'dark',
+    respectPrefersColorScheme: true,
     navbar: {
       title: 'Project Error Docs',
       logo: {
@@ -23,7 +25,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/project-error/project-error',
+          href: 'https://github.com/project-error/docs.projecterror.dev',
           label: 'GitHub',
           position: 'right',
         },
@@ -55,12 +57,12 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/project-error/project-error',
+              href: 'https://github.com/project-error/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Project Error`,
     },
   },
   presets: [
@@ -70,7 +72,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/project-error/project-error/web',
+          editUrl: 'https://github.com/project-error/docs.projecterror.dev',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
