@@ -14,7 +14,7 @@ const HeroComponent = () => {
           <h1 className={styles.heroProjectTitle}>Project Error</h1>
           <div className={styles.heroProjectTagline}>{siteConfig.tagline}</div>
           <div className={styles.indexCtas}>
-            <Link className="button" to="/docs" style={{ color: "white" }}>
+            <Link className={`button ${styles.Button}`} to="/docs">
               Our Docs
             </Link>
           </div>
