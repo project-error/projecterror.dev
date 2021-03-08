@@ -1,0 +1,21 @@
+{
+  "short_name": "PE Docs",
+  "name": "The Project Error Docs",
+  "icons": [
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "display": "standalone",
+  "theme_color": "#242526",
+  "background_color": "#242526",
+  "description": "The documentation for Project Error resources"
+}
