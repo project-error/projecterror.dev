@@ -91,7 +91,8 @@ module.exports = {
           showLastUpdateTime: true,
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/project-error/docs.projecterror.dev",
+          editUrl:
+            "https://github.com/project-error/docs.projecterror.dev/tree/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
