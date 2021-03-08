@@ -20,6 +20,12 @@ module.exports = {
         alt: "Project Logo",
         src: "img/logo.png",
       },
+      sitemap: {
+        cacheTime: 600 * 1000, // 600 sec - cache purge period
+        changefreq: "weekly",
+        priority: 0.5,
+        trailingSlash: false,
+      },
       items: [
         {
           to: "docs/",
