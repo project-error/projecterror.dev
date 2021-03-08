@@ -1,7 +1,7 @@
 ---
-id: develop
-title: Development
-sidebar_label: Development
+id: basics
+title: Basics of Development
+sidebar_label: Basics
 ---
 
 ### Adding a new app to `useApps`
