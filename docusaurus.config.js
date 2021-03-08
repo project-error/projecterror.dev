@@ -1,63 +1,71 @@
 module.exports = {
-  title: 'Project Error',
-  tagline: 'Project Error, a meme organization.',
-  url: 'https://docs.projecterror.dev',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.png',
-  organizationName: 'project-error', // Usually your GitHub org/user name.
-  projectName: 'docs.projecterror.dev', // Usually your repo name.
+  title: "Project Error",
+  tagline: "Developers striving to produce quality open source FiveM resources",
+  url: "https://docs.projecterror.dev",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.png",
+  organizationName: "project-error", // Usually your GitHub org/user name.
+  projectName: "docs.projecterror.dev", // Usually your repo name.
   themeConfig: {
-    defaultMode: 'dark',
+    defaultMode: "dark",
     respectPrefersColorScheme: true,
     navbar: {
-      title: 'Project Error Docs',
+      title: "Project Error",
       logo: {
-        alt: 'Project Logo',
-        src: 'img/logo.png',
+        alt: "Project Logo",
+        src: "img/logo.png",
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
-          position: 'left',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Resource Docs",
+          position: "left",
         },
         {
-          href: 'https://github.com/project-error/docs.projecterror.dev',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://discord.gg/rNXB48WUVx",
+          label: "Discord",
+          position: "right",
+        },
+        {
+          href: "https://github.com/project-error/docs.projecterror.dev",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Projects",
           items: [
             {
-              label: 'Get Started with NPWD',
-              to: 'docs/',
+              label: "New Phone Who Dis",
+              href: "https://github.com/project-error/new-phone-who-dis",
+            },
+            {
+              label: "New Garage Who Dis",
+              to: "#",
+            },
+            {
+              label: "New Bank Who Dis",
+              to: "#",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Discord',
-              href: 'https://discord.gg/rNXB48WUVx',
+              label: "Discord",
+              href: "https://discord.gg/rNXB48WUVx",
             },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/project-error/',
+              label: "GitHub",
+              href: "https://github.com/project-error/",
             },
           ],
         },
@@ -67,17 +75,17 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/project-error/docs.projecterror.dev',
+          editUrl: "https://github.com/project-error/docs.projecterror.dev",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
