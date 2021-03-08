@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
@@ -10,7 +9,7 @@ import HeroComponent from "../components/HeroComponent";
 const features = [
   {
     title: "New Phone Who Dis",
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    imageUrl: "img/npwd-icon.png",
     description: (
       <>
         Our largest and most popular resource for FiveM. Written entirely in
@@ -21,7 +20,7 @@ const features = [
   },
   {
     title: "New Bank Who Dis",
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    imageUrl: "img/npwd-icon.png",
     description: (
       <>
         A Bank/ATM resource that provides a user interface for ATM's and general
@@ -31,7 +30,7 @@ const features = [
   },
   {
     title: "New Garage Who Dis",
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    imageUrl: "img/npwd-icon.png",
     description: (
       <>
         A WIP all encompassing Garage resource that attemps to fill the massive
