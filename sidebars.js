@@ -14,7 +14,8 @@ module.exports = {
         type: 'category',
         label: 'Development',
         items: ['npwd/dev/dev_intro']
-      }
+      },
+      'npwd/current_state'
     ]
   }
 };
