@@ -15,7 +15,7 @@ may raise unexpected behavior with path handling.
 2. Add the following lines to the `server.cfg`
 ```cfg
 setr SCREENSHOT_BASIC_TOKEN Client_ID
-# This must be placed after es_extended
+# This must be placed after your framework such as es_extended
 ensure new-phone-who-dis
 ensure screenshot-basic
 ```
@@ -71,7 +71,7 @@ After you have completed all of these listed steps, your `server.cfg` should loo
 like this:
 
 ```shell
-ensure es_extended # Must be started first.
+ensure es_extended # Your framework must be started before NPWD.
 
 # Mumble-Voip
 ensure mumble-voip
