@@ -89,3 +89,7 @@ ensure screenshot-basic
 You should now be all set to start your server up and play with the resource!
 
 
+:::note
+
+If you're the message `playerJoining was not safe for net` means that you need to update artifacts!
+:::
