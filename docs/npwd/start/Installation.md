@@ -90,6 +90,7 @@ You should now be all set to start your server up and play with the resource!
 
 
 :::note
+If you get the error: `Error: Event playerJoining was not safe for net.` then your artifacts are outdated.
 
-If you're seeing the warning `playerJoining was not safe for net` in your console, you need to update artifacts!
+New-Phone-Who-Dis requires a **minimum** of artifact version `3622`. Please update your artifacts to the latest version [here](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/?)
 :::
