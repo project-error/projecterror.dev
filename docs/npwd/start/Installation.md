@@ -94,3 +94,58 @@ If you get the error: `Error: Event playerJoining was not safe for net.` then yo
 
 New-Phone-Who-Dis requires a **minimum** of artifact version `3622`. Please update your artifacts to the latest version [here](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/?)
 :::
+
+### Handling user data
+If you are only going to use the default player data, you can look away from this. For you that are using a framework, or some sort of a multicharacter system, please keep reading.
+
+Let's start with changing the config. Change 'enableMultiChar' to `true` and remember to change the database options if needed.
+```json
+{
+   "general": {
+      "useDashNumber": true,
+      "enableMultiChar": true
+   },
+   "database": {
+      "playerTable": "users",
+      "identifierColumn": "identifier"
+   }
+}
+```
+
+We have created the server-side event called `npwd:newPlayer` that you need to call in order to apply the user data desired. It takes in a object as an argument with `{ source, identifier, firstname, lastname }`, where `firstname` and `lastname` are optional.
+
+If you are using ESX, we already have the solution for you.
+### ESX
+#### Lua
+```lua
+-- server-side
+AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)  \
+   TriggerEvent('npwd:newPlayer', 
+      { 
+        source = playerId, 
+        identifier = xPlayer.identifier, 
+        firstname = xPlayer.get('firstname'),
+        lastname = xPlayer.get('lastname')
+      }
+   )
+end)
+```
+
+#### JS/TS
+```js
+// server-side
+on('esx:playerLoaded', (playerId, xPlayer) => {
+    emit('npwd:newPlayer', { 
+        source: playerId, 
+        identifier: xPlayer.identifier, 
+        firstname: xPlayer.get('firstname'), 
+        lastname: xPlayer.get('lastname') 
+    })
+})
+```
+
+If you're using any other framework, listen to what event that selects or loads the character and trigger the `npwd:newPlayer` event with your data.
+
+:::note
+If you don't see a open-source framework listed here and have a solution, please consider sharing it with us!
+:::
