@@ -7,20 +7,20 @@ sidebar_label: Dependencies
 :::warning
 
 These dependencies are not **final** and only represent the current state.
-We expect to remove the required ESX dependency by v1.0
+
 :::
 
 ### Resource Dependencies
 Below are the required **resource** dependencies. They must be installed alongside NPWD for full functionality.
 
-1. [es_extended](https://github.com/esx-framework/es_extended/tree/legacy) - During development we currently **require** that ESX v1.2 is installed.
 1. [screenshot-basic](https://github.com/project-error/screenshot-basic) - **Make sure to use the exact version, as linked.**
-1. [mumble-voip](https://github.com/FrazzIe/mumble-voip-fivem) - Support for other VOIP resources is planned (`pma-voice`, `toko-voip`)
+2. [pma-voice](https://github.com/AvarianKnight/pma-voice) - Support for other VOIP resources is planned (`toko-voip`) etc
+
 
 :::note
+NPWD has standardized pma-voice as our default voice system for the phone. We encourage everyone to do such.
 
-Adapting **NPWD** to your custom framework may not be very difficult. As development continues, we plan
-to release guides explaining to users how this can be done easily and effectively.
+Adapting **NPWD** to your custom framework may not be very difficult. You can read more about it at **Installation**
 
 :::
 

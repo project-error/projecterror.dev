@@ -3,6 +3,9 @@ id: basics
 title: Basics of Development
 sidebar_label: Basics
 ---
+:::warning
+This practice is outdated. Please consider look at already created apps until this page is upadated.
+:::
 
 ### Adding a new app to `useApps`
 Before creating a new app we want to create a new ``app object`` for our app. The object takes in a couple of properties:

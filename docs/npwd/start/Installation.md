@@ -27,26 +27,20 @@ As this is a `Typescript` resource, we need to both install `npm` packages and b
 code.
 
 1. Open a terminal of your choice (i.e, Powershell
-2. Navigate to the NPWD resource directory using `cd`, for example:
+2. Navigate to the NPWD root directory
+
+3. Install yarn
 ```shell
-cd E:\FXServer\resources\new-phone-who-dis
+yarn 
+# or
+yarn install
 ```
-3. Navigate to the `phone/` and run the following commands
+
+3. Build
 ```shell
-cd phone
-# This will install the node modules
-yarn
-# This will build the source code
-yarn build
+yarn build 
 ```
-4. Now we will do the same for the `resources/` folder.
-```shell
-# Will navigate to the resources/ directory
-cd ../resources
-# We need to run the same commands as we did for the phone/ directory
-yarn
-yarn build
-```
+[**Lerna**](https://github.com/lerna/lerna) will now build both `resources` and `phone` files.
    
 ### Database Setup
 *New Phone Who Dis* integrates our own `MySQL` client directly (`mysql2`). Meaning, we do
@@ -71,14 +65,13 @@ After you have completed all of these listed steps, your `server.cfg` should loo
 like this:
 
 ```shell
-ensure es_extended # Your framework must be started before NPWD.
+# Your framework must be started before NPWD.
 
-# Mumble-Voip
-ensure mumble-voip
-setr voice_use3dAudio true
-setr voice_useSendingRangeOnly off
+# pma-voice
+ensure pma-voice
+# and other convars you use
 
-#NPWD
+# NPWD
 setr SCREENSHOT_BASIC_TOKEN YOUR_IMGUR_TOKEN # Don't forget to set the token here.
 ensure new-phone-who-dis 
 ensure screenshot-basic
@@ -119,7 +112,7 @@ If you are using ESX, we already have the solution for you.
 #### Lua
 ```lua
 -- server-side
-AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)  \
+AddEventHandler('esx:playerLoaded', function(playerId, xPlayer)
    TriggerEvent('npwd:newPlayer', 
       { 
         source = playerId, 

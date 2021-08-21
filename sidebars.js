@@ -15,7 +15,8 @@ module.exports = {
         label: 'Development',
         items: ['npwd/dev/basics']
       },
-      'npwd/current_state'
+      'npwd/current_state',
+      'npwd/credits'
     ]
   }
 };
