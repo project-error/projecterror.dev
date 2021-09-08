@@ -73,7 +73,7 @@ ensure pma-voice
 
 # NPWD
 setr SCREENSHOT_BASIC_TOKEN YOUR_IMGUR_TOKEN # Don't forget to set the token here.
-ensure new-phone-who-dis 
+ensure npwd
 ensure screenshot-basic
 
 #All other resources you might have
