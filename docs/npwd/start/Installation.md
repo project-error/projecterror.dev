@@ -15,15 +15,15 @@ may raise unexpected behavior with path handling.
 2. Add the following lines to the `server.cfg`
 ```cfg
 setr SCREENSHOT_BASIC_TOKEN Client_ID
-# This must be placed after your framework such as es_extended
-ensure new-phone-who-dis
+# This must be placed after your framework
+ensure nwpd
 ensure screenshot-basic
 ```
 3. Change the config settings that can be found in `new-phone-who-dis/config.json`, to
 the settings of your choosing.
    
 ### Install Dependencies and Building Code
-As this is a `Typescript` resource, we need to both install `npm` packages and build the source
+As this is a `TypeScript` resource, we need to both install `npm` packages and build the source
 code.
 
 1. Open a terminal of your choice (i.e, Powershell
@@ -85,7 +85,7 @@ You should now be all set to start your server up and play with the resource!
 :::note
 If you get the error: `Error: Event playerJoining was not safe for net.` then your artifacts are outdated.
 
-New-Phone-Who-Dis requires a **minimum** of artifact version `3622`. Please update your artifacts to the latest version [here](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/?)
+NPWD requires a **minimum** of artifact version `3622`. Please update your artifacts to the latest version [here](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/?)
 :::
 
 ### Handling user data
