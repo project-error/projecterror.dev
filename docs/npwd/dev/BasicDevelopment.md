@@ -4,32 +4,8 @@ title: Basics of Development
 sidebar_label: Basics
 ---
 :::warning
-This practice is outdated. Please consider look at already created apps until this page is upadated.
+This practice is outdated. Please consider look at already created apps until this page is updated.
 :::
-
-### Adding a new app to `useApps`
-Before creating a new app we want to create a new ``app object`` for our app. The object takes in a couple of properties:
-
-* ``id`` - The name of the app.
-* ``nameLocale`` - For creating the locale's.-
-* ``icon`` - The icon that will be used at the home screen.
-* ``backgroundColor`` - The background color for the header (if you use the ``AppTitle``) and for the app in the home screen.
-* ``color`` - Color of the app icon
-* ``path`` - The path for the app. Example ``path: "/example"``.
-* ``Route`` - A function that uses ``Route`` from ``react-router-dom``.
-
-#### Example
-```js
-{
-  id: "EXAMPLE",
-  nameLocale: "APPS_EXAMPLE",
-  icon: <FontAwesomeIcon icon={faPlaneArrival} size="sm" />,
-  backgroundColor: blue[500],
-  color: blue[50],
-  path: "/example",
-  Route: () => <Route path="/example" component={ExampleApp} />,
-}
-```
 
 ### The main app component
 When creating a new app for the phone, you want to import the ``AppWrapper`` and ``AppContent``. These are two reusable components that surrounds all apps. You  also have access to the ``AppTitle`` component, which serves as a header.

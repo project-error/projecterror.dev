@@ -13,7 +13,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Development',
-        items: ['npwd/dev/basics']
+        items: ['npwd/dev/setup', 'npwd/dev/basics',]
       },
       'npwd/current_state',
       'npwd/credits'
