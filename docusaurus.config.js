@@ -34,7 +34,7 @@ module.exports = {
           position: "left",
         },
         {
-          href: "https://discord.gg/teaFPbAmdn",
+          href: "https://discord.gg/uy5N7jT5aJ",
           label: "Discord",
           position: "right",
         },

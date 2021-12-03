@@ -28,21 +28,21 @@ The Installation Steps assumes you have the following prerequisites:
 
 **Resource**
 
-1. Clone the [repo](https://github.com/project-error/new-phone-who-dis) into your `server-data/resources/` folder. The path will be `server-data\resources\new-phone-who-dis`. **Don't clone the repo into a sub folder.**
-1. Ensure the resource folder is named `new-phone-who-dis`.
-1. Import the [sql file](https://github.com/project-error/new-phone-who-dis/blob/master/resources/import.sql) from the root directory into your database.
+1. Clone the [repo](https://github.com/project-error/npwd) into your `server-data/resources/` folder. The path will be `server-data\resources\npwd`. **Don't clone the repo into a sub folder.**
+1. Ensure the resource folder is named `npwd`.
+1. Import the [sql file](https://github.com/project-error/npwd/blob/master/resources/import.sql) from the root directory into your database.
 1. Add the following to your `server.cfg`:
 ```
 setr SCREENSHOT_BASIC_TOKEN Client_ID
-ensure new-phone-who-dis # After es_extended.
+ensure npwd # After es_extended.
 ensure screenshot-basic
 ```
-1. Make your configurations in the [config.json](https://github.com/project-error/new-phone-who-dis/blob/master/config.json) **before** building the phone. Otherwise you will need to re-build.
+1. Make your configurations in the [config.json](https://github.com/project-error/npwd/blob/master/config.json) **before** building the phone. Otherwise you will need to re-build.
 1. Open a terminal with the program of your choice.
-1. Change your directiory into `new-phone-who-dis\phone` *like so*: `cd A:\FXServer\server-data\resources\new-phone-who-dis\phone`
+1. Change your directiory into `npwd\phone` *like so*: `cd A:\FXServer\server-data\resources\npwd\phone`
 1. Install node dependencies with `yarn install`.
 1. Build in the current directory with `yarn build`.
-1. Change your directiory into `new-phone-who-dis\resources` *like so*: `cd A:\FXServer\server-data\resources\new-phone-who-dis\resources`
+1. Change your directiory into `npwd\resources` *like so*: `cd A:\FXServer\server-data\resources\npwd\resources`
 1. Install node dependencies with`yarn install`.
 1. Build in the current directory with `yarn build`.
 1. Start your FiveM server
@@ -68,20 +68,20 @@ setr voice_useSendingRangeOnly off
 
 #NPWD
 setr SCREENSHOT_BASIC_TOKEN YOUR_IMGUR_TOKEN # Don't forget to set the token here.
-ensure new-phone-who-dis 
+ensure npwd 
 ensure screenshot-basic
 
 #All other resources you might have
 ```
 ## Development Iteration Cycle
 - You must rebuild the resource following any changes by doing `yarn build` in the `resources` and `phone` folder.
-- If iteration on UI changes, run the project with `yarn watch` which will monitor the JavaScript project and rebuild when you make code changes and then do `ensure new-phone-who-dis` after making your change.
+- If iteration on UI changes, run the project with `yarn watch` which will monitor the JavaScript project and rebuild when you make code changes and then do `ensure npwd` after making your change.
 - Avoid commiting `index.html` as the development version overrides the production version.
 
 
 ## Configuration
 
-This resource is highly configurable through the [config.json](https://github.com/project-error/new-phone-who-dis/blob/master/config.json). This JSON file holds configuration for the phone itself, for the apps running on it and peripheral information.
+This resource is highly configurable through the [config.json](https://github.com/project-error/npwd/blob/master/config.json). This JSON file holds configuration for the phone itself, for the apps running on it and peripheral information.
 
 Below is the list of current configuration options **(WIP)**:
 
@@ -124,7 +124,7 @@ Current Discord integrations with the phone **(WIP)**:
 - Twitter: reporting tweets
 
 # Important Information
-* By installing [New-Phone-Who-Dis (NPWD)](https://github.com/project-error/new-phone-who-dis), you agree to the use of the following diagnostic package:
+* By installing [npwd (NPWD)](https://github.com/project-error/npwd), you agree to the use of the following diagnostic package:
    * Sentry, (in use within the React portion of NPWD) Automatically
      uploads relevant sesssion details and stack traces whenever an exception is thrown. We use these metrics to further improve the quality of the phone.
 
@@ -132,7 +132,7 @@ Current Discord integrations with the phone **(WIP)**:
      please change the `SentryErrorMetrics` setting to `false` in `phone/config/default.json` and rebuild the phone.
 * Compatability with [esx_kashacter](https://github.com/FiveEYZ/esx_kashacter) is unknown as of 2/20/2021. Testing still need's to be conducted.
    * Same applies to any Multi-Character as testing has only been conducted on`V1 Final` and `1.1 Weight` **without** the use of these resources.
-* Encountered an issue? Please open an issue [here](https://github.com/project-error/new-phone-who-dis/issues/new/choose)
+* Encountered an issue? Please open an issue [here](https://github.com/project-error/npwd/issues/new/choose)
 * If you seek additional support, feel free to join the [Project-Error Discord](https://discord.gg/HYwBjTbAY5).
 
 # Previews

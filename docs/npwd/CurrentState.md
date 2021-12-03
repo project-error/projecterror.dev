@@ -4,7 +4,7 @@ title: Current Development Progress
 sidebar_label: Current Progress
 ---
 
-[New Phone Who Dis](https://github.com/project-error/new-phone-who-dis) is still in active development and is **not** production ready. Translations are very much appreicated.
+[New Phone Who Dis](https://github.com/project-error/npwd) is still in active development and is **not** production ready. Translations are very much appreicated.
 
 Follow current development on the [**Git Kraken**](https://app.gitkraken.com/glo/card/280229b041b54407946be50eb2e9c02b) as it is most likely more up to date than below.
 

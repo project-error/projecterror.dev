@@ -7,10 +7,9 @@ slug: /
 
 :::warning
 
-NPWD is still under heavy development and is **not ready** for use 
-in live environments *just yet*! Breaking changes may be fairly frequent
-as development progresses. **You should not install this phone for any other purpose
-aside from beta testing**
+NPWD, although close to release, is still being updated and may **not** be ready for use 
+in live environments. Breaking changes may still occur as development progresses. 
+**You should not install this phone for any other purpose aside from beta testing**
 
 :::
 

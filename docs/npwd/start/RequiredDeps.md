@@ -32,15 +32,15 @@ to produce *webpacked* releases.
 
 1. Basic understanding of how to interact with a terminal 
    (i.e, how to open one and execute commands). For most users, we recommend **Windows Powershell**
-1. [Git for Windows](https://git-scm.com/download/win) - To easily clone the repository
-1. [NodeJS > v12](https://nodejs.org/en/about/releases/) - To provide package management and env tools
-1. [yarn](https://yarnpkg.com/) - The `yarn` package manager which can easily be installed like this.
+2. [Git for Windows](https://git-scm.com/download/win) - To easily clone the repository
+3. [NodeJS > v16](https://nodejs.org/en/about/releases/) - To provide package management and env tools
+4. [yarn](https://yarnpkg.com/) - The `yarn` package manager which can be enabled using `corepack` on Node v16
    ```shell
-   npm install yarn --global
+   corepack enable
    ```
    
-1. Fully Functional FXServer - As setup [here](https://docs.fivem.net/docs/server-manual/setting-up-a-server/)
-1. [Imgur Token](https://api.imgur.com/oauth2/addclient) - 
+5. Fully Functional FXServer - As setup [here](https://docs.fivem.net/docs/server-manual/setting-up-a-server/)
+6. [Imgur Token](https://api.imgur.com/oauth2/addclient) - 
    Your app registration should look like [this](https://i.imgur.com/yO7L431.png). 
    When you register your app, you will received a `Client ID`. This should be set as a replicated convar in 
    `the server.cfg` as shown below: 

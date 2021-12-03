@@ -5,8 +5,8 @@ module.exports = {
         type: 'category',
         label: 'Getting Started',
         items: [
-          'npwd/start/introduction',
           'npwd/start/requiredDeps',
+          'npwd/start/introduction',
           'npwd/start/installation'
         ]
       },

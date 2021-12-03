@@ -4,7 +4,7 @@ title: Installation of the Phone
 sidebar_label: Installation
 ---
 ### Initial Setup
-1. Clone directly from our Git repo, which can be found [here](https://github.com/project-error/new-phone-who-dis),
+1. Clone directly from our Git repo, which can be found [here](https://github.com/project-error/npwd),
    into FXServer's `resources` directory.
    
 :::warning
@@ -19,7 +19,7 @@ setr SCREENSHOT_BASIC_TOKEN Client_ID
 ensure nwpd
 ensure screenshot-basic
 ```
-3. Change the config settings that can be found in `new-phone-who-dis/config.json`, to
+3. Change the config settings that can be found in `npwd/config.json`, to
 the settings of your choosing.
    
 ### Install Dependencies and Building Code
@@ -44,7 +44,7 @@ yarn build
    
 ### Database Setup
 *New Phone Who Dis* integrates our own `MySQL` client directly (`mysql2`). Meaning, we do
-not require a middleware resource like `mysql-async`.
+not require a middleware resource like `mysql-async` or `oxmysql`.
 
 **Make sure you have the following added to your `server.cfg` file, with the values 
 replaced with your respective credentials** 
