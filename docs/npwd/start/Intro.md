@@ -7,10 +7,8 @@ slug: /
 
 :::warning
 
-NPWD, although close to release, is still being updated and may **not** be ready for use 
-in live environments. Breaking changes may still occur as development progresses. 
-**You should not install this phone for any other purpose aside from beta testing**
-
+NPWD is currently in a public beta phase, edge cases and environment issues may occur and should be expected.
+If you encounter any issues, please make sure you report them adequately.
 :::
 
 This is **New Phone Who Dis** a NUI based phone resource for the multiplayer GTA modification,

@@ -5,20 +5,20 @@ module.exports = {
         type: 'category',
         label: 'Getting Started',
         items: [
-          'npwd/start/requiredDeps',
           'npwd/start/introduction',
-          'npwd/start/installation'
+          'npwd/start/installation',
+          'npwd/start/config_reference',
         ]
-      },
-      {
-        type: 'category',
-        label: 'Development',
-        items: ['npwd/dev/setup', 'npwd/dev/basics',]
       },
       {
         type: 'category',
         label: 'API Reference',
         items: ['npwd/api/client-exports', 'npwd/api/server-exports']
+      },
+      {
+        type: 'category',
+        label: 'Development',
+        items: ['npwd/dev/framework_integration', 'npwd/dev/setup', 'npwd/dev/basics',]
       },
       'npwd/current_state',
       'npwd/credits'
