@@ -9,6 +9,9 @@ module.exports = {
   organizationName: "project-error", // Usually your GitHub org/user name.
   projectName: "docs.projecterror.dev", // Usually your repo name.
   themeConfig: {
+    prism: {
+      additionalLanguages: ["lua"]
+    },
     gtag: {
       trackingID: "UA-191466813-1",
     },

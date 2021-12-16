@@ -1,0 +1,24 @@
+---
+id: server-exports
+title: Available Server Exports
+sidebar_label: Server Exports
+---
+
+import ExportComponent from '../../_export-component-partial.mdx';
+
+NPWD includes serveral available exports to easily interface with
+NPWD behavior and actions. You can find a list of the available **server exports** below.
+
+<ExportComponent
+    name="generatePhoneNumber"
+    luaExample={"local phoneNumber = exports.npwd:generatePhoneNumber()"}
+    jsExample={"const phoneNumber = await exports.npwd.generatePhoneNumber()"}
+    desc="Will generate a random phone number and return the value, this is useful for framework integration."
+/>
+
+<ExportComponent
+    name="newPlayer"
+    luaExample={"exports.npwd:newPlayer({ source = 1, firstname = 'Taso', lastname = 'Dev', identifier = 'dba4d971256a8bfb1a543cf0d46e342ad1cdd478', phoneNumber = '444-1312' })"}
+    jsExample={"exports.npwd.newPlayer({ source: 1, firstname: 'Taso', lastname: 'Dev', identifier: 'dba4d971256a8bfb1a543cf0d46e342ad1cdd478', phoneNumber: '444-1312' })"}
+    desc="Adds a new player to NPWD internal handling. This should be used for framework integration."
+/>

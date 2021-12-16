@@ -1,0 +1,66 @@
+---
+id: client-exports
+title: Available Client Exports
+sidebar_label: Client Exports
+---
+
+import ExportComponent from '../../_export-component-partial.mdx';
+
+NPWD includes serveral available exports to easily interface with
+NPWD behavior and actions. You can find a list of the available **client exports** below.
+
+<ExportComponent
+    key="openApp"
+    name="openApp"
+    luaExample={"exports.npwd:openApp('CONTACTS')"}
+    jsExample={"exports.npwd.openApp('CONTACTS')"}
+    desc="Will open the NPWD app of the given app id."
+/>
+
+<ExportComponent
+    key="setPhoneVisible"
+    name="setPhoneVisible"
+    luaExample={"exports.npwd:setPhoneVisible(true)"}
+    jsExample={"exports.npwd.setPhoneVisible(true)"}
+    desc="Accepts a boolean value to show or hide the phone. Will take into account the phone disabled state."
+/>
+
+<ExportComponent
+    name="setPhoneDisabled"
+    key="setPhoneDisabled"
+    luaExample={"exports.npwd:setPhoneDisabled(true)"}
+    jsExample={"exports.npwd.setPhoneDisabled(true)"}
+    desc="Sets whether the phone is disabled or not. When the phone is disabled, the player will be unable to open the phone and will not receive notifications"
+/>
+
+<ExportComponent
+    name="isPhoneDisabled"
+    key="isPhoneDisabled"
+    luaExample={"local isDisabled = exports.npwd:isPhoneDisabled()"}
+    jsExample={"const isDisabled = exports.npwd.isPhoneDisabled()"}
+    desc="The getter equivalent of setPhoneDisabled, returns whether the phone is in a disabled state or not."
+/>
+
+<ExportComponent
+    name="startPhoneCall"
+    key="startPhoneCall"
+    luaExample={"exports.npwd:startPhoneCall('603-555-1212')"}
+    jsExample={"exports.npwd.startPhoneCall('603-555-1212')"}
+    desc="Will initiate a phone call to the given phone number."
+/>
+
+<ExportComponent
+    name="fillNewContact"
+    key="fillNewContact"
+    luaExample={"exports.npwd:fillNewContact({ name = 'John Doe', phone = '603-555-1212', avatar = 'https://i.imgur.com/j3UvwQA.png' })"}
+    jsExample={"exports.npwd.fillNewContact({ name: 'John Doe', phone: '603-555-1212', avatar: 'https://i.imgur.com/j3UvwQA.png' })"}
+    desc="Opens the contact app and fills in a new contact form with the given data, it will not create the contact until the player confirms the action."
+/>
+
+<ExportComponent
+    name="fillNewNote"
+    key="fillNewNote"
+    luaExample={"exports.npwd:fillNewNote({ title = 'Some Note', content = 'This is the filled in content of the note' })"}
+    jsExample={"exports.npwd.fillNewNote({ title: 'Some Note', content: 'This is the filled in content of the note' })"}
+    desc="Will automatically open the notes app and start the new note processfilling in all of the fields with passed data. If this number already exists, it will edit it."
+/>

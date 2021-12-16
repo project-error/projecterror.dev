@@ -1,0 +1,29 @@
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<h3>{props.name}</h3>
+
+<p>{props.desc}</p>
+
+<Tabs
+  defaultValue="lua"
+  values={[
+    {label: 'Lua Example', value: 'lua'},
+    {label: 'JS Example', value: 'js'},
+  ]}>
+  <TabItem value="lua">
+    <CodeBlock
+      className="language-lua"
+    >
+        {props.luaExample}
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="js">
+    <CodeBlock
+      className="language-js"
+    >
+        {props.jsExample}
+    </CodeBlock>
+  </TabItem>
+</Tabs>

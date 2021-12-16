@@ -15,6 +15,11 @@ module.exports = {
         label: 'Development',
         items: ['npwd/dev/setup', 'npwd/dev/basics',]
       },
+      {
+        type: 'category',
+        label: 'API Reference',
+        items: ['npwd/api/client-exports', 'npwd/api/server-exports']
+      },
       'npwd/current_state',
       'npwd/credits'
     ]
