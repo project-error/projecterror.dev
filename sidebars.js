@@ -13,7 +13,7 @@ module.exports = {
       {
         type: 'category',
         label: 'API Reference',
-        items: ['npwd/api/client-exports', 'npwd/api/server-exports']
+        items: ['npwd/api/client-exports', 'npwd/api/server-exports', 'npwd/api/npwd-events']
       },
       {
         type: 'category',
