@@ -97,6 +97,3 @@ ensure npwd
 * Encountered an issue? Please open an issue [here](https://github.com/project-error/npwd/issues/new/choose)
 * If you seek additional support, feel free to join the [Project-Error Discord](https://discord.gg/HYwBjTbAY5).
 
-### Previews
-
-[Latest Teaser Video (October 28th)](https://streamable.com/f1ri9r)

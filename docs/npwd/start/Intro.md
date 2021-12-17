@@ -20,4 +20,10 @@ There are several goals of this project:
 * Create a **clean** and **maintable** codebase
 * Make it as framework **standalone** as possible
 
+### Features
 
+ADD FEATURE LIST HERE
+
+### Previews
+
+[Latest Teaser Video (October 28th)](https://streamable.com/f1ri9r)
