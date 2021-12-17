@@ -1,6 +1,6 @@
 module.exports = {
   title: "Project Error",
-  tagline: "Developers striving to produce quality open source FiveM resources",
+  tagline: "An open source collective centered around quality.",
   url: "https://docs.projecterror.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -46,30 +46,39 @@ module.exports = {
           label: "GitHub",
           position: "right",
         },
+        {
+          label: "Donate",
+          href: "https://ko-fi.com/projecterror",
+          position: "right",
+        }
       ],
     },
     footer: {
       style: "dark",
       links: [
         {
-          title: "Projects",
+          title: "Popular Projects",
           items: [
             {
-              label: "New Phone Who Dis",
-              href: "https://github.com/project-error/new-phone-who-dis",
+              label: "New Phone Who Dis (NPWD)",
+              href: "https://github.com/project-error/npwd",
             },
             {
-              label: "New Garage Who Dis",
-              to: "#",
+              label: "FiveM React Boilerplate Lua",
+              href: "https://github.com/project-error/fivem-react-boilerplate-lua",
             },
             {
-              label: "New Bank Who Dis",
-              to: "#",
+              label: "PE Basic Loading",
+              href: "https://github.com/project-error/pe-basicloading",
             },
+            {
+              label: "PE V8 Utils",
+              href: "https://github.com/project-error/pe-utils"
+            }
           ],
         },
         {
-          title: "Community",
+          title: "Community Links",
           items: [
             {
               label: "Discord",
@@ -79,6 +88,10 @@ module.exports = {
               label: "GitHub",
               href: "https://github.com/project-error/",
             },
+            {
+              label: "Donate",
+              href: "https://ko-fi.com/projecterror"
+            }
           ],
         },
       ],
