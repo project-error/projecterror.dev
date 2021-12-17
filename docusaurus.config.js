@@ -33,7 +33,7 @@ module.exports = {
         {
           to: "docs/",
           activeBasePath: "docs",
-          label: "Resource Docs",
+          label: "Documentation",
           position: "left",
         },
         {
