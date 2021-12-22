@@ -16,7 +16,7 @@ may raise unexpected behavior with path handling.
 ```cfg
 setr SCREENSHOT_BASIC_TOKEN Client_ID
 # This must be placed after your framework
-ensure nwpd
+ensure npwd
 ensure screenshot-basic
 ```
 3. Change the config settings that can be found in `npwd/config.json`, to
