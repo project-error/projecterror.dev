@@ -9,7 +9,7 @@ If you wish for NPWD to have full functionality. The following resources are req
 installed and started before NPWD.
 
 1. [screenshot-basic](https://github.com/project-error/screenshot-basic) - **Make sure to use the exact version, as linked.**
-2. [pma-voice](https://github.com/AvarianKnight/pma-voice) - Support for other VOIP resources is planned (`toko-voip`) etc
+2. [pma-voice](https://github.com/AvarianKnight/pma-voice)
 
 :::note
 NPWD has standardized pma-voice as our default voice system for the phone. We encourage everyone to do such.
@@ -79,10 +79,12 @@ ensure screenshot-basic
 ensure pma-voice
 
 ensure my_framework_here # Your framework resource
-ensure esx-npwd # Any compatibility resources like esx-npwd or qb-npwd
+ensure esx-npwd # Any compatibility resources like esx-npwd or qb-npwd.
 
 ensure npwd
 ```
+
+Note: If you're using `es_extended` from `overextended`, `esx-npwd` is not necessary. See their [README](https://github.com/overextended/es_extended#readme) for more information.
 
 
 ### Important Information
@@ -92,8 +94,6 @@ ensure npwd
 
    * To explicitly disable this, we urge you **not to** as its incredibly useful metrics for us,
      please change the `SentryErrorMetrics` setting to `false` in `phone/config/default.json` and rebuild the phone.
-* Compatability with [esx_kashacter](https://github.com/FiveEYZ/esx_kashacter) is unknown as of 2/20/2021. Testing still need's to be conducted.
-   * Same applies to any Multi-Character as testing has only been conducted on`V1 Final` and `1.1 Weight` **without** the use of these resources.
-* Encountered an issue? Please open an issue [here](https://github.com/project-error/npwd/issues/new/choose)
+* Encountered an issue? Please open an issue [here](https://github.com/project-error/npwd/issues/new/?assignees=&labels=New+Issue&template=bug-report.yml&title=Bug%3A+%3Cshort+description%3E)
 * If you seek additional support, feel free to join the [Project-Error Discord](https://discord.gg/HYwBjTbAY5).
 

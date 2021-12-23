@@ -11,9 +11,9 @@ This short guide will help you get your development environment bootstrapped and
 Please make sure you have the following dependencies installed within your development environment.
 
 #### Prerequisites
-* Git
-* Node > 16.x
-* Yarn
+* [Git](https://git-scm.com/)
+* [Node > 16.x](https://nodejs.org/en/)
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
 
 #### Enabling Yarn
 
@@ -63,3 +63,22 @@ To build **only** the game scripts package, navigate to the `resources` folder a
 ```sh
 cd resources && yarn build
 ```
+
+#### Watching files
+If you don't want to rebuild all the time, you can also watch files which will write to disk.
+
+```sh
+cd phone && yarn watch
+```
+
+```sh
+cd resources && yarn watch
+```
+
+:::note
+### Common issues
+
+#### Media files are not loaded when running `yarn watch`:
+You most likely forgot to build the phone first. Building the phone will place the media files in `/resources/html`
+
+:::
