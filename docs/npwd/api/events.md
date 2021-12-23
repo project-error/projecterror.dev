@@ -16,5 +16,5 @@ camera is active.
 ### `npwd:PhotoModeEnded`
 
 This event is the ending equivalent of `npwd:PhotoModeStarted`, it will be triggered upon the player exiting the camera. 
-It can be useful for toggling UI components while the camera is active.
+It can be useful for toggling UI components on again.
 
