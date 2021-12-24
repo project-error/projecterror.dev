@@ -1,13 +1,13 @@
 module.exports = {
   title: "Project Error",
   tagline: "An open source collective centered around quality.",
-  url: "https://docs.projecterror.dev",
+  url: "https://projecterror.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   organizationName: "project-error", // Usually your GitHub org/user name.
-  projectName: "docs.projecterror.dev", // Usually your repo name.
+  projectName: "projecterror.dev", // Usually your repo name.
   themeConfig: {
     prism: {
       additionalLanguages: ["lua"]
