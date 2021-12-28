@@ -20,8 +20,8 @@ of configuration options depending on your needs.
 
 ### General
 
-- `enableMultiChar`
-  - Set this to `true` you're running a framework that handles character details independent.
+- `useResourceIntegration`
+  - Set this to `true` you're running a framework that handles character details (identifier, name, etc) independent.
   - `default`: **false**
 
 ### Database

@@ -17,7 +17,7 @@ may be subject to change.
 ## Framework Integration Steps
 
 You should use the `newPlayer` function whenever a player has finished loading in your framework. If you have a 
-multicharacter system, make sure that the `identifier` property in the passed argument object is unique to 
+multicharacter system or any framework tha handles player data, make sure that the `identifier` property in the passed argument object is unique to 
 each character.
 
 If your framework has a system for switching characters, you should first call the `unloadPlayer` function to unload
