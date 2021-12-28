@@ -38,8 +38,14 @@ NPWD allows for players to access a camera app and take in-game photos. These ph
 One solution is to setup NPWD to upload the photos to Imgur. 
 
 **Steps**
-1. Setup an imgur application [here](https://api.imgur.com/oauth2/addclient)
-2. Copy the client ID and add `setr SCREENSHOT_BASIC_TOKEN <your_client_id>` to your `server.cfg` file before starting NPWD.
+1. Setup an imgur application [here](https://api.imgur.com/oauth2/addclient).
+2. After you have created an account or logged in, create an application [here](https://api.imgur.com/oauth2/addclient).
+3. Type in a `Application name`. This can be something like `npwd-imgur-[servername]`.
+4. Choose the `Authorization type` called `OAuth 2 authorization without a callback URL`. [Example](https://imgur.com/a/QsYsd4d).
+5. Fill in the rest of the form.
+6. Copy the client ID and add `setr SCREENSHOT_BASIC_TOKEN <your_client_id>` to your `server.cfg` file before starting NPWD.
+
+If you can't find your application you just created, check your settings pages [here](https://imgur.com/account/settings/apps).
 
 ### Setup Your Database
 
