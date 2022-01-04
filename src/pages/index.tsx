@@ -19,22 +19,20 @@ const features = [
     ),
   },
   {
-    title: "New Bank Who Dis",
-    imageUrl: "img/npwd-icon.png",
+    title: "FiveM React Boilerplate Lua",
+    imageUrl: "img/pe-logo.png",
     description: (
       <>
-        A Bank/ATM resource that provides a user interface for ATM's and general
-        banking.
+        A simple and extendable React (TypeScript) boilerplate designed around the Lua ScRT.
       </>
     ),
   },
   {
-    title: "New Garage Who Dis",
-    imageUrl: "img/npwd-icon.png",
+    title: "Project Error Basic Loading",
+    imageUrl: "img/pe-logo.png",
     description: (
       <>
-        A WIP all encompassing Garage resource that attemps to fill the massive
-        gaps of prior resources
+        A very basic, yet still robust and extendable, loading screen.
       </>
     ),
   },
@@ -47,10 +45,10 @@ function Feature({ imageUrl, title, description }) {
       {imgUrl && (
         <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
       )}
-      <h3>{title}</h3>
-      <p>{description}</p>
     </div>
   );
 }
