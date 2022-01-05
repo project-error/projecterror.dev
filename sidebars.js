@@ -20,7 +20,6 @@ module.exports = {
         label: 'Development',
         items: ['npwd/dev/dev_bootstrap', 'npwd/dev/framework_integration', 'npwd/dev/setup', 'npwd/dev/disable_apps', 'npwd/dev/basics',]
       },
-      'npwd/current_state',
       'npwd/credits'
     ]
   }
