@@ -25,7 +25,9 @@ of configuration options depending on your needs.
   - `default`: **false**
 - `toggleKey`
   - The IO parameter ID to use for the default binding, e.g. `f3`.
-
+- `toggleCommand`
+  - The underlying commmand to be used for the default binding, but also functions for toggling.
+  
 ### Database
 
 - `useIdentifierPrefix`
