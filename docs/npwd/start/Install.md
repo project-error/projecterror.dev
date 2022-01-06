@@ -5,14 +5,17 @@ sidebar_label: Installation
 ---
 
 ### Third-Party Resource Dependencies
-If you wish for NPWD to have full functionality. The following resources are required to be
-installed and started before NPWD.
+:::warning
+Failure to adhere to these dependencies will result in *NPWD* not working correctly. You MUST use the screenshot basic version linked below.
+:::
+If you wish for *NPWD* to have full functionality. The following resources are required to be
+installed and started before *NPWD*.
 
 1. [screenshot-basic](https://github.com/project-error/screenshot-basic) - **Make sure to use the exact version, as linked.**
 2. [pma-voice](https://github.com/AvarianKnight/pma-voice)
 
 :::note
-NPWD has standardized pma-voice as our default voice system for the phone. We encourage everyone to do such. We will **not** provide support  or configuration, for any other VOIP's should issues arise.
+*NPWD* has standardized pma-voice as our default voice system for the phone. We encourage everyone to do such. We will **not** provide support or configuration, for any other VOIP's should issues arise.
 :::
 ### Downloading Release
 1. Navigate to the [releases page](https://github.com/project-error/npwd/releases).
@@ -43,7 +46,7 @@ set mysql_connection_string "user=root;database=es_extended;password=12345;chars
 
 ### Basic Configuration
 :::caution
-Standalone installation requires a users table of some sort that stores player identifiers. As of v1.x, we do not populate such a table, but are working on possible solutions.
+Standalone installation requires a users table of some sort that stores player identifiers. If you are a menu based server and don't use popular frameworks, you will need to use [pe-core](https://github.com/project-error/pe-core) so you can use this resource. It's a very basic "framework" and wlll have no impact on your server.
 :::
 *NPWD* uses a `config.json` file that contains important information **required** for the resource to work correctly. Thie file is location within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json). The below configuration instructions is **universal** regardless which install method you do.
 
