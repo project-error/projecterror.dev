@@ -20,5 +20,16 @@ NPWD behavior and actions. You can find a list of the available **server exports
     name="newPlayer"
     luaExample={"exports.npwd:newPlayer({ source = 1, firstname = 'Taso', lastname = 'Dev', identifier = 'dba4d971256a8bfb1a543cf0d46e342ad1cdd478', phoneNumber = '444-1312' })"}
     jsExample={"exports.npwd.newPlayer({ source: 1, firstname: 'Taso', lastname: 'Dev', identifier: 'dba4d971256a8bfb1a543cf0d46e342ad1cdd478', phoneNumber: '444-1312' })"}
-    desc="Adds a new player to NPWD internal handling. This should be used for framework integration."
+    desc="Adds a new player to NPWD internal handling. This is used with framework integration to load a player."
 />
+
+<ExportComponent
+    name="unloadPlayer"
+    luaExample={"exports.npwd:unloadPlayer(source)"}
+    jsExample={"exports.npwd.unloadPlayer(source)"}
+    desc="Removes a player from the player map. This should be triggered when swapping to another character where the player data changes."
+/>
+
+:::warning
+The export `unloadPlayer` currently doesn't perform correctly due to recoil limitations. You can track the issue [here](https://github.com/project-error/npwd/issues/476).
+:::
