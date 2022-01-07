@@ -1,5 +1,6 @@
 # Website
 [Our Docs](https://github.com/project-error/projecterror.dev)
+
 The Project Error docs are built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
 ## Installation
