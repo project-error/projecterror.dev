@@ -1,7 +1,7 @@
 ---
 id: qb-core
-title: QB-Core Integratration
-sidebar_label: QB-Core Integratration
+title: QB-Core Integration
+sidebar_label: QB-Core Integration
 ---
 
 ## Dependencies
