@@ -27,7 +27,7 @@ If you encounter any issues, please make sure you report them adequately to the 
 
 </div>
 
-# NPWD Release (Current Version 1.x)
+# NPWD Release (Current version 1.0)
 
 **New-Phone-Who-Dis** (*NPWD*) is a standalone and open source phone resource created for use in [*FiveM*](https://fivem.net/). It was built from 
 the ground up by some of the previous contributors and maintainers of the Reignited GCPhone project, who found
@@ -36,6 +36,22 @@ the Vue 2 codebase littered with technical debt and legacy code that hindered co
 *NPWD* is an attempt at solving these problems and making a codebase that can be adapted and extended on
 by the community. Maintainability has been our utmost priority as well. It has been designed to be as developer accessible as possible, with included utilities and tools
 to ease and streamline the phone development process.
+
+## Standalone Information & Installation
+
+We have designed *NPWD* to be generally framework agnostic, meaning that it can easily be 
+integrated with both popular open source frameworks like ESX & QBCore or any arbitary 
+custom framework. 
+
+For further details on this system, please refer to our installation [documentation](https://projecterror.dev/docs/npwd/start/installation).
+
+**As of 1/6/2021, you must use our fork of [screenshot-basic](https://github.com/project-error/screenshot-basic)
+
+## Technical Stack and Development
+
+*NPWD* uses React + TypeScript to form the NUI front end and uses TypeScript (V8 runtime) for game 
+scripts. You can find more technical information regarding the development of this project on our docs 
+page [here](https://projecterror.dev/docs/npwd/dev/dev_bootstrap).
 
 ## Feature Request & Issue Reporting
 Please open an issue/enhancement on our Github [repository](https://github.com/project-error/npwd/issues/new/choose). This is the best way for us to track what needs to be resolved or improved upon.
@@ -103,16 +119,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
   - Follow our [documentation](../start/Install.md#setting-up-discord-log-integration) for intial setup.
   - Never used a webhook before? Follow Discord's [documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for creating a webhook.
 
-## Standalone Information & Installation
+## Final words
+A special thanks to all the people who have helped out with the translations! You have all been amazing.
 
-We have designed *NPWD* to be generally framework agnostic, meaning that it can easily be 
-integrated with both popular open source frameworks like ESX & QBCore or any arbitary 
-custom framework. 
-
-For further details on this system, please refer to our [installation](../start/Install.md#standalone-installation).
-
-## Technical Stack and Development
-
-*NPWD* uses React + TypeScript to form the NUI front end and uses TypeScript (V8 runtime) for game 
-scripts. You can find more technical information regarding the development of this project on our docs 
-page [here](../dev/DevelopmentBootstrap.md).
+Thanks to [Ultrahacx](https://github.com/ultrahacx) for all the artwork and animations seen in the trailer and this post.
