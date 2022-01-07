@@ -48,7 +48,7 @@ set mysql_connection_string "user=root;database=es_extended;password=12345;chars
 :::caution
 Standalone installation requires a users table of some sort that stores player identifiers. If you are a menu based server and don't use popular frameworks, you will need to use [pe-core](https://github.com/project-error/pe-core) so you can use this resource. It's a very basic "framework" and wlll have no impact on your server.
 :::
-*NPWD* uses a `config.json` file that contains important information **required** for the resource to work correctly. Thie file is location within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json). The below configuration instructions is **universal** regardless which install method you do.
+*NPWD* uses a `config.json` file that contains important information **required** for the resource to work correctly. This file is location within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json).
 
 #### Databse Configuration
 ```json
@@ -108,13 +108,7 @@ Above is the default database configuration that comes with *NPWD*. The informat
 If you are using a popular framework such as *ESX* or *QBCore*, you can easily integrate NPWD using the corresponding
 premade compatbility resource(s), these should automatically configure *NPWD* to work with your framework.
 
-The below resource(s) may have issues depending on your framework version. Please open an issue on our Github [repository](https://github.com/project-error/npwd/issues/new?assignees=&labels=New+Issue&template=bug-report.yml&title=Bug%3A+%3Cshort+description%3E) if you encounter any bugs.
-
-- [esx-npwd](https://github.com/overextended/esx-npwd)
-    - You do **NOT** need this if you're using Overextended's [esx](https://github.com/overextended/es_extended) fork as the functionality has been built in.
-- [qb-npwd](https://github.com/project-error/qb-npwd)
-    - Loosely tested with [qb-core](https://github.com/qbcore-framework/qb-core)
-    - We will not support qbus or any unofficial versions.
+Follow the written documentation for [ESX](../framework/esx) and [QB-Core](../framework/qb-core) for the altered installation.
 
 
 If you have *basic* development knowledge and wish to integrate NPWD with any arbitrary framework,

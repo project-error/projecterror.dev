@@ -12,6 +12,11 @@ module.exports = {
       },
       {
         type: 'category',
+        label: 'Framework Integration',
+        items: ['npwd/framework/esx', 'npwd/framework/qb-core',]
+      },
+      {
+        type: 'category',
         label: 'API Reference',
         items: ['npwd/api/client-exports', 'npwd/api/server-exports', 'npwd/api/npwd-events']
       },
