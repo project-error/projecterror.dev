@@ -12,6 +12,11 @@ module.exports = {
       },
       {
         type: 'category',
+        label: 'Framework Integration',
+        items: ['npwd/framework/esx', 'npwd/framework/qb-core',]
+      },
+      {
+        type: 'category',
         label: 'API Reference',
         items: ['npwd/api/client-exports', 'npwd/api/server-exports', 'npwd/api/npwd-events']
       },
@@ -20,7 +25,8 @@ module.exports = {
         label: 'Development',
         items: ['npwd/dev/dev_bootstrap', 'npwd/dev/framework_integration', 'npwd/dev/setup', 'npwd/dev/disable_apps', 'npwd/dev/basics',]
       },
-      'npwd/credits'
+      'npwd/credits',
+      'npwd/faq'
     ]
   }
 };
