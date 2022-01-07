@@ -43,7 +43,12 @@ module.exports = {
         },
         {
           href: "https://github.com/project-error/docs.projecterror.dev",
-          label: "GitHub",
+          label: "Docs",
+          position: "right",
+        },
+        {
+          href: "https://github.com/project-error/npwd",
+          label: "Get NPWD",
           position: "right",
         },
         {
