@@ -122,7 +122,7 @@ Have you made a wrapper for a framework not listed above? If so, please reach ou
 Below is information pertaining to functionalty to enable specific features of the phone such as image uploading for the camera or report logging for discord.
 ### Setting up Camera Functionality
 :::caution
-We are aware of issues related to photos being null and not saving. This is currently out of our control, but we are exploring other options for image uploading. 
+Some have reported issues with uploading images. While this is most likely related to using a different version of [screenshot-basic](https://github.com/project-error/screenshot-basic), imgur may also be blocked in your country. We are currently working on alternatives.
 :::
 *NPWD* allows for players to access a camera app and take in-game photos. The link to the photo is saved within the database of *NPWD* so these photos are **required** to be uploaded somewhere.
 One solution is to setup *NPWD* to upload the photos to *Imgur*. 
