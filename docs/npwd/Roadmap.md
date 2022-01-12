@@ -42,8 +42,9 @@ These are features the team has no interest in supporting at the current moment.
 
 - Instagram	App
     - Too similiar already to Twitter and only used for images.	Not worth the dev time.
-- Spotify App
-    - DMCA issues with music and potential copyright issues.		
+- Music App
+    - DMCA issues with music and potential copyright issues.	
+    - This includes any sort of variations to this that are focused on music or copyrighted material.
 - Job Whitelisting
     - Heavily dependent on framework integration.
 - Default Phone Contacts
