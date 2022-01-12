@@ -35,4 +35,22 @@ These are features we plan on adding to the phone, but currently have no set tim
     - Send current location.
     - Intervally update real time position.
 - [ ] Group Messages				
-- [ ] Photo Enlarge on Click				
+- [ ] Photo Enlarge on Click
+
+### Unplanned Features/Won't Support			
+These are features the team has no interest in supporting at the current moment. Please do not suggest them as they will be closed/denied.	
+
+- Instagram	App
+    - Too similiar already to Twitter and only used for images.	Not worth the dev time.
+- Spotify App
+    - DMCA issues with music and potential copyright issues.		
+- Job Whitelisting
+    - Heavily dependent on framework integration.
+- Default Phone Contacts
+    - We plan to handle this with our exposed events for calling/messaging so server owners can do their own things. There won't be any default contacts.
+- Radio App
+    - Not within the current scope of the phone. Use an actual radio resource.				
+- Support For Other Voips		
+    - We have standardized [pma-voice](https://github.com/AvarianKnight/pma-voice) and don't plan to support any other voice resources.		
+- Support Ticket
+    - Not within the current scope of the phone. Best to use a resource designed for this.						
