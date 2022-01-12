@@ -17,7 +17,7 @@ Below are a list of depdencies, outside of the standard installation, for *NPWD*
     - While `esx-npwd` may work on other esx versions, this is the best version to use.
 
 ### Configuration
-You will need to adjust the `config.json` file to match the example below. This is required for `qb-npwd` to function correctly. This is located within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json).
+You will need to adjust the `config.json` file to match the example below. This is required for `esx-npwd` to function correctly. This is located within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json).
 
 ```json
   "general": {
