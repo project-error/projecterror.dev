@@ -100,7 +100,7 @@ Above is the default database configuration that comes with *NPWD*. The informat
     Setting this to true is what exposes the `newPlayer` export. The export won't work without this set to true.
     :::
 - `"toggleKey"`
-    - The key used to open the phone. Please see here for a list of available keys.
+    - The key used to open the phone. Please see [here](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/) for a list of available keys.
 - `"toggleCommand"`
     - The command used to open the phone. This is executed on the key press of the configured `toggleKey`. 
 
