@@ -6,7 +6,7 @@ sidebar_label: QB-Core Integration
 
 ## Dependencies
 Below are a list of depdencies, outside of the standard installation, for *NPWD* to work with *QB-Core*
-- [qb-npwd](https://github.com/project-error/qb-npwd)
+- [qb-npwd](https://github.com/qbcore-framework/qb-npwd)
     - Required for the resource to work with the framework.
     - Uses the `newPlayer` export.
 - [QB-Core](https://github.com/qbcore-framework/qb-core)
