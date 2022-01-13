@@ -35,7 +35,7 @@ These are features we plan on adding to the phone, but currently have no set tim
     - Send current location.
     - Intervally update real time position.
 - [ ] Group Messages				
-- [ ] Penis Enlarge on Click
+- [ ] Image Enlarge on Click
 
 ### Unplanned Features/Won't Support			
 These are features the team has no interest in supporting at the current moment. Please do not suggest them as they will be closed/denied.	
