@@ -28,4 +28,4 @@ the internal NPWD player, then call the `newPlayer` function to load the new cha
 If you would like to see an example of this API in use, see the following repositories.
 
 * [esx-npwd](https://github.com/overextended/esx-npwd)
-* [qb-npwd](https://github.com/project-error/qb-npwd)
+* [qb-npwd](https://github.com/qbcore-framework/qb-npwd)
