@@ -54,6 +54,14 @@ This is usually caused by:
 ### Failed to upload photo, Column 'image' cannot be null
 Ensure you installed the correct version of [screenshot-basic](https://github.com/project-error/screenshot-basic) and have followed the documentation for generating an *imgur* [token](start/installation#setting-up-camera-functionality). If you have done so, then imgur may be blocked in your country. We're working on alternatives for this issue.
 
+### Illegal mix of collations (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_general_ci,IMPLICIT) for operation '='
+You need to set your database collation to `utf8_unicode_ci`. In future releases, we'll specify this ourselves. You can also try using this querry to resolve the issue:
+```sql
+ALTER TABLE npwd_messages CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+ALTER TABLE npwd_messages_conversationsCONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+This error will make it so emojis show as a question mark on twitter as well.
+
 ## Basic Questions
 
 ### How do I open the phone?
