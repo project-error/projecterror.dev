@@ -33,3 +33,24 @@ export const APPS: IAppConfig[] = [
   /...
 ]
 ```
+
+Also make sure to comment out/remove any usage of the apps service handlers. These are usually located in `Phone.tsx`
+```tsx
+useEffect(() => {
+    i18n.changeLanguage(settings.language.value).catch((e) => console.error(e));
+  }, [i18n, settings.language]);
+
+  useConfig();
+
+  usePhoneService();
+  useSimcardService();
+  useTwitterService();
+  useMarketplaceService();
+  // useBankService(); - In this case we'll have to comment out or the remove the banking service.
+  useMessagesService();
+  useContactsListener();
+  useNoteListener();
+  useCallService();
+  useDialService();
+  useInvalidSettingsHandler();
+```
