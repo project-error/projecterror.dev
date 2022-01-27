@@ -1,4 +1,3 @@
-
 ---
 id: qb-core
 title: QB-Core Integration
