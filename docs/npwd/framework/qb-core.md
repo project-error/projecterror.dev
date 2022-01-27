@@ -36,7 +36,7 @@ The following steps are required for `qb-npwd` to function correctly with `npwd`
     "phoneNumberColumn": "phone_number"
   },
 ```
-2. Run the `patch.sql` on your database. This will add the `phone_number` column to the `players` table.
+2. Run the `patch.sql`, located in `qb-npwd`, on your database. This will add the `phone_number` column to the `players` table.
 3. Verify your resource start order in your `server.cfg` resembles the example found within the [installation](../start/installation#example-final-config) page. 
 
 ### Configuration
