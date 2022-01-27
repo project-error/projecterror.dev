@@ -7,7 +7,7 @@ sidebar_label: QB-Core Integration
 ## Dependencies
 Below are a list of dependencies, outside of the standard installation, for *NPWD* to work with a *QB-Core* server.
 - [qb-npwd](https://github.com/qbcore-framework/qb-npwd)
-    - Required for `npwd` to work with the `QB-Core` using the `newPlayer` export
+    - Required for *NPWD* to work with `QB-Core` using the `newPlayer` export.
     - PhoneAsItem support
 - [QB-Core](https://github.com/qbcore-framework/qb-core)
 
