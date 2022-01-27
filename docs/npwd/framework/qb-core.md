@@ -14,7 +14,10 @@ Below are a list of dependencies, outside of the standard installation, for *NPW
 ### Initial Setup
 The following steps are required for `qb-npwd` to function correctly with *NPWD* and `qb-core`. Follow each step exactly as shown.
 
-1. Adjust the `config.json` file in `npwd` to match the example below *exactly*.
+:::warning 
+Failure to adhere to these instructions will result in *NPWD* not working correctly.
+ :::
+1. Adjust the [config.json](https://github.com/project-error/npwd/blob/master/config.json) file in *NPWD* to match the example below.
 ```json
   "PhoneAsItem": {
     "enabled": true,
