@@ -12,7 +12,7 @@ Below are a list of dependencies, outside of the standard installation, for *NPW
 - [QB-Core](https://github.com/qbcore-framework/qb-core)
 
 ### Initial Setup
-The following steps are required for `qb-npwd` to function correctly with `npwd` and `qb-core`. Follow each step exactly as shown.
+The following steps are required for `qb-npwd` to function correctly with *NPWD* and `qb-core`. Follow each step exactly as shown.
 
 1. Adjust the `config.json` file in `npwd` to match the example below *exactly*.
 ```json
