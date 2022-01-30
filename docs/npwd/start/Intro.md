@@ -117,7 +117,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
   - Filter notification preferences.
 - Discord Logging
   - Follow our [documentation](../start/Install.md#setting-up-discord-log-integration) for initial setup.
-  - Never used a web hook before? Follow Discord's [documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for creating a web hook.
+  - Never used a webhook before? Follow Discord's [documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for creating a webhook.
 
 ## Final words
 A special thanks to all the people who have helped out with the translations! You have all been amazing.
