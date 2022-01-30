@@ -23,7 +23,7 @@ This can sometimes happen after we change the structure of our client stored set
 
 ### Event playerJoining was not safe for net
 
-You need to update your artefacts to a version beyond `3622`. Don’t know your artefact version? Type `version` into your console. 
+You need to update your artifacts to a version beyond `3622`. Don’t know your artifact version? Type `version` into your console. 
 
 Click [here](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/?) to download the latest.
 
