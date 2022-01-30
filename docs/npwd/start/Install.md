@@ -139,7 +139,7 @@ If you can't find your application you just created, check your settings pages [
 
 ### Setting up Discord Log Integration
 
-NPWD can integrate with Discord to log certain actions. As of release v1.0.3, the only use case is to log reported tweets and marketplace listings. This requires a web hook to be setup and the following convar
+NPWD can integrate with Discord to log certain actions. As of release v1.0.3, the only use case is to log reported tweets and marketplace listings. This requires a webhook to be setup and the following convar
 set in your `server.cfg` file:
 
 ```
