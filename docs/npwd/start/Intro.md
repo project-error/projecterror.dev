@@ -62,7 +62,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
 - [Twitter](https://i.imgur.com/BjwovRR.png)
   - Like, reply, retweet, report and delete your own Tweets.
   - Send emojis and images directly from the phone's gallery, or from an external URL. *Gifs too!*
-  - NPWD features discord logging so all reported tweets will be sent to the configured web hook.
+  - NPWD features discord logging so all reported tweets will be sent to the configured webhook.
 - [Matchmaker](https://i.imgur.com/46XtZ06.jpeg)
   - Like tinder but without all the bots. Swipe right into romance or rejection.
   - As of v1.0, there is no filter for sexual preference.
