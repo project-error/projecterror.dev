@@ -33,7 +33,7 @@ These are features we plan on adding to the phone, but currently have no set tim
     - Will use [NGWD](https://github.com/project-error/new-garage-who-dis) as this is planned to be fully standalone. 
 - [ ] GPS System	
     - Send current location.
-    - Intervalley update real time position.
+    - Update real time position within a specified time frame.
 - [ ] Group Messages				
 - [ ] Image Enlarge on Click
 
