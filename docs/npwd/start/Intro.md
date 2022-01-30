@@ -40,7 +40,7 @@ to ease and streamline the phone development process.
 ## Standalone Information & Installation
 
 We have designed *NPWD* to be generally framework agnostic, meaning that it can easily be 
-integrated with both popular open source frameworks like ESX & QBCore or any arborators 
+integrated with both popular open source frameworks like ESX & QBCore or any arbitrary 
 custom framework. 
 
 For further details on this system, please refer to our installation [documentation](https://projecterror.dev/docs/npwd/start/installation).
