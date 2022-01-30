@@ -6,7 +6,7 @@ sidebar_label: Bootstrap Development
 Setting up NPWD for development requires a few steps and some familiarity with the scripts. 
 This short guide will help you get your development environment bootstrapped and ready.
 
-## Enviroment Setup
+## Environment Setup
  
 Please make sure you have the following dependencies installed within your development environment.
 
@@ -33,7 +33,7 @@ git clone https://github.com/project-error/npwd.git
 **Step 2**
 
 Navigate to cloned folder and install dependencies for both NUI and game scripts (This will automatically install dependencies in 
-all the subpackages)
+all the sub-packages)
 ```sh
 cd npwd && yarn
 ```

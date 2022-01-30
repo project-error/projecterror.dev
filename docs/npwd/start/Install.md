@@ -46,11 +46,11 @@ set mysql_connection_string "user=root;database=es_extended;password=12345;chars
 
 ### Basic Configuration
 :::caution
-Standalone installation requires a users table of some sort that stores player identifiers. If you are a menu based server and don't use popular frameworks, you will need to use [pe-core](https://github.com/project-error/pe-core) so you can use this resource. It's a very basic "framework" and wlll have no impact on your server.
+Standalone installation requires a users table of some sort that stores player identifiers. If you are a menu based server and don't use popular frameworks, you will need to use [pe-core](https://github.com/project-error/pe-core) so you can use this resource. It's a very basic "framework" and will have no impact on your server.
 :::
 *NPWD* uses a `config.json` file that contains important information **required** for the resource to work correctly. This file is location within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json).
 
-#### Databse Configuration
+#### Database Configuration
 ```json
 "database": {
     "useIdentifierPrefix": false,
@@ -65,7 +65,7 @@ Standalone installation requires a users table of some sort that stores player i
 Above is the default database configuration that comes with *NPWD*. The information needs to be altered to match your database.
 
 - `"useIdentifierPrefix"`
-    - The prefix is refering to the text before the colon when obntaining identifiers.
+    - The prefix is referring to the text before the colon when obtaining identifiers.
     - If your database uses `license:XXXXXXXXXXXXXXXXXXXXXXXXXXX` set this to `true`. Otherwise, set it to `false`.
     - This is **only** used when `"useResourceIntegration"` is set to `false`.
 - `"playerTable"`
@@ -106,7 +106,7 @@ Above is the default database configuration that comes with *NPWD*. The informat
 
 ### Framework Integration
 If you are using a popular framework such as *ESX* or *QBCore*, you can easily integrate NPWD using the corresponding
-premade compatbility resource(s), these should automatically configure *NPWD* to work with your framework.
+premade compatibility resource(s), these should automatically configure *NPWD* to work with your framework.
 
 Follow the written documentation for [ESX](../framework/esx) and [QB-Core](../framework/qb-core) for the altered installation.
 
@@ -119,7 +119,7 @@ Have you made a wrapper for a framework not listed above? If so, please reach ou
 :::
 
 ## Feature Related Setup
-Below is information pertaining to functionalty to enable specific features of the phone such as image uploading for the camera or report logging for discord.
+Below is information pertaining to functionality to enable specific features of the phone such as image uploading for the camera or report logging for discord.
 ### Setting up Camera Functionality
 :::caution
 Some have reported issues with uploading images. While this is most likely related to using a different version of [screenshot-basic](https://github.com/project-error/screenshot-basic), imgur may also be blocked in your country. We are currently working on alternatives.
@@ -139,7 +139,7 @@ If you can't find your application you just created, check your settings pages [
 
 ### Setting up Discord Log Integration
 
-NPWD can integrate with Discord to log certain actions. As of release v1.0.3, the only use case is to log reported tweets and marketplace listings. This requires a webhook to be setup and the following convar
+NPWD can integrate with Discord to log certain actions. As of release v1.0.3, the only use case is to log reported tweets and marketplace listings. This requires a web hook to be setup and the following convar
 set in your `server.cfg` file:
 
 ```
@@ -175,7 +175,7 @@ If you're using `es_extended` from `overextended`, `esx-npwd` is not necessary a
 ## Important Information
 * By installing [npwd](https://github.com/project-error/npwd), you agree to the use of the following diagnostic package:
    * Sentry, (in use within the React portion of NPWD) Automatically
-     uploads relevant sesssion details and stack traces whenever an exception is thrown. We use these metrics to further improve the quality of the phone.
+     uploads relevant session details and stack traces whenever an exception is thrown. We use these metrics to further improve the quality of the phone.
    * To explicitly disable this, we urge you **not to** as its incredibly useful metrics for us, please change the `SentryErrorMetrics` setting to `false` in `phone/config/default.json` and rebuild the phone.
 * Encountered an issue? Please open an issue [here](https://github.com/project-error/npwd/issues/new/?assignees=&labels=New+Issue&template=bug-report.yml&title=Bug%3A+%3Cshort+description%3E) following the provided template.
 * If you seek additional support, feel free to join the [Project-Error Discord](https://discord.gg/HYwBjTbAY5).

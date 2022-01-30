@@ -40,7 +40,7 @@ to ease and streamline the phone development process.
 ## Standalone Information & Installation
 
 We have designed *NPWD* to be generally framework agnostic, meaning that it can easily be 
-integrated with both popular open source frameworks like ESX & QBCore or any arbitary 
+integrated with both popular open source frameworks like ESX & QBCore or any arborators 
 custom framework. 
 
 For further details on this system, please refer to our installation [documentation](https://projecterror.dev/docs/npwd/start/installation).
@@ -61,15 +61,15 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
   - 0.01 ms on idle and 0.05 while in use.
 - [Twitter](https://i.imgur.com/BjwovRR.png)
   - Like, reply, retweet, report and delete your own Tweets.
-  - Send emojis and images directly from the phone's gallery, or from an external url. *Gifs too!*
-  - NPWD features discord logging so all reported tweets will be sent to the configured webhook.
+  - Send emojis and images directly from the phone's gallery, or from an external URL. *Gifs too!*
+  - NPWD features discord logging so all reported tweets will be sent to the configured web hook.
 - [Matchmaker](https://i.imgur.com/46XtZ06.jpeg)
   - Like tinder but without all the bots. Swipe right into romance or rejection.
   - As of v1.0, there is no filter for sexual preference.
   - Don't want this app? Follow the documentation [here](../dev/DisableApps.md) to disable it.
 - [Marketplace](https://user-images.githubusercontent.com/55056068/147530933-d56ceb19-0db2-471f-a8ca-7cc3986b87be.png)
   - Post an ad with/without a picture.
-  - Choose a picture from your gallery or from a url.
+  - Choose a picture from your gallery or from a URL.
   - Features calling/messaging icons so no need to provide your number.
 - [Text Messaging](https://i.imgur.com/9vFHqhW.png)
   - Send a message or an image taken straight from the phones Gallery.
@@ -77,7 +77,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
   - Call anyone from anywhere.
 - [Camera](https://i.imgur.com/Fk6wQkg.png)
   - Take pictures of oneself or your surroundings. 
-  - All pictures save to the gallery where they can be retrieved with a copyable link.
+  - All pictures save to the gallery where they can be retrieved with a copy-able link.
   - As of v1.0, there is currently [two photo modes](https://i.imgur.com/pole8bA.jpeg) for front/rear camera.
 - [Contacts](https://i.imgur.com/Qxs35rj.png)
   - Add a phone number to your contacts for easier access.
@@ -86,7 +86,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
 - [Notes](https://i.imgur.com/0Hvvlah.png)
   - Something you want to remember in game? Make a note!
 - [Calculator](https://user-images.githubusercontent.com/55056068/147531020-b7527a69-0b0e-4e81-83c7-58ad836eab23.png)
-  - Peform calculations. 
+  - Reform calculations. 
 - [Themes](https://i.imgur.com/2DpBHuM.png)
   - Default dark theme or light theme with other themes in the works. Want to make your own? Follow our [documentation](../dev/SettingUpApp.md#setting-up-the-theme).
   - Set within the Settings app.
@@ -111,13 +111,13 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
   - Use a slider to set ringtone and notification alert volume.
   - Copy your phone number to clipboard for easy sharing.
   - Configure a chosen ringtone or alert sound.
-  - Choose betwen **twelve** languages as of v1.0.
+  - Choose between **twelve** languages as of v1.0.
   - Change frames, icon sets and themes.
   - Adjust Zoom (100% to 70%).
   - Filter notification preferences.
 - Discord Logging
-  - Follow our [documentation](../start/Install.md#setting-up-discord-log-integration) for intial setup.
-  - Never used a webhook before? Follow Discord's [documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for creating a webhook.
+  - Follow our [documentation](../start/Install.md#setting-up-discord-log-integration) for initial setup.
+  - Never used a web hook before? Follow Discord's [documentation](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for creating a web hook.
 
 ## Final words
 A special thanks to all the people who have helped out with the translations! You have all been amazing.
