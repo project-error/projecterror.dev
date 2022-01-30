@@ -5,11 +5,11 @@ sidebar_label: Advanced Configuration
 ---
 
 NPWD includes a `config.json` file in the root directory that allows for further customization of phone
-behavior. This file is what allows for us to offer framework-agnostic compatibility as well as for multitude
+behaviour. This file is what allows for us to offer framework-agnostic compatibility as well as for multitude
 of configuration options depending on your needs. IF you followed the [installation instructions](../start/installation#basic-configuration) , we went over the basic configuration already and has been abstracted from this page.
 
 ## Export Configuration
-To keep the resource as framework agnostic as possible, we occassionally use exports to do certain things for us that would normally require framework dependency.
+To keep the resource as framework agnostic as possible, we occasionally use exports to do certain things for us that would normally require framework dependency.
 ### PhoneAsItem
 Default Configuration:
 ```json

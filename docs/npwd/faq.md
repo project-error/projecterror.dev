@@ -39,7 +39,7 @@ If you want to modify the source code please see the [documentation page](dev/De
 
 This export is only available when the `useResourceIntegration` is set to true. See [here](https://github.com/project-error/npwd/blob/fc2a905f0fd85db797b716053b8f0d4398b8bd61/config.json#L8).
 
-### Cannont read properties of undefined (reading 'phone_number')
+### Cannot read properties of undefined (reading 'phone_number')
 The error would look like [this](https://i.imgur.com/IIM0vEd.png)
 
 This is usually caused by:
@@ -55,7 +55,7 @@ This is usually caused by:
 Ensure you installed the correct version of [screenshot-basic](https://github.com/project-error/screenshot-basic) and have followed the documentation for generating an *imgur* [token](start/installation#setting-up-camera-functionality). If you have done so, then imgur may be blocked in your country. We're working on alternatives for this issue.
 
 ### Illegal mix of collations (utf8mb4_unicode_ci,IMPLICIT) and (utf8mb4_general_ci,IMPLICIT) for operation '='
-You need to set your database collation to `utf8_unicode_ci`. In future releases, we'll specify this ourselves. You can also try using this querry to resolve the issue:
+You need to set your database collation to `utf8_unicode_ci`. In future releases, we'll specify this ourselves. You can also try using this query to resolve the issue:
 ```sql
 ALTER TABLE npwd_messages CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 ALTER TABLE npwd_messages_conversationsCONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
@@ -78,6 +78,6 @@ We currently don’t have this functionality. We have plans to create an export 
 
 You can do so [here](https://github.com/project-error/npwd/blob/20b7ca34416a8a428b0c4e39c1da80c8e96f5b0f/config.json#L10). Just restart the resource after.
 
-### How do i set the default language?
+### How do I set the default language?
 
 As of v1.0.4, the only way to set the default language is by setting it [here](https://github.com/project-error/npwd/blob/20b7ca34416a8a428b0c4e39c1da80c8e96f5b0f/phone/src/config/default.json#L3) and rebuilding the phone. We are working on abstracting this to a config so this isn't required.

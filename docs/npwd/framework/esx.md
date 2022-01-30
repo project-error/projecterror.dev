@@ -1,15 +1,15 @@
 ---
 id: esx
-title: ESX Integratration
-sidebar_label: ESX Integratration
+title: ESX Integration
+sidebar_label: ESX Integration
 ---
 
 :::warning
-ESX is **very** end of life and shouldn't be used. However, if you insist on doing so please use Overextended's [ESX](https://github.com/overextended/es_extended). NPWD is already integrated with it and it's actively maintained. The origional repository has no active maintainors and this is the most reliable fork to date.
+ESX is **very** end of life and shouldn't be used. However, if you insist on doing so please use Overextended's [ESX](https://github.com/overextended/es_extended). NPWD is already integrated with it and it's actively maintained. The original repository has no active maintainers and this is the most reliable fork to date.
 :::
 
 ## Dependencies
-Below are a list of depdencies, outside of the standard installation, for *NPWD* to work with *QB-Core*
+Below are a list of dependencies, outside of the standard installation, for *NPWD* to work with *QB-Core*
 - [esx-npwd](https://github.com/overextended/esx-npwd)
     - Required for the resource to work with the framework.
     - Uses the `newPlayer` export.
