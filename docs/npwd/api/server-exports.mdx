@@ -30,6 +30,31 @@ NPWD behavior and actions. You can find a list of the available **server exports
     desc="Removes a player from the player map. This should be triggered when swapping to another character where the player data changes."
 />
 
+<ExportComponent
+    name="onMessage"
+    luaExample={`exports.npwd:onMessage('911', function(ctx)
+    TriggerEvent('roleplayEvent', ctx.data.message)
+end)`}
+    jsExample={`exports.npwd.onMessage('911', (ctx) => {
+    emit('roleplayEvent', ctx.data.message)
+})`}
+    desc="Listen to any message from a phone number"
+/>
+
+```ts
+interface OnMessageExportCtx {
+  data: PreDBMessage;
+
+  source: number;
+}
+
+interface PreDBMessage {
+  conversationId: string;
+  tgtPhoneNumber: string;
+  message: string;
+}
+```
+
 :::warning
 The export `unloadPlayer` currently doesn't perform correctly due to recoil limitations. You can track the issue [here](https://github.com/project-error/npwd/issues/476).
 :::
