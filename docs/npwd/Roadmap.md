@@ -16,7 +16,7 @@ We push any major changes to the develop branch of the resource. So
 - [ ] Messages/Call Hooks 
 - [ ] Notify Weirdos Of New Versions
 - [x] [Ringtone Dial For Originator](https://github.com/project-error/npwd/commit/071e5e65d9bc3627ad5a122bafe45feb5d06233e)
-- [ ] [Share Contact](https://github.com/project-error/npwd/issues/472)
+- [x] [Share Contact](https://github.com/project-error/npwd/issues/472)
 
 ### Version 1.2.0+
 TBA
