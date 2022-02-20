@@ -36,6 +36,22 @@ exports('myCheckerFunction', function()
 end)
 ```
 
+## Word Filtering / Blacklisting
+
+Block / filter banned words in some apps like twitter, messaging and marketplace.
+
+Set enabled to true and add blacklisted words to the array like so:
+
+```json
+{
+  "profanityFilter": {
+    "enabled": true,
+    "badWords": ["sus", "amogus"]
+  }
+}
+```
+This will block these words with asterisks so a message would appear as "\*\*\*sy" instead of "sussy"
+
 ## App Configuration
 ### Twitter
 - `showNotifications`
