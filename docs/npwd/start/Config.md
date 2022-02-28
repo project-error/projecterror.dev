@@ -53,6 +53,9 @@ end)
 - `allowReportTweets`
   - Allow players to report tweets.
   - `default`: **true**
+- `allowRetweet`
+  - Allow tweets to be retweeted.
+  - `default`: **true**
 - `characterLimit`
   - The number of characters allowed in a tweet.
   - `default`: **160**
