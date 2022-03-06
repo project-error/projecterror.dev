@@ -4,19 +4,21 @@ title: ESX Integration
 sidebar_label: ESX Integration
 ---
 
-:::warning
-ESX is **very** end of life and shouldn't be used. However, if you insist on doing so please use Overextended's [ESX](https://github.com/overextended/es_extended). NPWD is already integrated with it and it's actively maintained. The original repository has no active maintainers and this is the most reliable fork to date.
-:::
-
 ## Dependencies
-Below are a list of dependencies, outside of the standard installation, for *NPWD* to work with *QB-Core*
+Below are a list of dependencies, outside of the standard installation, for *NPWD* to work with *ESX*.
 - [esx-npwd](https://github.com/overextended/esx-npwd)
     - Required for the resource to work with the framework.
     - Uses the `newPlayer` export.
-- [ESX](https://github.com/overextended/es_extended)
+- [ESX](https://github.com/esx-framework/esx-legacy)
     - While `esx-npwd` may work on other esx versions, this is the best version to use.
 
 ### Configuration
+
+:::info
+
+If you're downloading the whole ESX Legacy package it comes with `esx_phone`, make sure to remove it if you're going to be using `npwd`.
+:::
+
 You will need to adjust the `config.json` file to match the example below. This is required for `esx-npwd` to function correctly. This is located within the root of your `npwd` folder. See [here](https://github.com/project-error/npwd/blob/master/config.json).
 
 ```json
@@ -36,4 +38,4 @@ You will need to adjust the `config.json` file to match the example below. This 
 ```
 
 ### Final Notes
-Be sure your `server.cfg` resembled the example found within the [installation](../start/installation#example-final-config) page. As a reminder, `esx-npwd` may not work on older versions so be sure to use Overextended's [ESX](https://github.com/overextended/es_extended).
+Be sure your `server.cfg` resembled the example found within the [installation](../start/installation#example-final-config) page. As a reminder, `esx-npwd` may not work on older versions so be sure to use ESX [Legacy](https://github.com/esx-framework/esx-legacy).
