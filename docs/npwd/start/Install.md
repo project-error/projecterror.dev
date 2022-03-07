@@ -167,11 +167,6 @@ ensure esx-npwd # Any compatibility resources like esx-npwd or qb-npwd. Ignore i
 ensure npwd
 ```
 
-:::caution
-If you're using `es_extended` from `overextended`, `esx-npwd` is not necessary as it's built into their resource. See their [README](https://github.com/overextended/es_extended#readme) for more information.
-:::
-
-
 ## Important Information
 * By installing [npwd](https://github.com/project-error/npwd), you agree to the use of the following diagnostic package:
    * Sentry, (in use within the React portion of NPWD) Automatically
