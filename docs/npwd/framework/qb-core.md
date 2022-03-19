@@ -16,7 +16,8 @@ The following steps are required for `qb-npwd` to function correctly with *NPWD*
 
 :::warning 
 Failure to adhere to these instructions will result in *NPWD* not working correctly.
- :::
+:::
+
 1. Adjust the [config.json](https://github.com/project-error/npwd/blob/master/config.json) file in *NPWD* to match the example below.
 ```json
   "PhoneAsItem": {
