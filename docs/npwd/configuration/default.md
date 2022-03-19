@@ -54,6 +54,10 @@ Here you can find all the available options to configurate NPWD to your liking. 
       "wikipedia.org"
     ]
   },
+  "profanityFilter": {
+    "enabled": false,
+    "badWords": ["esx"]
+  },
   "twitter": {
     "showNotifications": true,
     "generateProfileNameFromUsers": true,
@@ -144,6 +148,22 @@ Configuration options explained.
   - Url to wrap unsafe images with
 - `"safeImageUrls"`: `string[]`
   - List of safe urls.
+
+### Word Filtering
+
+```json
+{
+  "profanityFilter": {
+    "enabled": false,
+    "badWords": ["esx", "chip"]
+  },
+}
+```
+
+- `"enabled"`: `boolean`
+  - Enable the profanity filtering
+- `"badWords"`: `string[]`
+  - List of banned words which will be filtered
 
 ### Twitter
 
