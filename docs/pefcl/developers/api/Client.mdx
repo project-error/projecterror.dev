@@ -1,0 +1,148 @@
+---
+id: client
+title: Client exports & events
+sidebar_label: Client
+---
+
+import ExportComponent from '../../../_export-component-ts.mdx';
+import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Exports
+
+PEFCL exposes a few useful exports that be used from other resources to integrate better with the financing system.
+The exports support both callback & promises.
+
+<ExportComponent
+  name="openBank"
+  luaExample={'exports.pefcl:openBank()'}
+  jsExample={'exports.pefcl.openBank()'}
+  tsExample={'exports.pefcl.openBank()'}
+  desc="Opens the Bank UI. This can be used to open the bank anywhere"
+/>
+
+<ExportComponent
+  name="closeBank"
+  luaExample={'exports.pefcl:closeBank()'}
+  jsExample={'exports.pefcl.closeBank()'}
+  tsExample={'exports.pefcl.closeBank()'}
+  desc="Closes the Bank UI"
+/>
+
+<ExportComponent
+  name="openAtm"
+  luaExample={'exports.pefcl:openAtm()'}
+  jsExample={'exports.pefcl.openAtm()'}
+  tsExample={'exports.pefcl.openAtm()'}
+  desc="Opens the ATM UI"
+/>
+
+<ExportComponent
+  name="closeAtm"
+  luaExample={'exports.pefcl:closeAtm()'}
+  jsExample={'exports.pefcl.closeAtm()'}
+  tsExample={'exports.pefcl.closeAtm()'}
+  desc="Closes the ATM UI"
+/>
+
+<ExportComponent
+  name="giveCash"
+  luaExample={'exports.pefcl:giveCash(amount)'}
+  jsExample={'exports.pefcl.giveCash(amount)'}
+  tsExample={'exports.pefcl.giveCash(amount: number)'}
+  desc="Gives amount of cash to the nearest player."
+/>
+
+- amount: `number`
+  - Amount of cash to be given to the nearest player.
+
+<ExportComponent
+  name="createInvoice"
+  luaExample={'exports.pefcl:createInvoice(amount, message)'}
+  jsExample={'exports.pefcl.createInvoice(amount, message)'}
+  tsExample={'exports.pefcl.createInvoice(amount: number, message: string)'}
+  desc="Creates an invoice for the nearest player."
+/>
+
+- amount: `number`
+  - Decides how much the invoice should be
+- message: `string`
+  - Invoice description
+
+<ExportComponent
+  name="depositMoney"
+  luaExample={'exports.pefcl:depositMoney(amount)'}
+  jsExample={'exports.pefcl.depositMoney(amount)'}
+  tsExample={'exports.pefcl.depositMoney(amount: number)'}
+  desc="Deposits money into default account, without ATM."
+/>
+
+<ExportComponent
+  name="withdrawMoney"
+  luaExample={'exports.pefcl:withdrawMoney(amount)'}
+  jsExample={'exports.pefcl.withdrawMoney(amount)'}
+  tsExample={'exports.pefcl.withdrawMoney(amount: number)'}
+  desc="Withdraws money from default account, without ATM."
+/>
+
+## Events
+
+### `pefcl:newTransaction`
+
+```typescript
+interface Account {
+  id: number;
+  number: string;
+  balance: number;
+  isDefault: boolean;
+  accountName: string;
+  ownerIdentifier: string;
+  role: 'owner' | 'admin' | 'contributor';
+  type: 'personal' | 'shared';
+  createdAt?: string;
+}
+
+interface Transaction {
+  id: number;
+  toAccount?: Account;
+  fromAccount?: Account;
+
+  amount: number;
+  message: string;
+  type: 'Outgoing' | 'Incoming';
+
+  updatedAt?: string;
+  createdAt?: string;
+}
+```
+
+<Tabs>
+<TabItem value="lua" label="Lua">
+
+```lua
+AddEventHandler('pefcl:newTransaction', function(transaction)
+    ShowNotification("You got a new transaction of" .. transaction.amount)
+end)
+```
+
+</TabItem>
+<TabItem value="js" label="JavaScript">
+
+```js
+onNet('pefcl:newTransaction', (transaction) => {
+  showNotification(`You got a new transaction of ${transaction.amount}`)
+}
+```
+
+</TabItem>
+<TabItem value="py" label="Typescript">
+
+```ts
+onNet('pefcl:newTransaction', (transaction: Transaction) => {
+  showNotification(`You got a new transaction of ${transaction.amount}`)
+}
+```
+
+</TabItem>
+</Tabs>
