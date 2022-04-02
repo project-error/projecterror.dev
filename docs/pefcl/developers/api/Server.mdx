@@ -1,0 +1,101 @@
+---
+id: server
+title: Server exports & events
+sidebar_label: Server
+---
+
+import ExportComponent from '../../../_export-component-ts.mdx';
+
+## Exports
+
+PEFCL exposes a few useful exports that be used from other resources to integrate better with the financing system.
+The exports support both callback & promises.
+
+<ExportComponent
+  name="addBankBalance"
+  luaExample={'exports.pefcl:addBankBalance(source, amount, message)'}
+  jsExample={'await exports.pefcl.addBankBalance(source, amount, message)'}
+  tsExample={
+    'await exports.pefcl.addBankBalance(source: number, amount: number, message?: string)'
+  }
+  desc="Adds money to the default account of the player"
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of money to be added to default the account
+  - message: `string`
+    - Transaction message
+
+<ExportComponent
+  name="removeBankBalance"
+  luaExample={'exports.pefcl:removeBankBalance(source, amount, message)'}
+  jsExample={'await exports.pefcl.removeBankBalance(source, amount, message)'}
+  tsExample={
+    'await exports.pefcl.removeBankBalance(source: number, amount: number, message?: string)'
+  }
+  desc="Removes money from the default account of the player. Message is optional."
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of money to be removed from the default account
+  - message: `string`
+    - Transaction message
+
+<ExportComponent
+  name="addCash"
+  luaExample={'exports.pefcl:addCash(source, amount)'}
+  jsExample={'await exports.pefcl.addCash(source, amount)'}
+  tsExample={'await exports.pefcl.addCash(source: number, amount: number)'}
+  desc="Adds cash to the player"
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of cash to be added
+
+<ExportComponent
+  name="removeCash"
+  luaExample={'exports.pefcl:removeCash(source, amount)'}
+  jsExample={'await exports.pefcl.removeCash(source, amount)'}
+  tsExample={'await exports.pefcl.removeCash(source: number, amount: number)'}
+  desc="Removs cash from the player"
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of cash to be removed
+
+<ExportComponent
+  name="createInvoice"
+  luaExample={'exports.pefcl:createInvoice(source, from, amount, message)'}
+  jsExample={'await exports.pefcl.createInvoice(source, from, amount, message)'}
+  tsExample={
+    'await exports.pefcl.createInvoice(source: number, from: string, amount: number, message: string)'
+  }
+  desc="Creates an invoice"
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - from: `string`
+    - This is a message that should explain who sent the invoice. Examples:
+      - "Police Dpt."
+      - "John Doe"
+  - amount: `number`
+    - Decides how much the invoice should be
+  - message: `string`
+    - Invoice description. Examples:
+      - "For the repairs"
+
+## Events
