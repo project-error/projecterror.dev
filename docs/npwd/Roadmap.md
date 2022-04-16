@@ -11,7 +11,7 @@ We push any major changes to the develop branch of the resource. So
 - [x] [Center Time With Frame](https://github.com/project-error/npwd/issues/511)
 - [x] [Check for Custom Wallpaper](https://github.com/project-error/npwd/commit/8a1220474ff83db5fbcc8b3056c66260f3c80f4e)
 - [ ] Config For Generated Number Format
-- [ ] [Default Language](https://github.com/project-error/npwd/issues/501)
+- [x] [Default Language](https://github.com/project-error/npwd/issues/501)
 - [ ] [Handle Initial Database Insertion For Users](https://github.com/project-error/npwd/issues/502)
 - [ ] Messages/Call Hooks 
 - [ ] Notify Weirdos Of New Versions
@@ -31,10 +31,10 @@ These are features we plan on adding to the phone, but currently have no set tim
 - [ ] Email App				
 - [ ] Garage App
     - Will use [NGWD](https://github.com/project-error/new-garage-who-dis) as this is planned to be fully standalone. 
-- [ ] GPS System	
+- [x] GPS System	
     - Send current location.
     - Update real time position within a specified time frame.
-- [ ] Group Messages				
+- [x] Group Messages				
 - [ ] Image Enlarge on Click
 
 ### Unplanned Features/Won't Support			
