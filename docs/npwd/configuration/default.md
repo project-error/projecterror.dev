@@ -21,7 +21,8 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "useResourceIntegration": false,
     "toggleKey": "f1",
     "toggleCommand": "phone",
-    "defaultLanguage": "en"
+    "defaultLanguage": "en",
+    "showId": false
   },
   "database": {
     "useIdentifierPrefix": false,

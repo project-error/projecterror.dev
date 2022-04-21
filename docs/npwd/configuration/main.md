@@ -42,6 +42,7 @@ You can find a lot more available configuration options under [defaults](/docs/n
     "toggleKey": "f1",
     "toggleCommand": "phone",
     "defaultLanguage": "en"
+    "showId": false
   }
 }
 ```
@@ -54,6 +55,8 @@ You can find a lot more available configuration options under [defaults](/docs/n
   - Command to open / close the phone
 - `"defaultLanguage"`
   - Initial language for the phone. This can be changed by the user
+- `"showId"`
+  - Show the source of the player in the notifiation bar
 
 ### Database
 
