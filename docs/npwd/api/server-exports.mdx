@@ -58,3 +58,17 @@ interface PreDBMessage {
   message: string;
 }
 ```
+<ExportComponent
+    name="emitMessage"
+    luaExample={`exports.npwd:emitMessage({
+    senderNumber = '911',
+    targetNumber = '123-456-7890',
+    message = 'Hello this is the police!'
+})`}
+    jsExample={`exports.npwd.emitMessage({
+    senderNumber: '911',
+    targetNumber: '123-456-7890',
+    message: 'Hello this is the police!'
+})`}
+    desc="Send a message to any player from any number"
+/>
