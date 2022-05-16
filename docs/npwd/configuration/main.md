@@ -81,7 +81,7 @@ You can find a lot more available configuration options under [defaults](/docs/n
   - The table in which your user information is stored.
   - REQUIRED COLUMNS: id, identifier, phone_number
 - `"identifierColumn"`
-  - Identifier can't be the ID column.
+  - This _should_ be a [unique](https://www.mysqltutorial.org/mysql-unique-constraint/) column
 - `"identifierType"`
   - Ranges from the following: `steam`, `license`, `xbl`, `ip`, `discord` and `live`.
 - `"profileQueries"`
