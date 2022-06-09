@@ -6,7 +6,7 @@ sidebar_label: Installation
 
 ### Installation
 
-1. Download latest version from [releases page](https://github.com/project-error/pe-financial/releases).
+1. Download latest version from [releases page](https://github.com/project-error/pefcl/releases).
 2. Unzip `pefcl` into your resources folder
 3. Add `ensure pefcl` to your `server.cfg`
 
