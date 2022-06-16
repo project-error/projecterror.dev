@@ -113,7 +113,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
   - Configure a chosen ringtone or alert sound.
   - Choose between **twelve** languages as of v1.0.
   - Change frames, icon sets and themes.
-  - Adjust Zoom (100% to 70%).
+  - Adjust Zoom (150% to 70%).
   - Filter notification preferences.
 - Discord Logging
   - Follow our [documentation](../start/Install.md#setting-up-discord-log-integration) for initial setup.
