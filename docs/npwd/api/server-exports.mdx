@@ -63,12 +63,45 @@ interface PreDBMessage {
     luaExample={`exports.npwd:emitMessage({
     senderNumber = '911',
     targetNumber = '123-456-7890',
-    message = 'Hello this is the police!'
+    message = 'Mission Row PD location!',
+    embed = {
+        type = "location",
+        coords = { 434.15, -981.71, 30.70 },
+        phoneNumber = '911'
+    }
 })`}
     jsExample={`exports.npwd.emitMessage({
     senderNumber: '911',
     targetNumber: '123-456-7890',
-    message: 'Hello this is the police!'
+    message: 'Mission Row PD location!',
+    embed: {
+        type: "location",
+        coords: { 434.15, -981.71, 30.70 },
+        phoneNumber: '911'
+    }
 })`}
     desc="Send a message to any player from any number"
 />
+
+```ts
+interface EmitMessageExport {
+  senderNumber: string;
+  targetNumber: string;
+  message: string;
+  embed?: LocationEmbed | ContactEmbed;
+}
+
+interface LocationEmbed {
+    type: "location";
+    coords: { x: number, y: number, z: number };
+    phoneNumber: string;
+};
+
+interface ContactEmbed {
+    type: "contact";
+    display: string;
+    number: string;
+    avatar: string;
+    id: number;
+}
+```
