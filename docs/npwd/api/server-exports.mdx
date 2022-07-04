@@ -114,3 +114,46 @@ interface ContactEmbed {
     jsExample={"exports.npwd.getPhoneNumber(src)"}
     desc="Returns the phone number of the source"
 />
+
+<ExportComponent
+    name="onCall"
+    luaExample={`exports.npwd:onCall("911", function(ctx)
+    local DispatcherSrc = 69 -- Get this via your own logic
+    -- If online, forward the 911 call to a real player, else send them a text message and hang up
+    if GetPlayerPing(DispatcherSrc) > 0 then
+        local DispatcherNum = exports.npwd:getPhoneNumber(DispatcherSrc)
+        ctx.forward(DispatcherNum)
+    else
+        ctx.reply("Sorry, we cannot find an active dispatcher to handle your call. Please try again later.")
+        ctx.exit()
+    end
+end)`}
+    jsExample={`exports.npwd.onCall("911", (ctx) => {
+    const DispatcherSrc = 69 // Get this via your own logic
+    // If online, forward the 911 call to a real player, else send them a text message and hang up
+    if (GetPlayerPing(DispatcherSrc) > 0) {
+        const DispatcherNum = exports.npwd.getPhoneNumber(DispatcherSrc)
+        ctx.forward(DispatcherNum)
+    } else {
+        ctx.reply("Sorry, we cannot find an active dispatcher to handle your call. Please try again later.")
+        ctx.exit()
+    }
+})`}
+    desc="Phone call middleware to intercept and handle calls with your own defined logic with provided context"
+/>
+
+```ts
+interface IncomingCallerCtx {
+  source: number;
+  number: string;
+  name: string;
+}
+
+interface OnCallExportCtx {
+  incomingCaller: IncomingCallerCtx; // incoming caller context
+  exit: () => void; // Exits the phone call for the caller
+  next: () => void; // Allows the number to ring out to the default handler
+  reply: (msg: string) => void; // Sends a text message to the caller
+  forward: (tgt: string) => void; // Forwards the call to a new number
+}
+```
