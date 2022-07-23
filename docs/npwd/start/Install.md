@@ -121,21 +121,14 @@ Have you made a wrapper for a framework not listed above? If so, please reach ou
 ## Feature Related Setup
 Below is information pertaining to functionality to enable specific features of the phone such as image uploading for the camera or report logging for discord.
 ### Setting up Camera Functionality
-:::caution
-Some have reported issues with uploading images. While this is most likely related to using a different version of [screenshot-basic](https://github.com/project-error/screenshot-basic), imgur may also be blocked in your country. We are currently working on alternatives.
-:::
 *NPWD* allows for players to access a camera app and take in-game photos. The link to the photo is saved within the database of *NPWD* so these photos are **required** to be uploaded somewhere.
-One solution is to setup *NPWD* to upload the photos to *Imgur*. 
+We recommend [PE Image](https://image.projecterror.dev), a service we have developed to help with image uploading. This guides you through the process of setting it up.
 
 **Steps**
-1. Setup an imgur application [here](https://api.imgur.com/oauth2/addclient).
-2. After you have created an account or logged in, create an application [here](https://api.imgur.com/oauth2/addclient).
-3. Type in a `Application name`. This can be something like `npwd-imgur-[servername]`.
-4. Choose the `Authorization type` called `OAuth 2 authorization without a callback URL`. [Example](https://imgur.com/a/QsYsd4d).
-5. Fill in the rest of the form.
-6. Copy the client ID and add `setr SCREENSHOT_BASIC_TOKEN your_client_id` to your `server.cfg` file before starting NPWD.
-
-If you can't find your application you just created, check your settings pages [here](https://imgur.com/account/settings/apps).
+1. Create an account at [PE Image](https://image.projecterror.dev/register)
+2. After you have created an account or logged in, navigate to [Dashboard > Billing](https://image.projecterror.dev/dashboard/billing) and choose a plan.
+3. Once you've chosen a plan, you'll have access to the [API Keys](https://image.projecterror.dev/dashboard/keys) tab, where you can generate a token.
+4. Copy the API token and add `set SCREENSHOT_BASIC_TOKEN insert_token` to your `server.cfg` file before starting NPWD.
 
 ### Setting up Discord Log Integration
 
