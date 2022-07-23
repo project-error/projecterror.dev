@@ -128,7 +128,7 @@ We recommend [PE Image](https://image.projecterror.dev), a service we have devel
 1. Create an account at [PE Image](https://image.projecterror.dev/register)
 2. After you have created an account or logged in, navigate to [Dashboard > Billing](https://image.projecterror.dev/dashboard/billing) and choose a plan.
 3. Once you've chosen a plan, you'll have access to the [API Keys](https://image.projecterror.dev/dashboard/keys) tab, where you can generate a token.
-4. Copy the API token and add `setr SCREENSHOT_BASIC_TOKEN insert_token` to your `server.cfg` file before starting NPWD.
+4. Copy the API token and add `set SCREENSHOT_BASIC_TOKEN insert_token` to your `server.cfg` file before starting NPWD.
 
 ### Setting up Discord Log Integration
 
