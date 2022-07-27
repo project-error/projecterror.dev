@@ -44,7 +44,7 @@ module.exports = {
       'npwd/faq',
       'npwd/roadmap',
     ],
-    'PE-Financing': [
+    'Financing (PEFCL)': [
       'pefcl/installation',
       'pefcl/configuration',
       {
@@ -52,6 +52,7 @@ module.exports = {
         label: 'Developers',
         items: [
           'pefcl/developers/introduction',
+          'pefcl/developers/framework_integration',
           {
             type: 'category',
             label: 'API',

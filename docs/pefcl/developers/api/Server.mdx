@@ -11,41 +11,20 @@ import ExportComponent from '../../../_export-component-ts.mdx';
 PEFCL exposes a few useful exports that be used from other resources to integrate better with the financing system.
 The exports support both callback & promises.
 
+### Cash
+
 <ExportComponent
-  name="addBankBalance"
-  luaExample={'exports.pefcl:addBankBalance(source, amount, message)'}
-  jsExample={'await exports.pefcl.addBankBalance(source, amount, message)'}
-  tsExample={
-    'await exports.pefcl.addBankBalance(source: number, amount: number, message?: string)'
-  }
-  desc="Adds money to the default account of the player"
+  name="getCash"
+  luaExample={'exports.pefcl:getCash(source)'}
+  jsExample={'await exports.pefcl.getCash(source)'}
+  tsExample={'await exports.pefcl.getCash(source: number)'}
+  desc="Gets cash from the player, framework integrated.
+  When framework integration is enabled you need to export the functions required. Read more under Framework Integration."
 />
 
 - Export arguments:
   - source: `number`
     - PlayerSrc
-  - amount: `number`
-    - Amount of money to be added to default the account
-  - message: `string`
-    - Transaction message
-
-<ExportComponent
-  name="removeBankBalance"
-  luaExample={'exports.pefcl:removeBankBalance(source, amount, message)'}
-  jsExample={'await exports.pefcl.removeBankBalance(source, amount, message)'}
-  tsExample={
-    'await exports.pefcl.removeBankBalance(source: number, amount: number, message?: string)'
-  }
-  desc="Removes money from the default account of the player. Message is optional."
-/>
-
-- Export arguments:
-  - source: `number`
-    - PlayerSrc
-  - amount: `number`
-    - Amount of money to be removed from the default account
-  - message: `string`
-    - Transaction message
 
 <ExportComponent
   name="addCash"
@@ -76,26 +55,296 @@ The exports support both callback & promises.
     - Amount of cash to be removed
 
 <ExportComponent
-  name="createInvoice"
-  luaExample={'exports.pefcl:createInvoice(source, from, amount, message)'}
-  jsExample={'await exports.pefcl.createInvoice(source, from, amount, message)'}
+  name="depositCash"
+  luaExample={'exports.pefcl:depositCash(source, { amount, message })'}
+  jsExample={'await exports.pefcl.depositCash(source, , { amount, message })'}
   tsExample={
-    'await exports.pefcl.createInvoice(source: number, from: string, amount: number, message: string)'
+    'await exports.pefcl.depositCash(source: number, { amount, message }: { amount: number, message: string })'
   }
-  desc="Creates an invoice"
+  desc={
+    'Takes money from cash and deposits it into the player\'s default bank account. If framework integration is enabled PEFCL uses the export "removeCash" to take cash from the player.'
+  }
 />
 
 - Export arguments:
   - source: `number`
     - PlayerSrc
+  - amount: `number`
+    - Amount of cash to be deposited
+  - message: `string`
+    - Transaction message
+
+<ExportComponent
+  name="withdrawCash"
+  luaExample={'exports.pefcl:withdrawCash(source, { amount, message })'}
+  jsExample={'await exports.pefcl.withdrawCash(source, , { amount, message })'}
+  tsExample={
+    'await exports.pefcl.withdrawCash(source: number, { amount, message }: { amount: number, message: string })'
+  }
+  desc={
+    'Withdraws money from the player\'s default bank account and adds as cash. If framework integration is enabled PEFCL uses the export "addCash" to give cash to the player.'
+  }
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of cash to be deposited
+  - message: `string`
+    - Transaction message
+
+### Bank balance
+
+<ExportComponent
+  name="getTotalBankBalance"
+  luaExample={'exports.pefcl:getTotalBankBalance(source)'}
+  jsExample={'await exports.pefcl.getTotalBankBalance(source)'}
+  tsExample={'await exports.pefcl.getTotalBankBalance(source: number)'}
+  desc="Retrieve total bank balance."
+/>
+
+<ExportComponent
+  name="getDefaultAccountBalance"
+  luaExample={'exports.pefcl:getDefaultAccountBalance(source)'}
+  jsExample={'await exports.pefcl.getDefaultAccountBalance(source)'}
+  tsExample={'await exports.pefcl.getDefaultAccountBalance(source: number)'}
+  desc="Retrieve bank balance from default account."
+/>
+
+<ExportComponent
+  name="addBankBalance"
+  luaExample={'exports.pefcl:addBankBalance(source, )'}
+  jsExample={'await exports.pefcl.addBankBalance(source, amount, message)'}
+  tsExample={
+    'await exports.pefcl.addBankBalance(source: number, amount: number, message?: string)'
+  }
+  desc="Adds money to the default account of the player. Message is optional."
+/>
+
+- Export arguments:
+
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of money to be added to default the account
+  - message: `string`
+    - Transaction message
+
+- Export arguments:
+  - identifier: `number`
+    - Player identifier
+  - amount: `number`
+    - Amount of money to be added to default the account
+  - message: `string`
+    - Transaction message
+
+<ExportComponent
+  name="removeBankBalance"
+  luaExample={'exports.pefcl:removeBankBalance(source, amount, message)'}
+  jsExample={'await exports.pefcl.removeBankBalance(source, amount, message)'}
+  tsExample={
+    'await exports.pefcl.removeBankBalance(source: number, amount: number, message?: string)'
+  }
+  desc="Removes money from the default account of the player. Message is optional."
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+  - amount: `number`
+    - Amount of money to be removed from the default account
+  - message: `string`
+    - Transaction message
+
+<ExportComponent
+  isOffline
+  name="addBankBalanceByIdentifier"
+  luaExample={
+    'exports.pefcl:addBankBalanceByIdentifier({ identifier, amount, message })'
+  }
+  jsExample={
+    'await exports.pefcl.addBankBalanceByIdentifier({ identifier, amount, message })'
+  }
+  tsExample={
+    'await exports.pefcl.addBankBalanceByIdentifier({ identifier, amount, message }: { identifier: string, amount: number, message?: string })'
+  }
+  desc="Adds money to the default account of specified player. Message is optional.
+  This export can be used to create recurring payments to players, such as a job salary.
+  "
+/>
+
+- Export arguments:
+  - identifier: `string`
+    - Player identifier
+  - amount: `number`
+    - Amount of money to be added to the default account
+  - message: `string`
+    - Transaction message
+
+<ExportComponent
+  isOffline
+  name="removeBankBalanceByIdentifier"
+  luaExample={
+    'exports.pefcl:removeBankBalanceByIdentifier({ identifier, amount, message })'
+  }
+  jsExample={
+    'await exports.pefcl.removeBankBalanceByIdentifier({ identifier, amount, message })'
+  }
+  tsExample={
+    'await exports.pefcl.removeBankBalanceByIdentifier({ identifier, amount, message }: { identifier: string, amount: number, message?: string })'
+  }
+  desc="Removes money from the default account of specified player. Message is optional."
+/>
+
+- Export arguments:
+  - identifier: `string`
+    - Player identifier
+  - amount: `number`
+    - Amount of money to be added to the default account
+  - message: `string`
+    - Transaction message
+
+### Accounts
+
+<ExportComponent
+  isOffline
+  name="createAccount"
+  luaExample={'exports.pefcl:createAccount({ identifier, name, type })'}
+  jsExample={'await exports.pefcl.createAccount({ identifier, name, type })'}
+  tsExample={
+    'await exports.pefcl.createAccount({ identifier, name, type }: { identifier: string, name: string, type: AccountType })'
+  }
+  desc="Create an account for player, with specific type & name."
+/>
+
+- Export arguments:
+  - identifier: `string`
+    - Owner identifier of account
+  - name: `number`
+    - Account name
+  - type: `personal | shared`
+    - Transaction message
+
+<ExportComponent
+  name="getAccounts"
+  luaExample={'exports.pefcl:getAccounts(source)'}
+  jsExample={'await exports.pefcl.getAccounts(source)'}
+  tsExample={'await exports.pefcl.createAccount(source: number)'}
+  desc="Retrieve all accounts for player."
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+
+<ExportComponent
+  isOffline
+  name="getAccountsByIdentifier"
+  luaExample={'exports.pefcl:getAccountsByIdentifier(identifier)'}
+  jsExample={'await exports.pefcl.getAccountsByIdentifier(identifier)'}
+  tsExample={'await exports.pefcl.createAccount(identifier: string)'}
+  desc="Retrieve all accounts for player by identifier."
+/>
+
+- Export arguments:
+  - identifier: `string`
+    - Identifier for player / character
+
+### Invoices
+
+<ExportComponent
+  isOffline
+  name="createInvoice"
+  luaExample={
+    'exports.pefcl:createInvoice(source, { to, toIdentifier, from, fromIdentifier, amount, message, recieverAccountId, expiresAt })'
+  }
+  jsExample={
+    'await exports.pefcl.createInvoice(source, { to, toIdentifier, from, fromIdentifier, amount, message, recieverAccountId, expiresAt })'
+  }
+  tsExample={
+    'await exports.pefcl.createInvoice(source: number, { to, toIdentifier, from, fromIdentifier, amount, message, recieverAccountId, expiresAt }: { to: string; toIdentifier: string; from: string; fromIdentifier: string; amount: number; message: string, recieverAccountId?: number; expiresAt?: string })'
+  }
+  desc="Creates a invoice with specified information. Invoice will be sent to the player. Possible to define which account recieves the money as well."
+/>
+
+- Export arguments:
+  - to: `string`
+    - Name of the player that should pay the invoice.
+  - toIdentifier: `string`
+    - Identifier of the player who should pay the invoice.
   - from: `string`
     - This is a message that should explain who sent the invoice. Examples:
       - "Police Dpt."
       - "John Doe"
+  - fromIdentifier: `string`
+    - Identifier of the player who should pay the invoice.
   - amount: `number`
     - Decides how much the invoice should be
   - message: `string`
     - Invoice description. Examples:
       - "For the repairs"
+  - recieverAccountId?: `number`
+    - Optional. If specified, the invoice will be sent to the specified account.
+  - expiresAt?: `string`
+    - Optional. If specified, the invoice will expire at the specified date.
+
+<ExportComponent
+  name="getInvoices"
+  luaExample={'exports.pefcl:getInvoices(source)'}
+  jsExample={'await exports.pefcl.getInvoices(source)'}
+  tsExample={'await exports.pefcl.getInvoices(source: number)'}
+  desc="Retrieve all invoices for player by source."
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+
+<ExportComponent
+  name="getUnpaidInvoices"
+  luaExample={'exports.pefcl:getUnpaidInvoices(source)'}
+  jsExample={'await exports.pefcl.getUnpaidInvoices(source)'}
+  tsExample={'await exports.pefcl.getUnpaidInvoices(source: number)'}
+  desc="Retrieve all UNPAID invoices for player by source."
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
+
+### Player
+
+<ExportComponent
+  name="loadPlayer"
+  luaExample={'exports.pefcl:loadPlayer(source, { identifier, name, source })'}
+  jsExample={
+    'await exports.pefcl.loadPlayer(source, { identifier, name, source })'
+  }
+  tsExample={
+    'await exports.pefcl.loadPlayer(source: number, { identifier, name, source }: { identifier: string, name: string, source: number })'
+  }
+  desc="Load player into PEFCL via export. This is used to bridge existing framework with PEFCL. Such as QB & ESX."
+/>
+
+- Export arguments:
+  - identifier: `string`
+    - Player / Character identifier
+  - name: `number`
+    - Player name
+  - source: `number`
+    - PlayerSrc
+
+<ExportComponent
+  name="unloadPlayer"
+  luaExample={'exports.pefcl:unloadPlayer(source)'}
+  jsExample={'await exports.pefcl.loadPlayer(source)'}
+  tsExample={'await exports.pefcl.loadPlayer(source: number)'}
+  desc="Unload player from PEFCL via export. This is used to bridge existing framework with PEFCL. Such as QB & ESX."
+/>
+
+- Export arguments:
+  - source: `number`
+    - PlayerSrc
 
 ## Events
