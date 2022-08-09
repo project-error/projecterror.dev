@@ -14,7 +14,6 @@ Please make sure you have the following dependencies installed within your devel
 * [Git](https://git-scm.com/)
 * [Node > 16.x](https://nodejs.org/en/)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
-* [Go](https://go.dev/dl/)
 
 #### Enabling Yarn
 

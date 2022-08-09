@@ -1,125 +1,103 @@
 ---
-id: setup
-title: Setting up the app
-sidebar_label: Setting up the app
+id: setup 
+title: Creating applications
+sidebar_label: Creating applications
 ---
 
-#### When creating a new app there's a few prerequisites. Let's go through them now.
+### Getting started
 
-### Setting up the theme
-Let's cover the "boring" part first, so we don't have to worry about this later on.
+We have developed a module system that allows developers to create apps that can live in other resources. This makes the
+process of creating framework related apps much easier, and keep NPWD as a standalone product you almost don't need to
+touch.
 
-Each app has a `*.theme.ts` file where we define its colors and palette. These files are located inside the app folder itself.
-You can easily copy an existing one, and tweak it to your liking.
+To get started, there are a few things we need to go through.
 
-You'll see that we define `MESSAGES_APP_PRIMARY_COLOR` and `MESSAGES_APP_TEXT_COLOR` first.
-```typescript
-export const CONTACTS_APP_PRIMARY_COLOR = blue[500];
-export const CONTACTS_APP_TEXT_COLOR = common.white;
+1. Make sure you have the source code of NPWD, and have been able to build it successfully.
+2. You have a basic understanding of React, Vue or other web lib/frameworks.
+
+
+### Setup
+Before we can start, we have to download or clone the app template which you can find [here](https://github.com/project-error/npwd-app-template).
+:::tip
+We recommend renaming the app resource with a prefix. Such as `npwd-appname` or `npwd-framework-appname`
+:::
+Then install all dependencies by running `yarn install` in the root of the app resource.
+
+#### App configuration
+Before we can get started with developing the app, we should configure our app.
+
+In `npwd.config.ts` you'll find some a basic config you can change. Most of these are self-explanatory, but we'll go through some of them.
+
+```ts
+export default (settings: Settings) => ({
+  // ...
+  id: 'APP_NAME',
+  nameLocale: localizedAppName[settings?.language ?? defaultLanguage],
+  icon: AppIcon,
+  app: App,
+});
 ```
-The primary color serves as the main color of the app, whereas the text color serves as the contrast color.
-The `MESSAGES_APP_PRIMARY_COLOR` is for example used for the header color in each app, as well as the background color of each app at the home screen.
 
-```typescript
-const theme = {
-  palette: {
-    primary: {
-      main: CONTACTS_APP_PRIMARY_COLOR,
-      dark:  blue[700],
-      light: blue[300],
-      contrastText: CONTACTS_APP_TEXT_COLOR,
-    },
-  },
+- `id`: The ID of the app which is mostly used for NUI messages and translation.
+- `nameLocale`: This is the current language selected from the phone. You shouldn't need to change this.
+- `icon`: The app icon used on the home screen and for notifications
+- `app`: This is the DOM element which will be rendered when we navigate to the `path` set in the config.
+
+#### Module federation configuration
+This is a simple, but important step.
+
+Navigate to `webpack.config.js` and find `plugins` where you'll see something like this.
+```js
+// ...
+new ModuleFederationPlugin({
+      name: 'template',
+// ...
+```
+Change the `name` to the resource name of the app. This will help NPWD locating your app.
+
+
+### NPWD
+Now that we have set up the app, we have to add the app to NPWD. You'll find a file called `config.apps.js`.
+If you haven't done any changes, it should look like this
+```js
+module.exports = {
+  /*template: () => {
+    return import('template/config');
+  },*/
 };
 ```
+The reason we have to set the resource name as `name` in the `Module federation` plugin, is because we get the necassary files from the resource iframe. So here we can just replace `template` both places with the `resource name` of the app.
 
-We then use these to variables as `main` and `contrastText`. The two next properties, `dark` and `light` is text colors for the light/dark theme.
-
-You can also define palettes for `secondary` colors or `success` to indicate the successful completion of an action that user triggered.
-
-#### Full usage
-```typescript
-palette: {
-  primary: {
-    main: CONTACTS_APP_PRIMARY_COLOR,
-    dark: blue[700],
-    light: blue[300],
-    contrastText: CONTACTS_APP_TEXT_COLOR,
-  },
-  secondary: {
-    main: '#d32f2f',
-    light: '#eb4242',
-    dark: '#941212',
-    contrastText: CONTACTS_APP_TEXT_COLOR,
-  },
-  success: {
-    main: '#2196f3',
-    contrastText: CONTACTS_APP_TEXT_COLOR,
-  },
-},
+```js
+module.exports = {
+  resourcename: () => {
+    return import('resourcename/config');
+  }
+};
 ```
---- 
+If you want more apps, you follow the same steps. Create a new property in the object, and return an import of the config.
 
-### Adding icons
-There is no app without an awesome looking icon! Defining our icon is fairly straight forward.
 
-Located in `/os/apps/icons/*`
+### Development
+Now, you can start developing your billion dollar app idea. To see the app in-browser, run `yarn dev` in the `app resource`.
 
-We have two options. We can add MUI icons and svgs sets, or just one of them. If you choose to only add icons for one type, it might be a good idea
-to disable to option of switching icon set.
+Alternatively, you run `yarn start` in `npwd/phone` to see the app inside NPWD in-browser.
 
-```typescript jsx
-import React from 'react';
-import { Contacts } from '@mui/icons-material';
+#### Useful hooks and functions
+While developing, there are a few things to keep in mind. Sending NUI messages are with `SendNUIMessage` will not work. We have therefore created a client-side export `sendUIMessage` from NPWD. You can read more about that [here](https://projecterror.dev/docs/npwd/api/client-exports).
 
-const ContactIcon: React.FC = () => <Contacts fontSize="large" />;
-
-export default ContactIcon;
+We can intercept these NUI message with the `useNuiEvent` hook, and use the data returned.
+```ts
+const { data } = useNuiEvent<T>({ event: 'RANDOM' });
 ```
 
-When you've found the icon you like, you export it, and you're done! We automatically import these icons depending on what icon set you have selected.
-You just have to worry about finding a cool app icon!
+If you want to fetch data from the client via NUI, you can utilise the `fetchNui` function. This works like a normal POST req, and requires `RegisterNUICallback` on the client-side. Then use the callback provided by `RegisterNUICallback` to a send response back.
 
-### Initialize the app
-To complete the process we have one more step left. We still have to define the app somewhere, and we do such in `apps`. 
+## Build
+When you're ready to build the app for use in-game, run `yarn build` in the app resource. 
 
-Located in `os/apps/config/apps`
+Wait until it's done, then build NPWD: `yarn build`
 
-Let's go through what the app object needs:
-* ``id`` - The name of the app.
-* ``nameLocale`` - For showing the correct translation of the app name.
-* ``icon`` - The icon that will be used at the home screen, notifications etc.
-* ``backgroundColor`` - The main color for the app
-* ``color`` - Color of the app icon. Will only be applied on MUI icons
-* ``path`` - The path for the app. Example ``path: "/example"``.
-* ``Route`` - A function that uses ``Route`` from ``react-router-dom``.
-
-#### Example
-```typescript
-import {
-  CONTACTS_APP_PRIMARY_COLOR,
-  CONTACTS_APP_TEXT_COLOR,
-} from '../../../apps/contacts/contacts.theme';
-```
-
-```typescript jsx
-{
-  id: "CONTACTS"
-  nameLocale: "APPS_CONTACTS",
-  backgroundColor: CONTACTS_APP_PRIMARY_COLOR,
-  color: CONTACTS_APP_TEXT_COLOR,
-  path: "/contacts", 
-  Route: () => (
-  	<AppRoute id="CONTACTS" path="/contacts" component={ContactsApp} emitOnOpen={false} />
-  ),
-}
-```
-
-Here you can see that we are using the two colors we previously made, `CONTACTS_APP_PRIMARY_COLOR` and `CONTACTS_APP_TEXT_COLOR`
-
-:::note
-Assuming you don't have an app component yet, you can read more about that at `Basics of Development`.
+:::caution
+The app you've just made MUST be ensured before NPWD in the `server.cfg`.
 :::
-
-### Wrap up
-Now that you're all set, its time to start developing! Have fun :D

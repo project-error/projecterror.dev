@@ -10,6 +10,14 @@ NPWD includes serveral available exports to easily interface with
 NPWD behavior and actions. You can find a list of the available **client exports** below.
 
 <ExportComponent
+    key="sendUIMessage"
+    name="sendUIMessage"
+    luaExample={"exports.npwd:sendUIMessage('EVENT', { dog = \"woof\", cat = \"meow\" })"}
+    jsExample={"exports.npwd.sendUIMessage('EVENT', { dog: 'woof', cat: 'meow' })"}
+    desc="Use this in third-party apps when sending NUI messages. Accepts any data."
+/>
+
+<ExportComponent
     key="openApp"
     name="openApp"
     luaExample={"exports.npwd:openApp('CONTACTS')"}
