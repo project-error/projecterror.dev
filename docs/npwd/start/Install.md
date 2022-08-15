@@ -140,7 +140,21 @@ Some have reported issues with uploading images. While this is most likely relat
 1. After you have created an account or logged in, create an application [here](https://api.imgur.com/oauth2/addclient).
 2. Choose the `Authorization type` called `OAuth 2 authorization without a callback URL`. [Example](https://imgur.com/a/QsYsd4d).
 3. Copy the client ID and add `set SCREENSHOT_BASIC_TOKEN your_client_id` to your `server.cfg` file before starting NPWD.
-4. You'll then have to change the NPWD config. Have a look at the default config file [here](https://github.com/project-error/npwd/blob/master/config.default.json) to see what to add and change.
+4. Add the following to `npwd/config.json`.
+
+```
+"images": {
+    "url": "https://api.imgur.com/3/image",
+    "type": "imgur",
+    "imageEncoding": "jpg",
+    "contentType": "multipart/form-data",
+    "useContentType": true,
+    "authorizationHeader": "Authorization",
+    "authorizationPrefix": "Client-ID",
+    "useAuthorization": true,
+    "returnedDataIndexes": ["data", "link"]
+  },
+```
 
 If you can't find your application you just created, check your settings pages [here](https://imgur.com/account/settings/apps).
 
