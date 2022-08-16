@@ -31,11 +31,11 @@ through some of them.
 
 ```ts
 export default (settings: Settings) => ({
-	// ...
-	id: 'APP_NAME',
-	nameLocale: localizedAppName[settings?.language ?? defaultLanguage],
-	icon: AppIcon,
-	app: App,
+  // ...
+  id: "APP_NAME",
+  nameLocale: localizedAppName[settings?.language ?? defaultLanguage],
+  icon: AppIcon,
+  app: App,
 });
 ```
 
@@ -61,26 +61,24 @@ Change the `name` to the resource name of the app. This will help NPWD locating 
 
 ### NPWD
 
-Now that we have set up the app, we have to add the app to NPWD. You'll find a file called `config.apps.js`. If you
+Now that we have set up the app, we have to add the app to NPWD. You'll find a file called `config.json`. If you
 haven't done any changes, it should look like this
 
-```js
-module.exports = {
-	/*template: () => {
-      return import('template/config');
-    },*/
-};
+```json
+{
+  // other configuration
+  "apps": []
+}
 ```
 
 The reason we have to set the resource name as `name` in the `Module federation` plugin, is because we get the necassary
 files from the resource iframe. So here we can just replace `template` both places with the `resource name` of the app.
 
-```js
-module.exports = {
-	resourcename: () => {
-		return import('resourcename/config');
-	}
-};
+```json
+{
+  // other configuration
+  "apps": ["resourcename"]
+}
 ```
 
 If you want more apps, you follow the same steps. Create a new property in the object, and return an import of the
@@ -102,18 +100,25 @@ that [here](https://projecterror.dev/docs/npwd/api/client-exports).
 We can intercept these NUI message with the `useNuiEvent` hook, and use the data returned.
 
 ```ts
-const { data } = useNuiEvent<T>({ event: 'RANDOM' });
+const { data } = useNuiEvent<T>({ event: "RANDOM" });
 ```
 
+:::important
+If yo're using the `fetchNui` function, you need to hardcode the name in. If not, all the requests will go to NPWD, instead of your app resource.
+
+```js
+// ...
+
+const resourceName = "resourcename";
+
+// ...
+```
+
+:::
 If you want to fetch data from the client via NUI, you can utilise the `fetchNui` function. This works like a normal
 POST req, and requires `RegisterNUICallback` on the client-side. Then use the callback provided by `RegisterNUICallback`
 to a send response back.
 
 ## Build
 
-When you're ready to build the app for use in-game, run `yarn build` in the app resource.
-
-Wait until it's done, then build NPWD: `yarn build`
-
-:::caution The app you've just made MUST be ensured before NPWD in the `server.cfg`.
-:::
+Since we're loading these apps dynamically, you don't have to rebuild NPWD at all :)
