@@ -1,5 +1,7 @@
 ---
-id: setup title: Creating applications sidebar_label: Creating applications
+id: setup
+title: Creating applications
+sidebar_label: Creating applications
 ---
 
 ### Getting started
