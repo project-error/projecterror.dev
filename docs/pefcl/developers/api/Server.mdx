@@ -257,7 +257,7 @@ The exports support both callback & promises.
   isOffline
   name="createInvoice"
   luaExample={
-    'exports.pefcl:createInvoice(source, { to, toIdentifier, from, fromIdentifier, amount, message, recieverAccountId, expiresAt })'
+    'exports.pefcl:createInvoice(source, { to = to, toIdentifier = toIdentifier, from = from, fromIdentifier = fromIdentifier, amount = amount, message = message, recieverAccountId = recieverAccountId, expiresAt = expiresAt })'
   }
   jsExample={
     'await exports.pefcl.createInvoice(source, { to, toIdentifier, from, fromIdentifier, amount, message, recieverAccountId, expiresAt })'
@@ -278,14 +278,14 @@ The exports support both callback & promises.
       - "Police Dpt."
       - "John Doe"
   - fromIdentifier: `string`
-    - Identifier of the player who should pay the invoice.
+    - Identifier of the player who should receive the money from the invoice, _unless_ `receiverAccountId` is specified.
   - amount: `number`
     - Decides how much the invoice should be
   - message: `string`
     - Invoice description. Examples:
       - "For the repairs"
-  - recieverAccountId?: `number`
-    - Optional. If specified, the invoice will be sent to the specified account.
+  - receiverAccountId?: `number`
+    - Optional. If specified, the invoice amount will be sent to the specified account once it's paid.
   - expiresAt?: `string`
     - Optional. If specified, the invoice will expire at the specified date.
 
