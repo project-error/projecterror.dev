@@ -122,7 +122,9 @@ Have you made a wrapper for a framework not listed above? If so, please reach ou
 Below is information pertaining to functionality to enable specific features of the phone such as image uploading for the camera or report logging for discord.
 ### Setting up Camera Functionality
 *NPWD* allows for players to access a camera app and take in-game photos. The link to the photo is saved within the database of *NPWD* so these photos are **required** to be uploaded somewhere.
-We recommend [PE Image](https://image.projecterror.dev), a service we have developed to help with image uploading. This guides you through the process of setting it up. If you have any questions, ask us on Discord. 
+We recommend [PE Image](https://image.projecterror.dev), a service we have developed to help with image uploading. This guides you through the process of setting it up. If you have any questions, ask us on Discord.
+
+/!\ Whatever service you use, you'll need to use this fork of [screenshot-basic](https://github.com/project-error/screenshot-basic) for the camera to work.
 
 **Steps For PE Image**
 1. Create an account at [PE Image](https://image.projecterror.dev/register)
