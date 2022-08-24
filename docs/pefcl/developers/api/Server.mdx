@@ -233,13 +233,15 @@ The exports support both callback & promises.
 <ExportComponent
   isOffline
   name="getAccountsByIdentifier"
-  luaExample={'exports.pefcl:getAccountsByIdentifier(identifier)'}
-  jsExample={'await exports.pefcl.getAccountsByIdentifier(identifier)'}
-  tsExample={'await exports.pefcl.createAccount(identifier: string)'}
+  luaExample={'exports.pefcl:getAccountsByIdentifier(source, identifier)'}
+  jsExample={'await exports.pefcl.getAccountsByIdentifier(source, identifier)'}
+  tsExample={'await exports.pefcl.createAccount(source: number, identifier: string)'}
   desc="Retrieve all accounts for player by identifier."
 />
 
 - Export arguments:
+  - source: `number`
+    - Source for player / character (Optionnal. you can set it to -1)
   - identifier: `string`
     - Identifier for player / character
 
