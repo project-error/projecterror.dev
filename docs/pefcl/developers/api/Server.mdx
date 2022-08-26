@@ -150,6 +150,14 @@ The exports support both callback & promises.
     - Transaction message
 
 <ExportComponent
+  name="getTotalBankBalanceByIdentifier"
+  luaExample={'exports.pefcl:getTotalBankBalanceByIdentifier(source, identifier)'}
+  jsExample={'await exports.pefcl.getTotalBankBalanceByIdentifier(source, identifier)'}
+  tsExample={'await exports.pefcl.getTotalBankBalanceByIdentifier(source: number, identifier: string)'}
+  desc="Retrieve total bank balance."
+/>
+
+<ExportComponent
   isOffline
   name="addBankBalanceByIdentifier"
   luaExample={
@@ -178,13 +186,13 @@ The exports support both callback & promises.
   isOffline
   name="removeBankBalanceByIdentifier"
   luaExample={
-    'exports.pefcl:removeBankBalanceByIdentifier({ identifier, amount, message })'
+    'exports.pefcl:removeBankBalanceByIdentifier(source, { identifier, amount, message })'
   }
   jsExample={
-    'await exports.pefcl.removeBankBalanceByIdentifier({ identifier, amount, message })'
+    'await exports.pefcl.removeBankBalanceByIdentifier(source, { identifier, amount, message })'
   }
   tsExample={
-    'await exports.pefcl.removeBankBalanceByIdentifier({ identifier, amount, message }: { identifier: string, amount: number, message?: string })'
+    'await exports.pefcl.removeBankBalanceByIdentifier(source, { identifier, amount, message }: source: number, { identifier: string, amount: number, message?: string })'
   }
   desc="Removes money from the default account of specified player. Message is optional."
 />
