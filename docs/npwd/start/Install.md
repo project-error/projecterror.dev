@@ -5,13 +5,10 @@ sidebar_label: Installation
 ---
 
 ### Third-Party Resource Dependencies
-:::warning
-Failure to adhere to these dependencies will result in *NPWD* not working correctly. You MUST use the screenshot basic version linked below.
-:::
 If you wish for *NPWD* to have full functionality. The following resources are required to be
 installed and started before *NPWD*.
 
-1. [screenshot-basic](https://github.com/project-error/screenshot-basic) - **Make sure to use the exact version, as linked.**
+1. [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
 2. [pma-voice](https://github.com/AvarianKnight/pma-voice)
 
 :::note

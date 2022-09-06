@@ -108,12 +108,32 @@ interface ContactEmbed {
 ```
 
 <ExportComponent
-    name="getPhoneNumber"
-    key="getPhoneNumber"
-    luaExample={"exports.npwd:getPhoneNumber(src)"}
-    jsExample={"exports.npwd.getPhoneNumber(src)"}
-    desc="Returns the phone number of the source"
+    name="getPlayerData"
+    key="getPlayerData"
+    jsExample={"const { firstName, lastName, phoneNumber, identifier } = await exports.npwd.getPlayerData({ source: 1 })"}
+    luaExample={"local playerData = exports.npwd.getPlayerData({ identifier = 'license:abcdefg123456' })"}
+    desc="Returns all of the player data that npwd stores, can accept either a source, a license or a phone number in an object as the argument"
 />
+
+Player data return in an object with the following format
+```ts
+interface ExportedPlayerData {
+  phoneNumber: string;
+  firstName: string;
+  lastName: string;
+  name: string;
+  identifier: string;
+}
+```
+
+Fetch player data with an argument object with the following format, only use 1 at a time
+```ts
+interface PlayerDataArgument {
+  source?: string | number;
+  identifier?: string;
+  phoneNumber?: string;
+}
+```
 
 <ExportComponent
     name="onCall"
