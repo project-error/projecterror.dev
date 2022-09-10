@@ -133,10 +133,10 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="removeBankBalance"
-  luaExample={'exports.pefcl:removeBankBalance(source, amount, message)'}
-  jsExample={'await exports.pefcl.removeBankBalance(source, amount, message)'}
+  luaExample={'exports.pefcl:removeBankBalance(source, {amount, message})'}
+  jsExample={'await exports.pefcl.removeBankBalance(source, {amount, message})'}
   tsExample={
-    'await exports.pefcl.removeBankBalance(source: number, amount: number, message?: string)'
+    'await exports.pefcl.removeBankBalance(source: number, {amount: number, message?: string})'
   }
   desc="Removes money from the default account of the player. Message is optional."
 />
@@ -161,13 +161,13 @@ The exports support both callback & promises.
   isOffline
   name="addBankBalanceByIdentifier"
   luaExample={
-    'exports.pefcl:addBankBalanceByIdentifier({ identifier, amount, message })'
+    'exports.pefcl:addBankBalanceByIdentifier(source, { identifier, amount, message })'
   }
   jsExample={
-    'await exports.pefcl.addBankBalanceByIdentifier({ identifier, amount, message })'
+    'await exports.pefcl.addBankBalanceByIdentifier(source, { identifier, amount, message })'
   }
   tsExample={
-    'await exports.pefcl.addBankBalanceByIdentifier({ identifier, amount, message }: { identifier: string, amount: number, message?: string })'
+    'await exports.pefcl.addBankBalanceByIdentifier(source, { identifier, amount, message }: { identifier: string, amount: number, message?: string })'
   }
   desc="Adds money to the default account of specified player. Message is optional.
   This export can be used to create recurring payments to players, such as a job salary.
@@ -175,6 +175,8 @@ The exports support both callback & promises.
 />
 
 - Export arguments:
+  - source: `number`
+    - PlayerSrc
   - identifier: `string`
     - Player identifier
   - amount: `number`
@@ -210,15 +212,17 @@ The exports support both callback & promises.
 <ExportComponent
   isOffline
   name="createAccount"
-  luaExample={'exports.pefcl:createAccount({ identifier, name, type })'}
-  jsExample={'await exports.pefcl.createAccount({ identifier, name, type })'}
+  luaExample={'exports.pefcl:createUniqueAccount(source, { identifier, name, type })'}
+  jsExample={'await exports.pefcl.createUniqueAccount(source, { identifier, name, type })'}
   tsExample={
-    'await exports.pefcl.createAccount({ identifier, name, type }: { identifier: string, name: string, type: AccountType })'
+    'await exports.pefcl.createUniqueAccount(source, { identifier, name, type }: source: number, { identifier: string, name: string, type: AccountType })'
   }
   desc="Create an account for player, with specific type & name."
 />
 
 - Export arguments:
+  - source: `number`
+    - PlayerSrc
   - identifier: `string`
     - Owner identifier of account
   - name: `number`
