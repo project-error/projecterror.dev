@@ -171,6 +171,8 @@ If you can't find your application you just created, check your settings pages [
 
 To enable voice messages you need a place to host these files.
 If you already are using Error Media, make sure you have the premium plan and regenerate your api key.
+We're working on some solutions to provide a free option as well.
+
 You should see that both images and audio uplaods are allowed.
 
 In order to enable this on NPWD, head over to the `config.json` file. Here you'll see:

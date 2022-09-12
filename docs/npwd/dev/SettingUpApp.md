@@ -124,3 +124,13 @@ to a send response back.
 ## Build
 
 Since we're loading these apps dynamically, you don't have to rebuild NPWD at all :)
+
+## Adding your apps
+
+When you're ready to add your app, simply head over to the `config.json` file, and add your app to the `apps` field.
+
+```json
+"apps": "your_app"
+```
+
+The app name needs to be the name of the resource the app lives in.
