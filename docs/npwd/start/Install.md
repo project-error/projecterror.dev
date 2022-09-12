@@ -105,7 +105,7 @@ Above is the default database configuration that comes with *NPWD*. The informat
 If you are using a popular framework such as *ESX* or *QBCore*, you can easily integrate NPWD using the corresponding
 premade compatibility resource(s), these should automatically configure *NPWD* to work with your framework.
 
-Follow the written documentation for [ESX](../framework/esx) and [QB-Core](../framework/qb-core) for the altered installation.
+Follow the written documentation for [ESX](../../framework/esx) and [QB-Core](../../framework/qb-core) for the altered installation.
 
 
 If you have *basic* development knowledge and wish to integrate NPWD with any arbitrary framework,
