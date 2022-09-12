@@ -284,13 +284,13 @@ The exports support both callback & promises.
       - "Police Dpt."
       - "John Doe"
   - fromIdentifier: `string`
-    - Identifier of the player who should receive the money from the invoice, _unless_ `receiverAccountId` is specified.
+    - Identifier of the player who should receive the money from the invoice, _unless_ `receiverAccountIdentifier` is specified.
   - amount: `number`
     - Decides how much the invoice should be
   - message: `string`
     - Invoice description. Examples:
       - "For the repairs"
-  - receiverAccountId?: `number`
+  - receiverAccountIdentifier?: `number`
     - Optional. If specified, the invoice amount will be sent to the specified account once it's paid.
   - expiresAt?: `string`
     - Optional. If specified, the invoice will expire at the specified date.
