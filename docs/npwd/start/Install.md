@@ -175,12 +175,19 @@ We're working on some solutions to provide a free option as well.
 
 You should see that both images and audio uplaods are allowed.
 
-In order to enable this on NPWD, head over to the `config.json` file. Here you'll see:
+Then, another imprtant step is to add the new Convar to your server.cfg
+In order to enable this on NPWD, we first need to add a new Convar to the server.cfg.
+
+```
+set NPWD_TOKEN your_api_token
+```
+
+Then head over to the `config.json` file. Here you'll see:
 
 ```json
 "voiceMessage": {
   "enabled": false,
-  "authorizationHeader": "PE-Secret",
+  "authorizationHeader": "PE-Secret", // this is NOT where you token goes
   "url": "",
   "returnedDataIndexes": ["url"]
 }
