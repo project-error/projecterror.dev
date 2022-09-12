@@ -167,7 +167,7 @@ Some have reported issues with uploading images. While this is most likely relat
 
 If you can't find your application you just created, check your settings pages [here](https://imgur.com/account/settings/apps).
 
-### Enable voice and audio uplads
+### Enable voice and audio uploads
 
 To enable voice messages you need a place to host these files.
 If you already are using Error Media, make sure you have the premium plan and regenerate your api key.
