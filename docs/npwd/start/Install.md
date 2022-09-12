@@ -151,7 +151,7 @@ Some have reported issues with uploading images. While this is most likely relat
 3. Copy the client ID and add `set SCREENSHOT_BASIC_TOKEN your_client_id` to your `server.cfg` file before starting NPWD.
 4. Add the following to `npwd/config.json`.
 
-```
+```json
 "images": {
     "url": "https://api.imgur.com/3/image",
     "type": "imgur",
@@ -159,7 +159,7 @@ Some have reported issues with uploading images. While this is most likely relat
     "contentType": "multipart/form-data",
     "useContentType": true,
     "authorizationHeader": "Authorization",
-    "authorizationPrefix": "Client-ID",
+    "authorizationPrefix": "Client-ID", // This is NOT where your actual client ID goes, add the to the server.cfg
     "useAuthorization": true,
     "returnedDataIndexes": ["data", "link"]
   },
