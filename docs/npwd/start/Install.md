@@ -179,7 +179,7 @@ Then, another imprtant step is to add the new Convar to your server.cfg
 In order to enable this on NPWD, we first need to add a new Convar to the server.cfg.
 
 ```
-set NPWD_TOKEN your_api_token
+set NPWD_AUDIO_TOKEN your_api_token
 ```
 
 Then head over to the `config.json` file. Here you'll see:
