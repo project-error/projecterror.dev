@@ -106,7 +106,7 @@ const { data } = useNuiEvent<T>({ event: "RANDOM" });
 ```
 
 :::important
-If yo're using the `fetchNui` function, you need to hardcode the name in. If not, all the requests will go to NPWD, instead of your app resource.
+If you're using the `fetchNui` function, you need to hardcode the name in. If not, all the requests will go to NPWD, instead of your app resource.
 
 ```js
 // ...
