@@ -9,7 +9,7 @@ sidebar_label: Installation
 If you wish for _NPWD_ to have full functionality. The following resources are required to be
 installed and started before _NPWD_.
 
-1. [screenshot-basic](https://github.com/citizenfx/screenshot-basic)
+1. [screenshot-basic](https://github.com/project-error/screenshot-basic)
 2. [pma-voice](https://github.com/AvarianKnight/pma-voice)
 
 :::note
