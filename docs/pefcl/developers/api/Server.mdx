@@ -151,9 +151,15 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="getTotalBankBalanceByIdentifier"
-  luaExample={'exports.pefcl:getTotalBankBalanceByIdentifier(source, identifier)'}
-  jsExample={'await exports.pefcl.getTotalBankBalanceByIdentifier(source, identifier)'}
-  tsExample={'await exports.pefcl.getTotalBankBalanceByIdentifier(source: number, identifier: string)'}
+  luaExample={
+    'exports.pefcl:getTotalBankBalanceByIdentifier(source, identifier)'
+  }
+  jsExample={
+    'await exports.pefcl.getTotalBankBalanceByIdentifier(source, identifier)'
+  }
+  tsExample={
+    'await exports.pefcl.getTotalBankBalanceByIdentifier(source: number, identifier: string)'
+  }
   desc="Retrieve total bank balance."
 />
 
@@ -212,8 +218,12 @@ The exports support both callback & promises.
 <ExportComponent
   isOffline
   name="createAccount"
-  luaExample={'exports.pefcl:createUniqueAccount(source, { identifier, name, type })'}
-  jsExample={'await exports.pefcl.createUniqueAccount(source, { identifier, name, type })'}
+  luaExample={
+    'exports.pefcl:createUniqueAccount(source, { identifier, name, type })'
+  }
+  jsExample={
+    'await exports.pefcl.createUniqueAccount(source, { identifier, name, type })'
+  }
   tsExample={
     'await exports.pefcl.createUniqueAccount(source, { identifier, name, type }: source: number, { identifier: string, name: string, type: AccountType })'
   }
@@ -247,7 +257,9 @@ The exports support both callback & promises.
   name="getAccountsByIdentifier"
   luaExample={'exports.pefcl:getAccountsByIdentifier(source, identifier)'}
   jsExample={'await exports.pefcl.getAccountsByIdentifier(source, identifier)'}
-  tsExample={'await exports.pefcl.createAccount(source: number, identifier: string)'}
+  tsExample={
+    'await exports.pefcl.createAccount(source: number, identifier: string)'
+  }
   desc="Retrieve all accounts for player by identifier."
 />
 
@@ -354,3 +366,75 @@ The exports support both callback & promises.
     - PlayerSrc
 
 ## Events
+
+### "pefcl:newAccountBalance"
+
+This will get emitted every time: the balance is updated for an account.
+
+```
+AddEventHandler("pefcl:newAccountBalance", function(account: Account)
+  {...}
+end)
+```
+
+[Interface: Account](https://github.com/project-error/pefcl/blob/main/typings/Account.ts)
+
+### "pefcl:newAccountCreated"
+
+This will get emitted every time: a new account is created.
+
+```
+AddEventHandler("pefcl:newAccountCreated", function(account: Account)
+  {...}
+end)
+```
+
+[Interface: Account](https://github.com/project-error/pefcl/blob/main/typings/Account.ts)
+
+### "pefcl:accountDeleted"
+
+This will get emitted every time: an account is deleted.
+
+```
+AddEventHandler("pefcl:accountDeleted", function(account: Account)
+  {...}
+end)
+```
+
+[Interface: Account](https://github.com/project-error/pefcl/blob/main/typings/Account.ts)
+
+### "pefcl:newCash"
+
+This will get emitted every time: the cash amount is updated.
+
+```
+AddEventHandler("pefcl:newCash", function(cash: Cash)
+  {...}
+end)
+```
+
+[Interface: Cash](https://github.com/project-error/pefcl/blob/main/typings/Cash.ts)
+
+### "pefcl:newTransaction"
+
+This will get emitted every time: a new transaction is created.
+
+```
+AddEventHandler("pefcl:newTransaction", function(transaction: Transaction)
+  {...}
+end)
+```
+
+[Interface: Transaction](https://github.com/project-error/pefcl/blob/main/typings/Transaction.ts)
+
+### "pefcl:newInvoice"
+
+This will get emitted every time: a new invoice is created.
+
+```
+AddEventHandler("pefcl:newInvoice", function(invoice: Invoice)
+  {...}
+end)
+```
+
+[Interface: Invoice](https://github.com/project-error/pefcl/blob/main/typings/Invoice.ts)
