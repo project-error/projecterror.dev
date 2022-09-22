@@ -56,7 +56,9 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="depositCash"
-  luaExample={'exports.pefcl:depositCash(source, { amount, message })'}
+  luaExample={
+    'exports.pefcl:depositCash(source, { amount = amount, message = message })'
+  }
   jsExample={'await exports.pefcl.depositCash(source, , { amount, message })'}
   tsExample={
     'await exports.pefcl.depositCash(source: number, { amount, message }: { amount: number, message: string })'
@@ -76,7 +78,9 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="withdrawCash"
-  luaExample={'exports.pefcl:withdrawCash(source, { amount, message })'}
+  luaExample={
+    'exports.pefcl:withdrawCash(source, { amount = amount, message = message })'
+  }
   jsExample={'await exports.pefcl.withdrawCash(source, , { amount, message })'}
   tsExample={
     'await exports.pefcl.withdrawCash(source: number, { amount, message }: { amount: number, message: string })'
@@ -114,7 +118,9 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="addBankBalance"
-  luaExample={'exports.pefcl:addBankBalance(source, {amount, message})'}
+  luaExample={
+    'exports.pefcl:addBankBalance(source, { amount = amount, message = message })'
+  }
   jsExample={'await exports.pefcl.addBankBalance(source, amount, message)'}
   tsExample={
     'await exports.pefcl.addBankBalance(source: number, amount: number, message?: string)'
@@ -133,7 +139,9 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="removeBankBalance"
-  luaExample={'exports.pefcl:removeBankBalance(source, {amount, message})'}
+  luaExample={
+    'exports.pefcl:removeBankBalance(source, { amount = amount, message = message })'
+  }
   jsExample={'await exports.pefcl.removeBankBalance(source, {amount, message})'}
   tsExample={
     'await exports.pefcl.removeBankBalance(source: number, {amount: number, message?: string})'
@@ -167,7 +175,7 @@ The exports support both callback & promises.
   isOffline
   name="addBankBalanceByIdentifier"
   luaExample={
-    'exports.pefcl:addBankBalanceByIdentifier(source, { identifier, amount, message })'
+    'exports.pefcl:addBankBalanceByIdentifier(source, { identifier = identifier, amount = amount, message = message })'
   }
   jsExample={
     'await exports.pefcl.addBankBalanceByIdentifier(source, { identifier, amount, message })'
@@ -194,7 +202,7 @@ The exports support both callback & promises.
   isOffline
   name="removeBankBalanceByIdentifier"
   luaExample={
-    'exports.pefcl:removeBankBalanceByIdentifier(source, { identifier, amount, message })'
+    'exports.pefcl:removeBankBalanceByIdentifier(source, { identifier = identifier, amount = amount, message = message })'
   }
   jsExample={
     'await exports.pefcl.removeBankBalanceByIdentifier(source, { identifier, amount, message })'
@@ -219,7 +227,7 @@ The exports support both callback & promises.
   isOffline
   name="createAccount"
   luaExample={
-    'exports.pefcl:createUniqueAccount(source, { identifier, name, type })'
+    'exports.pefcl:createUniqueAccount(source, { identifier = identifier, name = name, type = type })'
   }
   jsExample={
     'await exports.pefcl.createUniqueAccount(source, { identifier, name, type })'
@@ -335,7 +343,9 @@ The exports support both callback & promises.
 
 <ExportComponent
   name="loadPlayer"
-  luaExample={'exports.pefcl:loadPlayer(source, { identifier, name, source })'}
+  luaExample={
+    'exports.pefcl:loadPlayer(source, { identifier = identifer, name = name, source = source })'
+  }
   jsExample={
     'await exports.pefcl.loadPlayer(source, { identifier, name, source })'
   }
