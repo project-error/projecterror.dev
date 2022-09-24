@@ -86,6 +86,15 @@ As of v1.0.4, the only way to set the default language is by setting it [here](h
 
 First you'll find apps made by our community [here](https://github.com/npwd-community). Make sure to download **release** and not **source** if you don't plan to edit our apps. 
 
+**Please make sure you've ensured every apps __BEFORE__ ensuring npwd like this** :
+
+```
+ensure npwd_crypto
+ensure npwd_qb_garage
+ensure ...
+ensure npwd
+```
+
 Then head out to your NPWD Phone folder, open **config.json** and find the line which contains : 
 
 > "apps" : [],
