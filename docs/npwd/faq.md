@@ -81,3 +81,17 @@ You can do so [here](https://github.com/project-error/npwd/blob/20b7ca34416a8a42
 ### How do I set the default language?
 
 As of v1.0.4, the only way to set the default language is by setting it [here](https://github.com/project-error/npwd/blob/20b7ca34416a8a428b0c4e39c1da80c8e96f5b0f/phone/src/config/default.json#L3) and rebuilding the phone. We are working on abstracting this to a config so this isn't required.
+
+### How do I add custom apps ? 
+
+First you'll find apps made by our community [here](https://github.com/npwd-community). Make sure to download **release** and not **source** if you don't plan to edit our apps. 
+
+Then head out to your NPWD Phone folder, open **config.json** and find the line which contains : 
+
+> "apps" : [],
+
+Once you find it, add as many apps you want to use like this : 
+
+> "apps" : ["pefcl", "npwd_crypto", "npwd_qb_garage", ...] 
+
+And you're free to go, enjoy your fresh new apps ! 
