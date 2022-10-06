@@ -126,16 +126,16 @@ Have you made a wrapper for a framework not listed above? If so, please reach ou
 
 Below is information pertaining to functionality to enable specific features of the phone such as image uploading for the camera or report logging for discord.
 
-### Setting up Camera Functionality
+## Setting up Camera Functionality
 
 _NPWD_ allows for players to access a camera app and take in-game photos. The link to the photo is saved within the database of _NPWD_ so these photos are **required** to be uploaded somewhere.
-We recommend [PE Image](https://image.projecterror.dev), a service we have developed to help with image uploading. This guides you through the process of setting it up. If you have any questions, ask us on Discord.
+We recommend [Error Media](https://media.error-interactive.com/), a service we have developed to help with image uploading. This guides you through the process of setting it up. If you have any questions, ask us on Discord.
 
-**Steps For PE Image**
+### Error Media
 
-1. Create an account at [PE Image](https://image.projecterror.dev/register)
-2. After you have created an account or logged in, navigate to [Dashboard > Billing](https://image.projecterror.dev/dashboard/billing) and choose a plan.
-3. Once you've chosen a plan, you'll have access to the [API Keys](https://image.projecterror.dev/dashboard/keys) tab, where you can generate a token.
+1. Create an account at [Error Media](https://media.error-interactive.com/register)
+2. After you have created an account or logged in, navigate to [Dashboard > Billing](https://media.error-interactive.com/dashboard/billing) and choose a plan.
+3. Once you've chosen a plan, you'll have access to the [API Keys](https://media.error-interactive.com/dashboard/keys) tab, where you can generate a token.
 4. Copy the API token and add `set SCREENSHOT_BASIC_TOKEN insert_token` to your `server.cfg` file before starting NPWD.
 
 Alternatively, you can use Imgur.
@@ -144,7 +144,7 @@ Alternatively, you can use Imgur.
 Some have reported issues with uploading images. While this is most likely related to using a different version of [screenshot-basic](https://github.com/project-error/screenshot-basic), imgur may also be blocked in your country. We are currently working on alternatives.
 :::
 
-**Steps For Imgur**
+### Imgur
 
 1. After you have created an account or logged in, create an application [here](https://api.imgur.com/oauth2/addclient).
 2. Choose the `Authorization type` called `OAuth 2 authorization without a callback URL`. [Example](https://imgur.com/a/QsYsd4d).
@@ -159,7 +159,7 @@ Some have reported issues with uploading images. While this is most likely relat
     "contentType": "multipart/form-data",
     "useContentType": true,
     "authorizationHeader": "Authorization",
-    "authorizationPrefix": "Client-ID", // This is NOT where your actual client ID goes, add the to the server.cfg
+    "authorizationPrefix": "Client-ID", // This is NOT where your actual client ID goes, add the to the server.cfg - Remove this!
     "useAuthorization": true,
     "returnedDataIndexes": ["data", "link"]
   },
@@ -167,7 +167,21 @@ Some have reported issues with uploading images. While this is most likely relat
 
 If you can't find your application you just created, check your settings pages [here](https://imgur.com/account/settings/apps).
 
-### Enable voice and audio uploads
+### Discord
+Add the following to `npwd/config.json`.
+
+```json
+"images": {
+    "useWebhook": true
+  },
+```
+In your *.cfg file, add your webhook to the `SCREENSHOT_BASIC_TOKEN` convar
+
+```
+set SCREENSHOT_BASIC_TOKEN your_webhook
+```
+
+## Enable voice and audio uploads
 
 To enable voice messages you need a place to host these files.
 If you already are using Error Media, make sure you have the premium plan and regenerate your api key.
@@ -204,7 +218,7 @@ We have not tested any other audio uploading services, but please let us know if
 :::
 If you wish to use another service you can. Such as [Clyp](https://clyp.it/api)
 
-### Setting up Discord Log Integration
+## Setting up Discord Log Integration
 
 NPWD can integrate with Discord to log certain actions. As of release v1.0.3, the only use case is to log reported tweets and marketplace listings. This requires a webhook to be setup and the following convar
 set in your `server.cfg` file:
