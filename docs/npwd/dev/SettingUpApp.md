@@ -37,13 +37,15 @@ export default (settings: Settings) => ({
   id: "APP_NAME",
   nameLocale: localizedAppName[settings?.language ?? defaultLanguage],
   icon: AppIcon,
+  notificationIcon: NotficationIcon, // You can use the AppIcon here, but we recommend choosing a smaller icon.
   app: App,
 });
 ```
 
 - `id`: The ID of the app which is mostly used for NUI messages and translation.
 - `nameLocale`: This is the current language selected from the phone. You shouldn't need to change this.
-- `icon`: The app icon used on the home screen and for notifications
+- `icon`: The app icon used on the home screen
+- `notificationIcon`: The icon used for notifications
 - `app`: This is the DOM element which will be rendered when we navigate to the `path` set in the config.
 
 #### Module federation configuration
