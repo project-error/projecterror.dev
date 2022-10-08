@@ -100,7 +100,7 @@ exports["npwd"]:createSystemNotification({
 
 ## Custom window events
 
-We have made a library with which trigger custom window events. This is to be used in external app.
+We have made a library which can trigger custom window events to NPWD. These are to be used in external apps (NUI).
 
 ```ts
 // Import `useNpwdEvent` from our hook lib
