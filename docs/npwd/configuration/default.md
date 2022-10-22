@@ -59,6 +59,7 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "enabled": false,
     "badWords": ["esx"]
   },
+  "defaultContacts": [],
   "twitter": {
     "showNotifications": true,
     "generateProfileNameFromUsers": true,
@@ -157,7 +158,7 @@ Configuration options explained.
   "profanityFilter": {
     "enabled": false,
     "badWords": ["esx", "chip"]
-  },
+  }
 }
 ```
 
@@ -229,6 +230,23 @@ Configuration options explained.
   - If you want to allow players to edit their profile name.
 
 ### Main configuration
+
+#### Default contacts
+
+```json
+{
+  "defaultContacts": [
+    {
+      "id": 1,
+      "display": "Police",
+      "number": "911",
+      "avatar": "avatar_url"
+    }
+  ]
+}
+```
+
+You can then use the `onMessage` or `onCall` export to listen to actions towards the `number` value.
 
 :::info
 More information regarding the main config can be found at [Main configuration](/docs/npwd/configuration/main).
