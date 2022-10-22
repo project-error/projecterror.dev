@@ -58,8 +58,6 @@ These are features the team has no interest in supporting at the current moment.
   - This includes any sort of variations to this that are focused on music or copyrighted material.
 - Job Whitelisting
   - Heavily dependent on framework integration.
-- Default Phone Contacts
-  - We plan to handle this with our exposed events for calling/messaging so server owners can do their own things. There won't be any default contacts.
 - Radio App
   - Not within the current scope of the phone. Use an actual radio resource.
 - Support For Other Voips
