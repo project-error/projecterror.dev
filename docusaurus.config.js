@@ -12,9 +12,6 @@ module.exports = {
     prism: {
       additionalLanguages: ["lua"]
     },
-    gtag: {
-      trackingID: "UA-191466813-1",
-    },
     defaultMode: "dark",
     respectPrefersColorScheme: true,
     sitemap: {
@@ -107,6 +104,9 @@ module.exports = {
     [
       "@docusaurus/preset-classic",
       {
+        gtag: {
+          trackingID: "UA-191466813-1",
+        },
         docs: {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
