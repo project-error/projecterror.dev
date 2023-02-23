@@ -28,7 +28,8 @@ Failure to adhere to these instructions will result in *NPWD* not working correc
   "general": {
     "useResourceIntegration": true,
     "toggleKey": "f1",
-    "toggleCommand": "phone"
+    "toggleCommand": "phone",
+    "defaultlanguage": "en"
   },
   "database": {
     "useIdentifierPrefix": false,
