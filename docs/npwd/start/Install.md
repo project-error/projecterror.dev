@@ -129,14 +129,29 @@ Below is information pertaining to functionality to enable specific features of 
 ## Setting up Camera Functionality
 
 _NPWD_ allows for players to access a camera app and take in-game photos. The link to the photo is saved within the database of _NPWD_ so these photos are **required** to be uploaded somewhere.
-We recommend [Error Media](https://media.error-interactive.com/), a service we have developed to help with image uploading. This guides you through the process of setting it up. If you have any questions, ask us on Discord.
+We recommend [Fivemanage](https://fivemanage.com), a service developed to help with image uploading, for free. This guides you through the process of setting it up. If you have any questions, ask us on Discord.
 
-### Error Media
+### Fivemanage
 
-1. Create an account at [Error Media](https://media.error-interactive.com/register)
-2. After you have created an account or logged in, navigate to [Dashboard > Billing](https://media.error-interactive.com/dashboard/billing) and choose a plan.
-3. Once you've chosen a plan, you'll have access to the [API Keys](https://media.error-interactive.com/dashboard/keys) tab, where you can generate a token.
+1. Create an account at [Fivemanage](https://fivemanage.com)
+2. After you have created an account or logged in, navigate to the [Token](https://www.fivemanage.com/dashboard/token) page and create a new token.
 4. Copy the API token and add `set SCREENSHOT_BASIC_TOKEN insert_token` to your `server.cfg` file before starting NPWD.
+
+5. Add this to the config.json in the npwd folder
+
+```json
+"images": {
+  "url": "https://api.fivemanage.com/api/image",
+  "type": "image",
+  "imageEncoding": "webp",
+  "contentType": "multipart/form-data",
+  "useContentType": false,
+  "authorizationHeader": "Authorization",
+  "authorizationPrefix": "",
+  "useAuthorization": true,
+  "returnedDataIndexes": ["url"]
+},
+```
 
 Alternatively, you can use Imgur.
 
