@@ -199,12 +199,8 @@ set SCREENSHOT_BASIC_TOKEN your_webhook
 ## Enable voice and audio uploads
 
 To enable voice messages you need a place to host these files.
-If you already are using Error Media, make sure you have the premium plan and regenerate your api key.
-We're working on some solutions to provide a free option as well.
+If you already are using [Fivemanage](https://fivemanage.com), you can also use it for audio uploads.
 
-You should see that both images and audio uplaods are allowed.
-
-Then, another imprtant step is to add the new Convar to your server.cfg
 In order to enable this on NPWD, we first need to add a new Convar to the server.cfg.
 
 ```
@@ -215,17 +211,11 @@ Then head over to the `config.json` file. Here you'll see:
 
 ```json
 "voiceMessage": {
-  "enabled": false,
-  "authorizationHeader": "PE-Secret", // this is NOT where you token goes
-  "url": "",
+  "enabled": true,
+  "authorizationHeader": "Authorization",
+  "url": "https://api.fivemanage.com/api/audio",
   "returnedDataIndexes": ["url"]
 }
-```
-
-Set `enabled` to `true`. If you're using Error Media, you can simply add `https://api.projecterror.dev/recording` to the `url` field:
-
-```json
-"url": "https://api.projecterror.dev/recording",
 ```
 
 :::note
