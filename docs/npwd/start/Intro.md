@@ -66,7 +66,7 @@ Please open an issue/enhancement on our Github [repository](https://github.com/p
 - [Matchmaker](https://i.imgur.com/46XtZ06.jpeg)
   - Like tinder but without all the bots. Swipe right into romance or rejection.
   - As of v1.0, there is no filter for sexual preference.
-  - Don't want this app? Follow the documentation [here](../dev/DisableApps.md) to disable it.
+  - Don't want this app? Follow the documentation [here](https://projecterror.dev/docs/npwd/configuration/defaults/#apps) to disable it.
 - [Marketplace](https://user-images.githubusercontent.com/55056068/147530933-d56ceb19-0db2-471f-a8ca-7cc3986b87be.png)
   - Post an ad with/without a picture.
   - Choose a picture from your gallery or from a URL.
