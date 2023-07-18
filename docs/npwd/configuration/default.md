@@ -17,12 +17,22 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "exportResource": "my-core-resource",
     "exportFunction": "myCheckerFunction"
   },
+  "customPhoneNumber": {
+    "enabled": false,
+    "exportResource": "number-generator-resource",
+    "exportFunction": "generateNumber"
+  },
   "general": {
     "useResourceIntegration": false,
     "toggleKey": "f1",
     "toggleCommand": "phone",
     "defaultLanguage": "en",
     "showId": false
+  },
+  "contacts": {
+    "frameworkPay": false,
+    "payResource": "my-core-resource",
+    "payFunction": "myCheckerFunction"
   },
   "database": {
     "useIdentifierPrefix": false,
@@ -33,26 +43,33 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "phoneNumberColumn": "phone_number"
   },
   "images": {
-    "url": "https://api.imgur.com/3/image",
-    "type": "imgur",
-    "imageEncoding": "jpg",
+    "url": "https://api.projecterror.dev/image",
+    "type": "pe_image",
+    "imageEncoding": "webp",
     "contentType": "multipart/form-data",
-    "authorizationPrefix": "Client-ID",
+    "useContentType": false,
+    "useWebhook": false,
+    "authorizationHeader": "PE-Secret",
+    "authorizationPrefix": "",
     "useAuthorization": true,
-    "returnedDataIndexes": ["data", "link"]
+    "returnedDataIndexes": ["url"]
   },
   "imageSafety": {
     "filterUnsafeImageUrls": true,
     "embedUnsafeImages": false,
     "embedUrl": "https://i.example.com/embed",
     "safeImageUrls": [
-      "imgur.com",
-      "file.glass",
+      "i.imgur.com",
+      "i.file.glass",
       "dropbox.com",
-      "tenor.com",
+      "c.tenor.com",
       "discord.com",
-      "discordapp.com",
-      "wikipedia.org"
+      "cdn.discordapp.com",
+      "media.discordapp.com",
+      "media.discordapp.net",
+      "upload.wikipedia.org",
+      "i.projecterror.dev",
+      "upcdn.io"
     ]
   },
   "profanityFilter": {
@@ -71,16 +88,30 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "enableAvatars": true,
     "enableEmojis": true,
     "enableImages": true,
-    "maxImages": 3
+    "maxImages": 1,
+    "allowNoMessage": false,
+    "resultsLimit": 25
   },
   "match": {
     "generateProfileNameFromUsers": true,
     "allowEditableProfileName": true
   },
+  "marketplace": {
+    "persistListings": false
+  },
   "debug": {
     "level": "error",
     "enabled": true,
     "sentryEnabled": true
+  },
+  "defaultContacts": [],
+  "disabledApps": [],
+  "apps": [],
+  "voiceMessage": {
+    "enabled": false,
+    "authorizationHeader": "PE-Secret",
+    "url": "",
+    "returnedDataIndexes": ["url"]
   }
 }
 ```
@@ -149,6 +180,28 @@ Configuration options explained.
   - Url to wrap unsafe images with
 - `"safeImageUrls"`: `string[]`
   - List of safe urls.
+
+### Voice Messages
+
+```json
+{
+  "voiceMessage": {
+    "enabled": false,
+    "authorizationHeader": "Authorization",
+    "url": "",
+    "returnedDataIndexes": ["url"]
+  }
+}
+```
+
+- `"voiceMessage"`
+  - Enable if you want people to be able to send voice notes
+- `"url"`
+  - URL of the API service you're uploading sound clips to, for example "https://api.fivemanage.com/api/audio"
+- `"authorizationHeader"`
+  - Name of the API header for authorisation
+- `"returnedDataIndexes"` 
+  - Path of the returned file URL
 
 ### Word Filtering
 
@@ -227,6 +280,48 @@ Configuration options explained.
   - If you want to generate profiles for the players when the phone is initialized.
 - `allowEditableProfileName`: `boolean`
   - If you want to allow players to edit their profile name.
+
+### Custom Phone Number
+```json
+{
+  "customPhoneNumber": {
+    "enabled": false,
+    "exportResource": "number-generator-resource",
+    "exportFunction": "generateNumber"
+  }
+}
+```
+- `"customPhoneNumber"` 
+  - If you want to use your own custom defined phone number generation this needs to be enabled
+- `"exportResource"`
+  - Resource which has the export
+- `"exportFunction"`
+  - This export needs to return a unique phone number as a string. NPWD Does not check for duplicate custom phone numbers
+
+### Marketplace
+```json
+{
+  "marketplace": {
+    "persistListings": false
+  }
+}
+```
+- `"persistListings"`
+  - If you want marketplace listings to persist after restarts
+
+### Apps
+
+```json
+{
+  "apps": [],
+  "disabledApps": []
+}
+```
+
+- `"apps"`
+  - List of external apps you want NPWD to load
+- `"disabledApps"`
+  - List of apps you want to be disabled
 
 ### Main configuration
 
