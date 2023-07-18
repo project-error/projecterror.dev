@@ -17,18 +17,13 @@ Please make sure you have the following dependencies installed within your devel
 
 - [Git](https://git-scm.com/)
 - [Node > 16.x](https://nodejs.org/en/)
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
-
-#### Enabling Yarn
-
-If you have not used Yarn before and are using Node > 16.10, you will need to enable it using `corepack enable`. If you have not
-used yarn before and are using Node < 16.10, you will need to install it using `npm i -g yarn`.
+- [pnpm](https://pnpm.io/)
 
 ## Installing Dependencies & Setup
 
 **Step 1**
 
-Clone the repository into your `resources` folder with the name `npwd`.
+Clone the repository into your `resources` folder with the name `npwd`. Make sure it is not within a [subfolder] like this.
 
 ```sh
 git clone https://github.com/project-error/npwd.git
@@ -40,7 +35,7 @@ Navigate to cloned folder and install dependencies for both NUI and game scripts
 all the apps and packages)
 
 ```sh
-cd npwd && yarn
+cd npwd && pnpm
 ```
 
 ## Build Phase
@@ -50,23 +45,23 @@ cd npwd && yarn
 To build the whole project (NUI & game-scripts), run the following command in the repository root. This will build all apps and packages.
 
 ```sh
-yarn build
+pnpm build
 ```
 
 #### Building NUI
 
-To build **only** the NUI package, navigate to the `phone` folder and run the `build` script as shown.
+To build **only** the NUI package, navigate to the `apps/phone` folder and run the `build` script as shown.
 
 ```sh
-cd phone && yarn build
+cd apps/phone && pnpm build
 ```
 
 #### Building Game Scripts
 
-To build **only** the game scripts package, navigate to the `resources` folder and run the `build` script as shown.
+To build **only** the game scripts package, navigate to the `apps/game` folder and run the `build` script as shown.
 
 ```sh
-cd resources && yarn build
+cd apps/game && pnpm build
 ```
 
 #### Watching files
@@ -74,14 +69,18 @@ cd resources && yarn build
 If you don't want to rebuild all the time, you can also watch files which will write to disk.
 
 ```sh
-
+pnpm dev
+```
+To watch individual components use the following in each package
+```sh
+pnpm dev:game
 ```
 
 :::note
 
 ### Common issues
 
-#### Media files are not loaded when running `yarn dev:game`:
+#### Media files are not loaded when running `pnpm dev:game`:
 
 You most likely forgot to build the phone first. Building the phone will place the media files in `/dist/html`
 
