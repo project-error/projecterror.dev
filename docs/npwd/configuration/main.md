@@ -33,6 +33,23 @@ You can find a lot more available configuration options under [defaults](/docs/n
 - `"exportFunction"`
   - This export needs to return ether true or false
 
+### Custom Phone Number
+```json
+{
+  "customPhoneNumber": {
+    "enabled": false,
+    "exportResource": "number-generator-resource",
+    "exportFunction": "generateNumber"
+  }
+}
+```
+- `"customPhoneNumber"` 
+  - If you want to use your own custom defined phone number generation this needs to be enabled
+- `"exportResource"`
+  - Resource which has the export
+- `"exportFunction"`
+  - This export needs to return a unique phone number as a string. NPWD Does not check for duplicate custom phone numbers
+
 ### General
 
 ```json
