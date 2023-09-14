@@ -242,7 +242,7 @@ Your `server.cfg` should somewhat resemble the following (in terms of order):
 
 ```cfg
 set mysql_connection_string "mysql://root:12345@localhost/es_extended?charset=utf8mb4"
-setr SCREENSHOT_BASIC_TOKEN XXXXXXXXXXXXXXX
+set SCREENSHOT_BASIC_TOKEN XXXXXXXXXXXXXXX
 set NPWD_DISCORD_TOKEN "my_discord_webhook" # Quotations required
 
 ensure screenshot-basic
