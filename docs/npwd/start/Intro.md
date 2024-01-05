@@ -5,12 +5,6 @@ sidebar_label: Introduction
 slug: /
 ---
 
-:::warning
-
-NPWD is currently in a public beta phase, edge cases and environment issues may occur and should be expected.
-If you encounter any issues, please make sure you report them adequately to the team via the [Discord](https://discord.gg/uy5N7jT5aJ) or by opening an issue on the Github [repository](https://github.com/project-error/docs.projecterror.dev).
-:::
-
 <div align="center">
     <img href="https://projecterror.dev" width="150" src="https://user-images.githubusercontent.com/55056068/147729117-5ab762d8-44be-48f0-bc33-a6664061b6cf.png" alt="Material-UI logo" />
 </div>
