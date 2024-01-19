@@ -21,7 +21,7 @@ slug: /
 
 </div>
 
-# NPWD Release (Current version 1.0)
+# NPWD (Current version 3.12.0)
 
 **New-Phone-Who-Dis** (*NPWD*) is a standalone and open source phone resource created for use in [*FiveM*](https://fivem.net/). It was built from 
 the ground up by some of the previous contributors and maintainers of the Reignited GCPhone project, who found
