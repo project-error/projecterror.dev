@@ -27,7 +27,8 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "toggleKey": "f1",
     "toggleCommand": "phone",
     "defaultLanguage": "en",
-    "showId": false
+    "showId": false,
+    "phoneNumberFormat": "/(\\d{3})(\\d{3})(\\d{4})/"
   },
   "contacts": {
     "frameworkPay": false,
@@ -43,13 +44,12 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "phoneNumberColumn": "phone_number"
   },
   "images": {
-    "url": "https://api.projecterror.dev/image",
-    "type": "pe_image",
+    "url": "https://api.fivemanage.com/api/image",
+    "type": "image",
     "imageEncoding": "webp",
     "contentType": "multipart/form-data",
     "useContentType": false,
-    "useWebhook": false,
-    "authorizationHeader": "PE-Secret",
+    "authorizationHeader": "Authorization",
     "authorizationPrefix": "",
     "useAuthorization": true,
     "returnedDataIndexes": ["url"]
@@ -69,7 +69,10 @@ Here you can find all the available options to configurate NPWD to your liking. 
       "media.discordapp.net",
       "upload.wikipedia.org",
       "i.projecterror.dev",
-      "upcdn.io"
+      "upcdn.io",
+      "i.fivemanage.com",
+      "api.fivemanage.com",
+      "r2.fivemanage.com"
     ]
   },
   "profanityFilter": {
@@ -89,7 +92,6 @@ Here you can find all the available options to configurate NPWD to your liking. 
     "enableEmojis": true,
     "enableImages": true,
     "maxImages": 1,
-    "allowNoMessage": false,
     "resultsLimit": 25
   },
   "match": {
@@ -98,6 +100,9 @@ Here you can find all the available options to configurate NPWD to your liking. 
   },
   "marketplace": {
     "persistListings": false
+  },
+  "browser": {
+    "homepageUrl": "https://docs.fivemanage.com"
   },
   "debug": {
     "level": "error",
@@ -109,8 +114,8 @@ Here you can find all the available options to configurate NPWD to your liking. 
   "apps": [],
   "voiceMessage": {
     "enabled": false,
-    "authorizationHeader": "PE-Secret",
-    "url": "",
+    "authorizationHeader": "Authorization",
+    "url": "https://api.fivemange/api/audio",
     "returnedDataIndexes": ["url"]
   }
 }

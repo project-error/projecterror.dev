@@ -8,6 +8,10 @@ NPWD includes a `config.json` file in the root directory that allows for further
 behaviour. This file is what allows for us to offer framework-agnostic compatibility as well as for multitude
 of configuration options depending on your needs. IF you followed the [installation instructions](../start/installation#basic-configuration) , we went over the basic configuration already and has been abstracted from this page.
 
+:::info
+Note that all changes to the `config.json` requires a restart of NPWD.
+:::
+
 ## Export Configuration
 To keep the resource as framework agnostic as possible, we occasionally use exports to do certain things for us that would normally require framework dependency.
 ### PhoneAsItem
@@ -36,53 +40,26 @@ exports('myCheckerFunction', function()
 end)
 ```
 
-## App Configuration
-### Twitter
-- `showNotifications`
-  - Whether to show notifications from Twitter or not.
-  - `default`: **true**
-- `generateProfileNameFromUsers`:
-  - If you want to generate profiles for the players when the phone is initialized.
-  - `default`: **true**
-- `allowEditableProfileName`
-  - If you want to allow players to edit their profile name.
-  - `default`: **true**
-- `allowDeleteTweets`: 
-  - Allow players to delete their tweets.
-  - `default`: **true**
-- `allowReportTweets`
-  - Allow players to report tweets.
-  - `default`: **true**
-- `allowRetweet`
-  - Allow tweets to be retweeted.
-  - `default`: **true**
-- `characterLimit`
-  - The number of characters allowed in a tweet.
-  - `default`: **160**
-- `newLineLimit`: 
-  - How many new lines a tweet can contain.
-  - `default`: **10**
-- `enableAvatars`
-  - If players should be able to change their avatar.
-  - `default`: **true**
-- `enableEmojis`
-  - Whether to allow emojis in tweets or not.
-  - `default`: **true**
-- `enableImages`
-  - Whether to allow images/media in tweets or not.
-  - `default`: **true**
-- `maxImages`
-  - The max amount of images allowed in a tweet.
-  - `default`: **true**
+## Custom phone number format
+```json
+ "general": {
+    "useResourceIntegration": false,
+    "toggleKey": "f1",
+    "toggleCommand": "phone",
+    "defaultLanguage": "en",
+    "showId": false,
+    "phoneNumberFormat": "/(\\d{3})(\\d{3})(\\d{4})/"
+  },
+```
 
-### Match
-- `generateProfileNameFromUsers`
-  - If you want to generate profiles for the players when the phone is initialized.
-  - `default`: **true**
-- `allowEditableProfileName`
-  - If you want to allow players to edit their profile name.
-  - `default`: **true**
+If you wish to change the format of the phone number you can do so with the `phoneNumberFormat`
 
-:::warning
-This documentation is not yet complete, refer to source code for more information.
-:::
+### Examples
+```json
+"phoneNumberFormat": "/(\\d{3})(\\d{3})(\\d{4})/"
+// Result: 233-134-95
+```
+```json
+"phoneNumberFormat": "/(\\d{8})"
+// Result: 34256475
+```
