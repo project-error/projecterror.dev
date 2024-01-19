@@ -57,7 +57,7 @@ If you wish to change the format of the phone number you can do so with the `pho
 ### Examples
 ```json
 "phoneNumberFormat": "/(\\d{3})(\\d{3})(\\d{4})/"
-// Result: 233-134-95
+// Result: 233-134-9533
 ```
 ```json
 "phoneNumberFormat": "/(\\d{8})"
