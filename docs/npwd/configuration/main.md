@@ -107,6 +107,23 @@ You can find a lot more available configuration options under [defaults](/docs/n
   - The column where phone numbers are stored.
   - As of v1.03, you need to create this yourself. See the [sql file](https://github.com/project-error/npwd/blob/13335e98d55ea7a082bf08c7c17f24866658a2d1/import.sql#L3) for an example query.
 
+### Default contacts
+
+```json
+{
+  "defaultContacts": [
+    { "display": "Contact", "number": "xxx-xxx", "avatar": "somelink.com" },
+    { "display": "911", "number": "911" }
+  ]
+}
+```
+
+Contains an array of contacts which will be prepended to every request to parse user contacts.
+
+:::caution
+This includes any apps that parse user contacts, if you experience any inconveniences please do not use this option.
+:::
+
 ### Debug
 
 ```json
