@@ -50,11 +50,35 @@ NPWD behavior and actions. You can find a list of the available **client exports
 />
 
 <ExportComponent
+    name="isPhoneVisible"
+    key="isPhoneVisible"
+    luaExample={"local isPhoneVisible = exports.npwd:isPhoneVisible()"}
+    jsExample={"const isPhoneVisible = exports.npwd.isPhoneVisible()"}
+    desc="The getter equivalent of setPhoneVisable, returns whether the phone is in a visible state or not."
+/>
+
+<ExportComponent
     name="startPhoneCall"
     key="startPhoneCall"
     luaExample={"exports.npwd:startPhoneCall('603-555-1212')"}
     jsExample={"exports.npwd.startPhoneCall('603-555-1212')"}
     desc="Will initiate a phone call to the given phone number."
+/>
+
+<ExportComponent
+    name="isInCall"
+    key="isInCall"
+    luaExample={"local isInCall = exports.npwd:isInCall()"}
+    jsExample={"const isInCall = exports.npwd.isInCall()"}
+    desc="Returns whether the player is in a phone call or not."
+/>
+
+<ExportComponent
+    name="endCall"
+    key="endCall"
+    luaExample={"local endCall = exports.npwd:endCall()"}
+    jsExample={"const endCall = exports.npwd.endCall()"}
+    desc="Will end the current phone call the player is in."
 />
 
 <ExportComponent
