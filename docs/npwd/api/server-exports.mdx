@@ -24,6 +24,20 @@ NPWD behavior and actions. You can find a list of the available **server exports
 />
 
 <ExportComponent
+    name="isPlayerBusy"
+    luaExample={"exports.npwd:isPlayerBusy(source)"}
+    jsExample={"exports.npwd.isPlayerBusy(source)"}
+    desc="Returns a boolean if a player is busy (on a phone call)."
+/>
+
+<ExportComponent
+    name="isPhoneNumberBusy"
+    luaExample={"exports.npwd:isPhoneNumberBusy(phoneNumber)"}
+    jsExample={"exports.npwd.isPhoneNumberBusy(phoneNumber)"}
+    desc="Returns a boolean if a phone number is busy (on a phone call)."
+/>
+
+<ExportComponent
     name="unloadPlayer"
     luaExample={"exports.npwd:unloadPlayer(source)"}
     jsExample={"exports.npwd.unloadPlayer(source)"}
